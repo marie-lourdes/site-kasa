@@ -1,9 +1,11 @@
 const http = require("http");
+const app = require("./app")
 
 const dotenv = require("dotenv");
 dotenv.config();
 
 const MY_PORT = process.env.PORT
+
 // gestion des erreurs du serveur
 
 const errorHandler = error => {
@@ -30,9 +32,7 @@ const errorHandler = error => {
     }
 };
 
-const server = http.createServer((req, res) => {
-    res.end("requete recue")
-});
+const server = http.createServer(app);
 server.on('error', errorHandler);
 server.on('listening', () => {
     const bind = 'port ' + MY_PORT;
