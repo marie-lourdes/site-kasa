@@ -1,7 +1,22 @@
+import React from 'react';
+import { useEffect, useState } from "react"
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const [data, setData] = useState([])
+  console.log("data useState", data)
+  useEffect(() => {
+
+
+    fetch("http://localhost:8000/api-kasa/logements")
+      .then(res => res.json())
+      .then((data) => {
+        setData(data?.appartmentData)
+        console.log("data", data)
+      })
+
+  }, [])
   return (
     <div className="App">
       <header className="App-header">
