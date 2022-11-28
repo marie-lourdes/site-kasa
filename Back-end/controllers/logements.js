@@ -1,8 +1,17 @@
 const data = require("../data/logements.json")
-console.log(data)
+//console.log(data)
 
 exports.getAllAppartments = (req, res) => {
+    try {
+        const appartmentData = data.map((element, index, array) => array)
+        res.status(200).json({ appartmentData })
+        console.log("requete appartement reussie")
+    } catch (error) {
+        res.status(404).json({ error: "page not found" })
+        console.log("requête appartement echouée")
+    }
 
-    res.status(200).json({ data })
+
+
 
 }
