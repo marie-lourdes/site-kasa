@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 
+import Header from "./layouts/Header"
+import Footer from "./layouts/Footer"
 import Home from "./pages/Home"
 import About from "./pages/About"
 import Location from "./pages/Location"
@@ -15,7 +17,7 @@ root.render(
     <Router>
       <App >
         {/* children*/}
-
+        <Header />
         <main>
           {/*Ajouter la prop exact pour que home s affiche sur ce path exactement et non sur un path contenant "/" , 
 c'est a dire que home ne doit pas s afficher dans le path du composant Survey qui commence par "/"*/}
@@ -26,6 +28,7 @@ c'est a dire que home ne doit pas s afficher dans le path du composant Survey qu
             <Route path="*" element={<Page404 />} />
           </Routes >
         </main>
+        <Footer />
       </App>
     </Router>
   </React.StrictMode>
