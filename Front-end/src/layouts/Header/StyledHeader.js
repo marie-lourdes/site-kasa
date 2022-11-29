@@ -13,7 +13,9 @@ margin: 0 6%;
 }
 nav {
     width: 300px;
-    font-size: 24px;  
+    font-size: 24px; 
+    display: flex;
+    justify-content: flex-end; 
 }
 nav ul{
     display: flex;
@@ -23,7 +25,7 @@ nav ul{
 ul li {
    text-align: right;
    line-height: 142.6%;
-   margin-left: 30px;
+   margin-left: 50px;
    color: ${colors.primary}; 
 }
 
