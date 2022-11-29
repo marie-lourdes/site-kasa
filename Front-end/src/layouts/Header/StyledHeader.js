@@ -6,7 +6,7 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 height: 68px;
-margin-top: 40px;
+padding-top: 40px;
 nav {
     width: 300px;
     font-size: 24px;
@@ -28,7 +28,7 @@ ul li {
   
 }
 
-img {
+& > div {
     height: 68px
 }
 
