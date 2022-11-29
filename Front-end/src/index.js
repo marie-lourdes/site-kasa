@@ -29,7 +29,7 @@ c'est a dire que home ne doit pas s afficher dans le path du composant Survey qu
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/location" element={<Location />} />
+            <Route path="/locations" element={<Location />} />
             <Route path="/location/:id" />
             <Route path="*" element={<Page404 />} />
           </Routes >
