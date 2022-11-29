@@ -1,8 +1,9 @@
 import logoConstrast from "../../assets/Logo-kasa-contrast.png"
+import StyledFooter from "./StyledFooter.js"
 function Footer() {
     return (
-        <footer>
-            <div>
+        <StyledFooter>
+            <div className="footer-wrapper">
                 <div>
                     <img src={logoConstrast} alt="logo contrasté de  Kasa" />
                 </div>
@@ -10,7 +11,7 @@ function Footer() {
 
             </div>
 
-        </footer>
+        </StyledFooter>
     )
 }
 

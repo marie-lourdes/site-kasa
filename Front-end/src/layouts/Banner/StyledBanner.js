@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const Banner = styled.section`
+export const StyledBanner = styled.section`
 width: 100%;
 border-radius: 25px;
 height: 223px;

@@ -2,15 +2,16 @@ import { createGlobalStyle } from "styled-components"
 import MontserratFont from "../assets/fonts/Montserrat-Regular.ttf"
 import colors from "../utils/colors"
 
-export const StyledGlobal = createGlobalStyle`
+const StyledGlobal = createGlobalStyle`
 
 @font-face {
     font-family: "MontSerrat";
     src: url(${MontserratFont});
     font-style: normal;
-   }
+}
 body {
-    min-height: 100vh;  
+    display: flex;
+    flex-direction: column;
     font-family: MontSerrat, sans-serif;
     font-weight: 500;
     color: ${colors.primary};
@@ -18,12 +19,14 @@ body {
 }
 
 #root {
-    margin: 0px 100px;    
+    margin: 0px 100px;   
 }
 
 main {
+    min-height: 100vh;  
     border-radius: 25px;
     background: ${colors.backgroundMain};
+    margin: 40px 0;
 }
 
 ul {
@@ -31,3 +34,5 @@ ul {
     list-style: none;
 }
 `
+
+export default StyledGlobal

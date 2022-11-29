@@ -12,7 +12,7 @@ import Location from "./pages/Location"
 import Page404 from "./pages/Page404"
 
 //styled component
-import { StyledGlobal } from './bases/StyledGlobal'
+import StyledGlobal from './bases/StyledGlobal'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
