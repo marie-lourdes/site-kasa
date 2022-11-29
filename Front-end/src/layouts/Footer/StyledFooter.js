@@ -2,10 +2,11 @@ import styled from "styled-components"
 import colors from "../../utils/colors"
 
 const StyledFooter = styled.footer`
+box-sizing: border-box;
 height: 200px;
 display: flex;
 justify-content: center;
-align-items: center;
+align-items: flex-end;
 color:${colors.secondary};
 background: ${colors.backgroundFooter};
 .footer-wrapper {
@@ -13,9 +14,11 @@ background: ${colors.backgroundFooter};
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 50px 0 30px;
     font-size: 24px;
    & > div {
-     margin-bottom: 20px;
+     margin-bottom: 30px;
+     height: 40px;
    }
     
 }
