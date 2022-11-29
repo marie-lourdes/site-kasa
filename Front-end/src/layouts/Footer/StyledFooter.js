@@ -4,6 +4,7 @@ import colors from "../../utils/colors"
 const StyledFooter = styled.footer`
 box-sizing: border-box;
 height: 200px;
+width: 100%;
 display: flex;
 justify-content: center;
 align-items: flex-end;
