@@ -1,8 +1,8 @@
 function Location() {
     return (
-        <section>
+        <main>
             Location
-        </section>
+        </main>
     )
 }
 
