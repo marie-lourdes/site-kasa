@@ -7,6 +7,7 @@ justify-content: space-between;
 align-items: center;
 height: 68px;
 padding-top: 40px;
+margin: 0 6%;
 & > div {
     height: 68px
 }

@@ -18,15 +18,14 @@ body {
     margin: 0;
 }
 
-#root {
-    margin: 0px 100px;   
-}
-
 main {
     min-height: 100vh;  
     border-radius: 25px;
     background: ${colors.backgroundMain};
     margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    margin: 4% 6%;
 }
 
 ul {
