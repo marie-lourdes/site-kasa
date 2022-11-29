@@ -10,8 +10,9 @@ import Home from "./pages/Home"
 import About from "./pages/About"
 import Location from "./pages/Location"
 import Page404 from "./pages/Page404"
+
 //styled component
-import { GlobalStyled } from './bases/GlobalStyled'
+import { StyledGlobal } from './bases/StyledGlobal'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
@@ -19,7 +20,8 @@ root.render(
     <Router>
       <App >
         {/* children*/}
-        <GlobalStyled />
+
+        <StyledGlobal />
         <Header />
         <div>
           {/*Ajouter la prop exact pour que home s affiche sur ce path exactement et non sur un path contenant "/" , 

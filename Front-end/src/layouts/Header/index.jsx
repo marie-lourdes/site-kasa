@@ -1,21 +1,24 @@
-
-import { Link } from "react-router-dom"
 import logo from "../../assets/Logo-kasa.png"
+
+//styled component
+import StyledHeader from "./StyledHeader.js"
+import StyledLink from "../../bases/StyledLink"
+
 
 function Header() {
     return (
-        <header>
+        <StyledHeader>
             <div>
                 <img src={logo} alt="logo Kasa" />
             </div>
             <nav>
                 <ul>
-                    <li> <Link to="/"> Accueil</Link></li>
-                    <li> <Link to="/about"> A Propos</Link></li>
+                    <li> <StyledLink to="/"> Accueil</StyledLink></li>
+                    <li> <StyledLink to="/about"> A Propos</StyledLink></li>
                 </ul>
 
             </nav>
-        </header>
+        </StyledHeader>
     )
 }
 
