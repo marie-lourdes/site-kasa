@@ -18,7 +18,7 @@ background: url(${bannerHome}) no-repeat  ;
     color: white;
     z-index: 9999;
     top: 32%;
-    left: 22.3%;
+    left: 22.4%;
    
    
    

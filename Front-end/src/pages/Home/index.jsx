@@ -5,24 +5,18 @@ import Banner from "../../layouts/Banner"
 import StyledHome from "./StyledHome.js"
 
 function Home() {
-    return (<React.Fragment>
-        <StyledHome>
-            <div className="title-home">
-                <h1> Chez vous, partout et ailleurs</h1>
-            </div>
-
-            <Banner />
-
-
-
-        </StyledHome>
-
-        <main>
-            Home
-        </main>
-
-    </React.Fragment>
-
+    return (
+        <React.Fragment>
+            <StyledHome>
+                <div className="title-home">
+                    <h1> Chez vous, partout et ailleurs</h1>
+                </div>
+                <Banner />
+            </StyledHome>
+            <main>
+                Home
+            </main>
+        </React.Fragment>
     )
 }
 
