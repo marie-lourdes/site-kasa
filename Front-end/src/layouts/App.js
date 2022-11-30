@@ -1,5 +1,13 @@
 import React from 'react'
 
+// composant layouts react
+import Header from "./Header"
+import Footer from "./Footer"
+
+//styled component
+import StyledGlobal from '../bases/StyledGlobal'
+
+//LAYOUT APP 
 
 function App({ children }) {
   /* test call api-kasa
@@ -14,7 +22,10 @@ function App({ children }) {
   }, [])*/
   return (
     <React.Fragment>
+      <StyledGlobal />
+      <Header />
       {children}
+      <Footer />
     </React.Fragment >
   )
 }

@@ -1,18 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import App from './App'
+import App from './layouts/App'
 import reportWebVitals from './reportWebVitals'
-// composant react
-import Header from "./layouts/Header"
-import Footer from "./layouts/Footer"
+
+//composants react du layout App
 import Home from "./pages/Home"
 import About from "./pages/About"
 import Location from "./pages/Location"
 import Page404 from "./pages/Page404"
 
-//styled component
-import StyledGlobal from './bases/StyledGlobal'
+//ROUTER ET ROUTES DU LAYOUT APP
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
@@ -20,12 +18,9 @@ root.render(
     <Router>
       <App >
         {/* children*/}
-
-        <StyledGlobal />
-        <Header />
         <div>
           {/*Ajouter la prop exact pour que home s affiche sur ce path exactement et non sur un path contenant "/" , 
-c'est a dire que home ne doit pas s afficher dans le path du composant Survey qui commence par "/"*/}
+    c'est a dire que home ne doit pas s afficher dans le path du composant Survey qui commence par "/"*/}
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -34,10 +29,9 @@ c'est a dire que home ne doit pas s afficher dans le path du composant Survey qu
             <Route path="*" element={<Page404 />} />
           </Routes >
         </div>
-        <Footer />
       </App>
-    </Router>
-  </React.StrictMode>
+    </Router >
+  </React.StrictMode >
 )
 
 // If you want to start measuring performance in your app, pass a function
