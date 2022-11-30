@@ -9,12 +9,21 @@ const StyledGlobal = createGlobalStyle`
     src: url(${MontserratFont});
     font-style: normal;
 }
+*{
+    margin:0;
+}
 body {
   
     font-family: MontSerrat, sans-serif;
     font-weight: 500;
     color: ${colors.primary};
-  
+    background: ${colors.secondary}
+}
+h1,h2,h2,h4 {
+    color:${colors.secondary};
+}
+h1{
+    font-size: 48px;
 }
 .container-page {
     display: flex;

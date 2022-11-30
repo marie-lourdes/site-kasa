@@ -7,8 +7,12 @@ import StyledHome from "./StyledHome.js"
 function Home() {
     return (<React.Fragment>
         <StyledHome>
-            <h1> Chez vous, partout et ailleurs</h1>
+            <div className="title-home">
+                <h1> Chez vous, partout et ailleurs</h1>
+            </div>
+
             <Banner />
+
 
 
         </StyledHome>
