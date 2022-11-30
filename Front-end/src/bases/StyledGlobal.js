@@ -14,7 +14,7 @@ body {
     font-family: MontSerrat, sans-serif;
     font-weight: 500;
     color: ${colors.primary};
-    margin: 0;
+  
 }
 .container-page {
     display: flex;
