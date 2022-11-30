@@ -19,7 +19,7 @@ body {
     color: ${colors.primary};
     background: ${colors.secondary}
 }
-h1,h2,h2,h4 {
+h1,h2,h2,h4,h5,h6 {
     color:${colors.secondary};
 }
 h1{
@@ -43,6 +43,7 @@ main {
     display: flex;
     flex-direction: column;
     with: 100%;
+    box-sizing: border-box;
   
 }
 

@@ -26,8 +26,9 @@ function ThumbLocation() {
         <React.Fragment>
             {
                 locationData.map(({ id, title }) => (
+                    /*<Link></Link>*/
                     <StyledCardLocation key={`${id}`}>
-                        <li ><Link>{locationData && title}</Link></li>
+                        <h5 >{locationData && title}</h5>
                     </StyledCardLocation>
                 ))
             }
