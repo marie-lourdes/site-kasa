@@ -23,9 +23,12 @@ function App({ children }) {
   return (
     <React.Fragment>
       <StyledGlobal />
-      <Header />
-      {children}
+      <div className="container">
+        <Header />
+        {children}
+      </div>
       <Footer />
+
     </React.Fragment >
   )
 }

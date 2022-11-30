@@ -10,14 +10,17 @@ const StyledGlobal = createGlobalStyle`
     font-style: normal;
 }
 body {
-    display: flex;
-    flex-direction: column;
+   
     font-family: MontSerrat, sans-serif;
     font-weight: 500;
     color: ${colors.primary};
     margin: 0;
 }
-
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 6%;
+}
 main {
     min-height: 100vh;  
     border-radius: 25px;
@@ -25,7 +28,7 @@ main {
     margin: 40px 0;
     display: flex;
     flex-direction: column;
-    margin: 4% 6%;
+  
 }
 
 ul {
