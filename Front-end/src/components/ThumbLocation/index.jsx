@@ -24,7 +24,7 @@ function ThumbLocation() {
         <React.Fragment>
             {
                 locationData.map(({ id, title }) => (
-                    <div Key={`${id}`}>
+                    <div key={`${id}`}>
                         <li ><Link>{locationData && title}</Link></li>
                     </div>
                 ))
