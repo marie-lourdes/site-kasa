@@ -23,10 +23,13 @@ function App({ children }) {
   return (
     <React.Fragment>
       <StyledGlobal />
-      <div className="container">
+      <div className="container-page">
         <Header />
-        {children}
+        <div className="main-content">
+          {children}
+        </div>
       </div>
+
       <Footer />
 
     </React.Fragment >

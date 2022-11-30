@@ -1,14 +1,17 @@
 import styled from "styled-components"
-import bannerHome from "../../assets/banner-home.png"
+import colors from "../../utils/colors"
 
 const StyledBanner = styled.div`
 width: 100%;
-border-radius: 25px;
-height: 223px;
-background: #000;
+background:${colors.backgroundBlack};
+position: absolute;
+top:0;
+left:0;
+bottom:0;
+right:0;
+
 opacity: 0.3;
 mix-blend-mode: darken;
-background: url(${bannerHome}) no-repeat cover;
 
 `
 

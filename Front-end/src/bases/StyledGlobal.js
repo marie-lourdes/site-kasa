@@ -10,22 +10,27 @@ const StyledGlobal = createGlobalStyle`
     font-style: normal;
 }
 body {
-   
+  
     font-family: MontSerrat, sans-serif;
     font-weight: 500;
     color: ${colors.primary};
     margin: 0;
 }
-.container {
+.container-page {
     display: flex;
     flex-direction: column;
-    margin: 0 6%;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1240px;
+}
+.main-content{
+    width: 100%;
 }
 main {
     min-height: 100vh;  
     border-radius: 25px;
     background: ${colors.backgroundMain};
-    margin: 40px 0;
+    margin: 3% 0;
     display: flex;
     flex-direction: column;
   

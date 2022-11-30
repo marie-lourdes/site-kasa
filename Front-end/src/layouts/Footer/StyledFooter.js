@@ -9,7 +9,7 @@ display: flex;
 justify-content: center;
 align-items: flex-end;
 color:${colors.secondary};
-background: ${colors.backgroundFooter};
+background: ${colors.backgroundBlack};
 .footer-wrapper {
     display: flex;
     flex-direction: column;

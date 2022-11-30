@@ -6,6 +6,7 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 height: 68px;
+width: 100%;
 padding-top: 40px;
 & > div {
     height: 68px
