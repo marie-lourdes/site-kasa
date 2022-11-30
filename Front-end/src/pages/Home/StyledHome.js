@@ -1,6 +1,18 @@
 import styled from "styled-components"
 import bannerHome from "../../assets/banner-home.png"
 
+const StyledGallery = styled.ul`
+display: flex;
+flex-wrap:wrap;
+justify-content: space-around;
+align-items: space-evenly;
+width: 100%;
+height:829px;
+overflow-y: scroll;
+box-sizing: border-box;
+
+`
+
 const StyledHome = styled.section`
 width: 100%;
 border-radius: 25px;
@@ -26,4 +38,4 @@ background: url(${bannerHome}) no-repeat;
 }
 `
 
-export default StyledHome
+export { StyledHome, StyledGallery }

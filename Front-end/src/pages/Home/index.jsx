@@ -1,9 +1,11 @@
 import React from "react"
 import Banner from "../../layouts/Banner"
-import ThumbLocation from "../../components/ThumbLocation"
+import ThumbLocation from "../../components/CardLocation"
+
 
 //style component
-import StyledHome from "./StyledHome.js"
+import { StyledHome, StyledGallery } from "./StyledHome.js"
+
 
 function Home() {
     return (
@@ -15,12 +17,12 @@ function Home() {
                 <Banner />
             </StyledHome>
             <main>
-                <div className="Gallery">
-                    <ul>
-                        <ThumbLocation />
-                    </ul>
 
-                </div>
+                <StyledGallery className="Gallery">
+                    <ThumbLocation />
+                </StyledGallery>
+
+
             </main>
         </React.Fragment>
     )

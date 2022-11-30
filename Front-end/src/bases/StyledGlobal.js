@@ -42,6 +42,7 @@ main {
     margin: 3% 0;
     display: flex;
     flex-direction: column;
+    with: 100%;
   
 }
 
