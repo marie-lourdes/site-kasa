@@ -1,5 +1,6 @@
 import React from "react"
 import Banner from "../../layouts/Banner"
+import ThumbLocation from "../../components/ThumbLocation"
 
 //style component
 import StyledHome from "./StyledHome.js"
@@ -14,7 +15,12 @@ function Home() {
                 <Banner />
             </StyledHome>
             <main>
-                Home
+                <div className="Gallery">
+                    <ul>
+                        <ThumbLocation />
+                    </ul>
+
+                </div>
             </main>
         </React.Fragment>
     )

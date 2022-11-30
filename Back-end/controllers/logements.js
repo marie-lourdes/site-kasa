@@ -3,7 +3,7 @@ const data = require("../data/logements.json")
 
 exports.getAllAppartments = (req, res) => {
     try {
-        const appartmentData = data.map((element, index, array) => array)
+        const appartmentData = data.map((element) => element)
         res.status(200).json({ appartmentData })
         console.log("requete appartement reussie")
     } catch (error) {
