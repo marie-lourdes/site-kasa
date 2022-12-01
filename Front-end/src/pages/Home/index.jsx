@@ -1,5 +1,4 @@
 import React from "react"
-import Banner from "../../layouts/Banner"
 import CardLocation from "../../components/CardLocation"
 import { useContext } from "react"
 
@@ -7,6 +6,7 @@ import { DataContext } from "../../utils/contexte/DataContext"
 import { StyledLinkCard } from "../../components/CardLocation/StyledCardLocation.js"
 //style component
 import StyledGallery from "./StyledHome.js"
+import StyledBanner from "../../layouts/StyledBanner.js"
 
 function Home() {
     const { data, error } = useContext(DataContext)
@@ -14,11 +14,11 @@ function Home() {
     console.log(appartmentData)
     return (
         <React.Fragment>
-            <Banner>
+            <StyledBanner >
                 <div className="title-home">
                     <h1> Chez vous, partout et ailleurs</h1>
                 </div>
-            </Banner>
+            </StyledBanner>
             <main>
                 {error && <div>Une erreur est survenue...</div>}
                 <StyledGallery className="Gallery">

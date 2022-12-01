@@ -22,6 +22,7 @@ background: ${colors.primary};
 border-radius: 10px;
 align-items: flex-end;
 position: relative;
+overflow: hidden;
 &::after {
     content: "";
     position: absolute;
