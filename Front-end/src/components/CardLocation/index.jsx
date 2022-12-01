@@ -29,7 +29,7 @@ function ThumbLocation() {
                 locationData.map(({ id, title }) => (
                     <StyledLinkCard>
                         <StyledCardLocation key={`${id}`}>
-                            <h5 >{locationData && title}</h5>
+                            <h5><li>{locationData && title}</li></h5>
                         </StyledCardLocation>
                     </StyledLinkCard>
                 ))
