@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components"
+import { StyledCardLocation } from "../components/CardLocation/StyledCardLocation"
 import MontserratFont from "../assets/fonts/Montserrat-Regular.ttf"
 import colors from "../utils/colors"
 
@@ -51,6 +52,7 @@ ul {
     padding-left: 0;
     list-style: none;
 }
+
 `
 
 export default StyledGlobal

@@ -4,9 +4,11 @@ import React from "react"
 import PropTypes from "prop-types"
 
 //styled Component
-import { StyledCardLocation, StyledLinkCard } from "./StyledCardLocation"
+import { StyledCardLocation } from "./StyledCardLocation"
 
-function CardLocation({ id, title }) {
+function CardLocation({ title }) {
+
+    if (typeof title === "number") return <div className="error-data-card">Données erronées...</div>
 
     return (
         <React.Fragment>
@@ -18,10 +20,20 @@ function CardLocation({ id, title }) {
         </React.Fragment >
     )
 }
-CardLocation.protoTypes = {
-    id: PropTypes.isRequired,
-    title: PropTypes.string.isRequired
-
+CardLocation.propTypes = {
+    title: PropTypes.string.isRequired,
 }
+/*function error() {
+    const verifTitle = CardLocation.propTypes.title
+
+    console.log("verifTitle", verifTitle)
+    try {
+
+
+    } catch (err) {
+        console.log("erruer prop")
+    }
+}*/
+
 
 export default CardLocation

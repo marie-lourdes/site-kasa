@@ -8,6 +8,11 @@ height:340px;
 max-width: 340px;
 margin: 0 2.5%  5%;
 display: flex;
+text-decoration:none;
+.error-data-card{
+   
+    color: ${colors.primary}
+}
 `
 
 const StyledCardLocation = styled.div`

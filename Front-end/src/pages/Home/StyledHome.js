@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import bannerHome from "../../assets/banner-home.png"
 
 const StyledGallery = styled.ul`
 display: flex;
@@ -11,7 +10,5 @@ height:829px;
 overflow-y: overlay;
 box-sizing: border-box;
 padding: 56px 0 20px 20px;
-
 `
-
 export default StyledGallery 

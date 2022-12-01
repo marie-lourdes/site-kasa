@@ -27,9 +27,7 @@ function Home() {
 
                     {appartmentData.map(({ id, title }) => (
                         <StyledLinkCard key={id} >
-                            <CardLocation
-                                id={id}
-                                title={title}
+                            <CardLocation title={title}
                             />
                         </StyledLinkCard>
                     ))}
