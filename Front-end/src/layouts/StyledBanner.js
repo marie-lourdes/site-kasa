@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import colors from "../utils/colors"
 import bannerHome from "../assets/banner-home.png"
+import bannerAbout from "../assets/banner-about.png"
 const StyledBanner = styled.section`
 width: 100%;
 border-radius: 25px;
@@ -12,19 +13,19 @@ margin-top: 5%;
 display: flex;
 justify-content: center;
 box-sizing: border-box;
-background: url(${bannerHome}) no-repeat;
+background: ${({ about }) => about ? `url(${bannerAbout}) no-repeat` : `url(${bannerHome}) no-repeat`};
 &::before {
-    content:"";
+    content: "";
     background-color:${colors.backgroundBlack};
     position: absolute;
-    top:0;
-    left:0;
-    bottom:0;
-    right:0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     opacity: 0.3;
-    mix-blend-mode: darken;
+    mix - blend - mode: darken;
 } 
- .title-home {
+.title-home {
     position: absolute;
     color: white;
     z-index: 9999;
@@ -33,8 +34,8 @@ background: url(${bannerHome}) no-repeat;
     box-sizing: border-box;
     display: flex;
     align-items: flex-end;
-    height:68px;  
-    
+    height: 68px;
+
 }
 `
 export default StyledBanner
