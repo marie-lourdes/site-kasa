@@ -2,27 +2,21 @@ import React from "react"
 import Banner from "../../layouts/Banner"
 import ThumbLocation from "../../components/CardLocation"
 
-
 //style component
-import { StyledHome, StyledGallery } from "./StyledHome.js"
-
+import StyledGallery from "./StyledHome.js"
 
 function Home() {
     return (
         <React.Fragment>
-            <StyledHome>
+            <Banner>
                 <div className="title-home">
                     <h1> Chez vous, partout et ailleurs</h1>
                 </div>
-                <Banner />
-            </StyledHome>
+            </Banner>
             <main>
-
                 <StyledGallery className="Gallery">
                     <ThumbLocation />
                 </StyledGallery>
-
-
             </main>
         </React.Fragment>
     )
