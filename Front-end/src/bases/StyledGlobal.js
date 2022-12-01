@@ -1,18 +1,18 @@
 import { createGlobalStyle } from "styled-components"
-import { StyledCardLocation } from "../components/CardLocation/StyledCardLocation"
 import MontserratFont from "../assets/fonts/Montserrat-Regular.ttf"
 import colors from "../utils/colors"
 
 const StyledGlobal = createGlobalStyle`
-
 @font-face {
     font-family: "MontSerrat";
     src: url(${MontserratFont});
     font-style: normal;
 }
+
 *{
     margin:0;
 }
+
 body {
   
     font-family: MontSerrat, sans-serif;
@@ -20,12 +20,15 @@ body {
     color: ${colors.primary};
     background: ${colors.secondary}
 }
+
 h1,h2,h2,h4,h5,h6 {
     color:${colors.secondary};
 }
+
 h1{
     font-size: 48px;
 }
+
 .container-page {
     display: flex;
     flex-direction: column;
@@ -33,9 +36,11 @@ h1{
     margin: 0 auto;
     max-width: 1240px;
 }
+
 .main-content{
     width: 100%;
 }
+
 main {
     min-height: 100vh;  
     border-radius: 25px;
@@ -52,7 +57,5 @@ ul {
     padding-left: 0;
     list-style: none;
 }
-
 `
-
 export default StyledGlobal

@@ -10,7 +10,6 @@ margin: 0 2.5%  5%;
 display: flex;
 text-decoration:none;
 .error-data-card{
-   
     color: ${colors.primary}
 }
 `
@@ -19,7 +18,7 @@ const StyledCardLocation = styled.div`
 display: flex;
 box-sizing: border-box;
 width: 100%;
-background:${colors.primary};
+background: ${colors.primary};
 border-radius: 10px;
 align-items: flex-end;
 position: relative;

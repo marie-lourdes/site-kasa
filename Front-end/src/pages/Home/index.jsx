@@ -11,9 +11,7 @@ import StyledGallery from "./StyledHome.js"
 function Home() {
     const { data, error } = useContext(DataContext)
     const appartmentData = data
-
-
-    console.log("datahome", data)
+    console.log(appartmentData)
     return (
         <React.Fragment>
             <Banner>
