@@ -7,7 +7,7 @@ function About() {
     return (
         <React.Fragment>
             <StyledBanner about />
-            <main>
+            <main className="main-about">
                 About
                 <Collapse />
             </main>
