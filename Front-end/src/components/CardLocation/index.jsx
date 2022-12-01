@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom"
 import React, { useState, useEffect } from "react"
 
 //styled Component
-import StyledCardLocation from "./StyledCardLocation"
+import { StyledCardLocation, StyledLinkCard } from "./StyledCardLocation"
+
+
 function ThumbLocation() {
     const [card, setCard] = useState([])
     useEffect(() => {
@@ -26,10 +27,11 @@ function ThumbLocation() {
         <React.Fragment>
             {
                 locationData.map(({ id, title }) => (
-                    /*<Link></Link>*/
-                    <StyledCardLocation key={`${id}`}>
-                        <h5 >{locationData && title}</h5>
-                    </StyledCardLocation>
+                    <StyledLinkCard>
+                        <StyledCardLocation key={`${id}`}>
+                            <h5 >{locationData && title}</h5>
+                        </StyledCardLocation>
+                    </StyledLinkCard>
                 ))
             }
 
