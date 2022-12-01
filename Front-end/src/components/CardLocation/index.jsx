@@ -1,33 +1,27 @@
-import React, { useEffect, useContext } from "react"
+import React from "react"
 
-import { DataContext } from "../../utils/contexte/DataContext"
+// import PropTypes
+import PropTypes from "prop-types"
 
 //styled Component
 import { StyledCardLocation, StyledLinkCard } from "./StyledCardLocation"
 
-
-function ThumbLocation({ appartmentData }) {
-    const { data } = useContext(DataContext)
-
-    const locationData = data
-    console.log("LOCATIONcard", locationData)
-    console.log("card", data)
+function CardLocation({ id, title }) {
 
     return (
         <React.Fragment>
-            {
-                locationData.map(({ id, title }) => (
-                    <StyledLinkCard>
-                        <StyledCardLocation key={`${id}`}>
-                            <h4><li>{locationData && title}</li></h4>
-                        </StyledCardLocation>
-                    </StyledLinkCard>
-                ))
-            }
+
+            <StyledCardLocation>
+                <h4><li >{title}</li></h4>
+            </StyledCardLocation>
 
         </React.Fragment >
-
     )
 }
+CardLocation.protoTypes = {
+    id: PropTypes.isRequired,
+    title: PropTypes.string.isRequired
 
-export default ThumbLocation
+}
+
+export default CardLocation

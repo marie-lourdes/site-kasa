@@ -1,15 +1,19 @@
 import React from "react"
 import Banner from "../../layouts/Banner"
-import ThumbLocation from "../../components/CardLocation"
+import CardLocation from "../../components/CardLocation"
 import { useContext } from "react"
 
 import { DataContext } from "../../utils/contexte/DataContext"
-
+import { StyledLinkCard } from "../../components/CardLocation/StyledCardLocation.js"
 //style component
 import StyledGallery from "./StyledHome.js"
 
 function Home() {
-    const { data } = useContext(DataContext)
+    const { data, error } = useContext(DataContext)
+    const appartmentData = data
+
+
+    console.log("datahome", data)
     return (
         <React.Fragment>
             <Banner>
@@ -18,8 +22,17 @@ function Home() {
                 </div>
             </Banner>
             <main>
+                {error && <div>Une erreur est survenue...</div>}
                 <StyledGallery className="Gallery">
-                    <ThumbLocation appartmentData={{ data }} />
+
+                    {appartmentData.map(({ id, title }) => (
+                        <StyledLinkCard key={id} >
+                            <CardLocation
+                                id={id}
+                                title={title}
+                            />
+                        </StyledLinkCard>
+                    ))}
                 </StyledGallery>
             </main>
         </React.Fragment>
