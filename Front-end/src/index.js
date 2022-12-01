@@ -4,6 +4,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import App from './layouts/App'
 import reportWebVitals from './reportWebVitals'
 
+//import DataProvider
+import { DataProvider } from "./utils/contexte/DataContext"
+
 //composants react du layout App
 import Home from "./pages/Home"
 import About from "./pages/About"
@@ -16,20 +19,22 @@ const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
     <Router>
-      <App >
-        {/* children*/}
-        <div>
-          {/*Ajouter la prop exact pour que home s affiche sur ce path exactement et non sur un path contenant "/" , 
+      <DataProvider>
+        <App >
+          {/* children*/}
+          <div>
+            {/*Ajouter la prop exact pour que home s affiche sur ce path exactement et non sur un path contenant "/" , 
     c'est a dire que home ne doit pas s afficher dans le path du composant Survey qui commence par "/"*/}
-          <Routes>
-            <Route exact path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/locations" element={<Location />} />
-            <Route path="/location/:id" />
-            <Route path="*" element={<Page404 />} />
-          </Routes >
-        </div>
-      </App>
+            <Routes>
+              <Route exact path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/locations" element={<Location />} />
+              <Route path="/location/:id" />
+              <Route path="*" element={<Page404 />} />
+            </Routes >
+          </div>
+        </App>
+      </DataProvider>
     </Router >
   </React.StrictMode >
 )

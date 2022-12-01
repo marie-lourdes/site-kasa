@@ -8,7 +8,7 @@ justify-content: flex-start;
 align-items: space-evenly;
 width: 100%;
 height:829px;
-overflow-y: scroll;
+overflow-y: overlay;
 box-sizing: border-box;
 padding: 56px 0 20px 20px;
 

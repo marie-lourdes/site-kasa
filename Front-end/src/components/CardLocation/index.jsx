@@ -1,27 +1,17 @@
-import React, { useState, useEffect } from "react"
+import React, { useEffect, useContext } from "react"
+
+import { DataContext } from "../../utils/contexte/DataContext"
 
 //styled Component
 import { StyledCardLocation, StyledLinkCard } from "./StyledCardLocation"
 
 
-function ThumbLocation() {
-    const [card, setCard] = useState([])
-    useEffect(() => {
+function ThumbLocation({ appartmentData }) {
+    const { data } = useContext(DataContext)
 
-        fetch("http://localhost:8000/api-kasa/logements")
-            .then(res => {
-                return res.json()
-            })
-            .then(({ appartmentData }) => {
-                setCard(appartmentData)
-                console.log("appartementData", appartmentData)
-            })
-            .catch(error => error)
-
-    }, [])
-    const locationData = card
+    const locationData = data
     console.log("LOCATIONcard", locationData)
-    console.log("card", card)
+    console.log("card", data)
 
     return (
         <React.Fragment>
@@ -29,7 +19,7 @@ function ThumbLocation() {
                 locationData.map(({ id, title }) => (
                     <StyledLinkCard>
                         <StyledCardLocation key={`${id}`}>
-                            <h5><li>{locationData && title}</li></h5>
+                            <h4><li>{locationData && title}</li></h4>
                         </StyledCardLocation>
                     </StyledLinkCard>
                 ))

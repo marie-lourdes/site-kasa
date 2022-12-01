@@ -1,11 +1,15 @@
 import React from "react"
 import Banner from "../../layouts/Banner"
 import ThumbLocation from "../../components/CardLocation"
+import { useContext } from "react"
+
+import { DataContext } from "../../utils/contexte/DataContext"
 
 //style component
 import StyledGallery from "./StyledHome.js"
 
 function Home() {
+    const { data } = useContext(DataContext)
     return (
         <React.Fragment>
             <Banner>
@@ -15,7 +19,7 @@ function Home() {
             </Banner>
             <main>
                 <StyledGallery className="Gallery">
-                    <ThumbLocation />
+                    <ThumbLocation appartmentData={{ data }} />
                 </StyledGallery>
             </main>
         </React.Fragment>
