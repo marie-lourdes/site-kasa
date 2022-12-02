@@ -24,14 +24,14 @@ function CollapseAbout({ children }) {
                 contentPanel.map(({ title, content }, index) =>
                     <StyledPanel
 
-                        Key={`${index}-${key}`}
-                        arrow={!openPanel ? "bottom-arrow" : "top-arrow"}
+                        key={`${index}-${key}`}
+                        arrow={openPanel ? "bottom-arrow" : "bottom-bottom"}
                         header={title}
                         value={key}
                         headerClass="my-header-class"
                         className="title-collapse"
                         showArrow={true}
-                        onChange={activeKey} onClick={() => setPanel(({ children }) => !children && openPanel ? false : true)}>
+                        onClick={() => setPanel(({ children }) => !children && openPanel ? false : true)}>
                         {content}
                     </StyledPanel>
                 )
