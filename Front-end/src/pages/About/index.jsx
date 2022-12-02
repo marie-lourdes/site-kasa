@@ -1,16 +1,17 @@
 import React from "react"
 import Collapse from "../../components/Collapse"
 //styled component
-import StyledBanner from "../../layouts/StyledBanner"
+import StyledAbout from "./StyledAbout.js"
+import StyledBanner from "../../layouts/StyledBanner.js"
 
 function About() {
     return (
         <React.Fragment>
             <StyledBanner about />
-            <main className="main-about">
+            <StyledAbout className="main-about">
                 About
                 <Collapse />
-            </main>
+            </StyledAbout>
         </React.Fragment>
     )
 }

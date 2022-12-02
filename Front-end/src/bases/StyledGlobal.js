@@ -53,11 +53,6 @@ main {
   
 }
 
-main.main-about {
-    background: transparent;
-    border-radius: 0;
-}
-
 ul {
     padding-left: 0;
     list-style: none;
