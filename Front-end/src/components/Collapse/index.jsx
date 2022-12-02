@@ -1,5 +1,6 @@
 
 import { useState } from "react"
+import PropTypes from 'prop-types';
 
 import contentPanel from "../../utils/dataPanel.js"
 
@@ -8,12 +9,12 @@ import { StyledCollapseContainer, StyledPanel } from "./StyledCollapse"
 
 
 
-function CollapseAbout() {
+function CollapseAbout({ children }) {
     const [key, setActiveKey] = useState(0)
     const [openPanel, setPanel] = useState(false)
     console.log("key", key)
     console.log("panel", openPanel)
-    console.log(contentPanel, "content panel")
+
 
     return (
 
@@ -23,13 +24,14 @@ function CollapseAbout() {
                 contentPanel.map(({ title, content }, index) =>
                     <StyledPanel
 
-                        key={`${index}-${key}`}
+                        Key={`${index}-${key}`}
                         arrow={!openPanel ? "bottom-arrow" : "top-arrow"}
                         header={title}
+                        value={key}
                         headerClass="my-header-class"
                         className="title-collapse"
                         showArrow={true}
-                        onChange={activeKey} onClick={() => setPanel(({ children }) => children && openPanel ? false : true)}>
+                        onChange={activeKey} onClick={() => setPanel(({ children }) => !children && openPanel ? false : true)}>
                         {content}
                     </StyledPanel>
                 )
@@ -43,6 +45,7 @@ function CollapseAbout() {
 
 
     }
+
 
 }
 export default CollapseAbout
