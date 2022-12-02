@@ -12,6 +12,7 @@ const StyledPanel = styled(Panel)`
 background: ${colors.backgroundMain};
 margin-bottom: 20px;
 position: relative;
+line-height: 1.5em;
 
 width: 100%;
 &, .my-header-class {
