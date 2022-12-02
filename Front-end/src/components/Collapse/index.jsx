@@ -6,7 +6,7 @@ import { StyledCollapse, StyledPanel } from "./StyledCollapse"
 function CollapseAbout() {
     return (
 
-        <StyledCollapse accordion={true}>
+        <StyledCollapse accordion="true">
             <StyledPanel header="Fiabilité" headerClass="my-header-class" className="title-collapse" showArrow={true}>
                 Les annonces postées sur Kasa garantissent une fiabilité totale.
                 Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes.

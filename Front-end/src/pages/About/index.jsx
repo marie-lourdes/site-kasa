@@ -7,7 +7,7 @@ import StyledBanner from "../../layouts/StyledBanner.js"
 function About() {
     return (
         <React.Fragment>
-            <StyledBanner about />
+            <StyledBanner $about />
             <StyledAbout className="main-about">
                 About
                 <Collapse />

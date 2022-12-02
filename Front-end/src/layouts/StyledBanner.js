@@ -13,7 +13,7 @@ margin-top: 5%;
 display: flex;
 justify-content: center;
 box-sizing: border-box;
-background: ${({ about }) => about ? `url(${bannerAbout}) no-repeat` : `url(${bannerHome}) no-repeat`};
+background: ${({ $about }) => $about ? `url(${bannerAbout}) no-repeat` : `url(${bannerHome}) no-repeat`};
 &::before {
     content: "";
     background-color:${colors.backgroundBlack};
