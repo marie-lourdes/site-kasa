@@ -9,7 +9,6 @@ function About() {
         <React.Fragment>
             <StyledBanner $about />
             <StyledAbout className="main-about">
-                About
                 <Collapse />
             </StyledAbout>
         </React.Fragment>

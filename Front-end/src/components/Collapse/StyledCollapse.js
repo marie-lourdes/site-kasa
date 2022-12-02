@@ -1,15 +1,15 @@
 import styled from "styled-components"
 //Rc- collapse
 import Collapse, { Panel } from "rc-collapse"
+
 import colors from "../../utils/colors"
+
 
 const StyledCollapse = styled(Collapse)`
  width: 80%;
 
-  
-
-
 `
+
 const StyledPanel = styled(Panel)`
 background: ${colors.backgroundMain};
 margin-bottom: 20px;
@@ -37,8 +37,11 @@ width: 100%;
     line-height: 47 px;
    font-size: 2em;
    color:white;
+   ${({ arrow }) => arrow === "180deg" ? `  transform: rotate(180deg);` : `  transform: rotate(0deg);`}
+ 
    &::before {
     content:"^"
+    
  
    }
 
@@ -46,4 +49,6 @@ width: 100%;
 
 
 `
+
+
 export { StyledCollapse, StyledPanel }
