@@ -18,14 +18,14 @@ function CollapseAbout({ children }) {
 
     return (
 
-        <StyledCollapseContainer accordion={false} >
+        <StyledCollapseContainer accordion={true} >
 
             {
                 contentPanel.map(({ title, content }, index) =>
                     <StyledPanel
 
                         key={`${index}-${key}`}
-                        arrow={openPanel ? "bottom-arrow" : "bottom-bottom"}
+                        arrow={openPanel ? "top-arrow" : "bottom-arrow"}
                         header={title}
                         value={key}
                         headerClass="my-header-class"

@@ -6,7 +6,7 @@ import RcCollapse, { Panel } from "rc-collapse"
 import colors from "../../utils/colors"
 
 const StyledCollapseContainer = styled(RcCollapse)`
- width: 80%;
+ width: 85%;
 `
 const StyledPanel = styled(RcCollapse.Panel)`
 background: ${colors.backgroundMain};
@@ -29,10 +29,15 @@ width: 100%;
    padding-left: 15px;
 }
 .rc-collapse-content-box{
-    padding: 20px 10px 0 10px;;
+    padding: 20px 10px 0 10px;
+  
 }
 
-.rc-collapse-expand-icon i.arrow {
+${({ arrow }) => arrow === "bottom-arrow" ? `.rc-collapse-content-box{
+    display:none}
+     ` : `.rc-collapse-content-box{display:block
+}` }
+.rc-collapse-expand-icon {
     color: ${colors.backgroundBlack};
     position: absolute;
     right:10px;
