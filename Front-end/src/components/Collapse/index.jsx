@@ -4,27 +4,37 @@ import { useState } from "react"
 import contentPanel from "../../utils/dataPanel.js"
 
 //styled component
-import { StyledCollapse, StyledPanel } from "./StyledCollapse"
+import { StyledCollapseContainer, StyledPanel } from "./StyledCollapse"
 
 
 
 function CollapseAbout() {
+    const [key, setActiveKey] = useState(0)
     const [panel, setPanel] = useState(false)
+    console.log("key", key)
+    console.log("panel", panel)
 
     return (
 
-        <StyledCollapse accordion="true">
+        <StyledCollapseContainer accordion={false} value={panel}>
 
             {
                 contentPanel.map(({ title, content }, index) =>
-                    <StyledPanel key={`${index}-${title}`} value={panel} arrow={panel ? "0deg" : "180deg"} header={title} headerClass="my-header-class" className="title-collapse" showArrow={true} onChange={(e) => setPanel(e.target.value)}>
+                    <StyledPanel Key={`${key}`}
+                        value={panel} arrow={key === 0 ? "bottom-arrow" : "top-arrow"}
+                        collapsible={key === 0 && `disabled`}
+                        header={title} headerClass="my-header-class"
+                        className="title-collapse"
+                        showArrow={true}
+                        onClick={() => setActiveKey(Math.random(Math.floor(key)) * 100)}
+                    >
                         {content}
                     </StyledPanel>
                 )
             }
 
 
-        </StyledCollapse>
+        </StyledCollapseContainer>
     )
     function openPanel(e) {
 
