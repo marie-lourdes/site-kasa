@@ -22,7 +22,10 @@ function CollapseAbout({ children }) {
 
 
     return (
-        <StyledCollapseContainer accordion={true} activeKey={key} onChange={key => setActiveKey(key)}  >
+        <StyledCollapseContainer accordion={true} activeKey={key} onChange={key => {
+            setActiveKey(key)
+            console.log("key", key)
+        }}  >
             <StyledPanel
                 key={0}
                 arrow={openPanel0 ? "top-arrow" : "bottom-arrow"}
