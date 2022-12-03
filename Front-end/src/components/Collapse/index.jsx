@@ -16,13 +16,13 @@ function CollapseAbout({ children }) {
     const [openPanel2, setPanel2] = useState(false)
     const [openPanel3, setPanel3] = useState(false)
     useEffect(() => {
-        return setActiveKey([1, 0, 2, 3])
+        return setActiveKey(1)
 
     }, [])
 
 
     return (
-        <StyledCollapseContainer accordion={true} activeKey={key}  >
+        <StyledCollapseContainer accordion={true} activeKey={key} onChange={key => setActiveKey(key)}  >
             <StyledPanel
                 key={0}
                 arrow={openPanel0 ? "top-arrow" : "bottom-arrow"}
@@ -33,6 +33,7 @@ function CollapseAbout({ children }) {
                 className="title-collapse"
                 showArrow={true}
                 onClick={() => setPanel0(openPanel0 ? false : true)}
+
             >
                 {contentPanel[0]["content"]}
             </StyledPanel>
