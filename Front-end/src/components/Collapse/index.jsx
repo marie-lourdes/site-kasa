@@ -11,18 +11,18 @@ import { StyledCollapseContainer, StyledPanel } from "./StyledCollapse"
 
 function CollapseAbout({ children }) {
     const [key, setActiveKey] = useState(0)
-    const [openPanel0, setPanel0] = useState(true)
-    const [openPanel1, setPanel1] = useState(false)
+    const [openPanel0, setPanel0] = useState(false)
+    const [openPanel1, setPanel1] = useState(true)
     const [openPanel2, setPanel2] = useState(false)
     const [openPanel3, setPanel3] = useState(false)
     useEffect(() => {
-        return setActiveKey(1)
+        return setActiveKey([1, 0, 2, 3])
 
-    }, [openPanel0, openPanel2, openPanel3])
+    }, [])
 
 
     return (
-        <StyledCollapseContainer accordion={false} activeKey={key}  >
+        <StyledCollapseContainer accordion={true} activeKey={key}  >
             <StyledPanel
                 key={0}
                 arrow={openPanel0 ? "top-arrow" : "bottom-arrow"}
@@ -39,14 +39,15 @@ function CollapseAbout({ children }) {
 
             <StyledPanel
                 key={1}
-                destroyInactivePanel={true}
+
                 arrow={openPanel1 ? "top-arrow" : "bottom-arrow"}
                 header={contentPanel[1]["title"]}
                 expandIcon={FontAwesome}
                 headerClass="my-header-class"
                 className="title-collapse"
                 showArrow={true}
-                onClick={() => setPanel1(openPanel1 ? false : true)}
+
+                onClick={() => setPanel1(openPanel1 && true)}
 
 
             >
