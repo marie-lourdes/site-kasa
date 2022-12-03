@@ -42,7 +42,6 @@ h1{
 }
 
 main {
-    min-height: 100vh;  
     border-radius: 25px;
     background: ${colors.backgroundMain};
     margin: 3% 0;
