@@ -24,6 +24,7 @@ function CollapseAbout({ children }) {
     return (
         <StyledCollapseContainer accordion={false} activeKey={key} onChange={key => {
             setActiveKey(key)
+            //renvoit le tableau 
             console.log("key", key)
         }}  >
             <StyledPanel
@@ -52,8 +53,6 @@ function CollapseAbout({ children }) {
                 showArrow={true}
                 destroyInactivePanel={true}
                 onClick={() => setPanel1(openPanel1 && true)}
-
-
             >
                 {contentPanel[1]["content"]}
 
