@@ -22,7 +22,7 @@ function CollapseAbout({ children }) {
 
 
     return (
-        <StyledCollapseContainer accordion={true} activeKey={key} onChange={key => {
+        <StyledCollapseContainer accordion={false} activeKey={key} onChange={key => {
             setActiveKey(key)
             console.log("key", key)
         }}  >
@@ -50,7 +50,7 @@ function CollapseAbout({ children }) {
                 headerClass="my-header-class"
                 className="title-collapse"
                 showArrow={true}
-
+                destroyInactivePanel={true}
                 onClick={() => setPanel1(openPanel1 && true)}
 
 
