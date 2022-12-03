@@ -25,7 +25,10 @@ width: 100%;
     color: ${colors.secondary};
     height: 47px;
     cursor: pointer;
-   line-height: 47px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ 
    padding-left: 15px;
 }
 .rc-collapse-content-box{
@@ -33,19 +36,19 @@ width: 100%;
   
 }
 
-${({ arrow }) => arrow === "bottom-arrow" ? `.rc-collapse-content-box{
-    display:none}
-     ` : `.rc-collapse-content-box{display:block
-}` }
+
 .rc-collapse-expand-icon {
     color: ${colors.backgroundBlack};
-    position: absolute;
-    right:10px;
-    z-index:9999;
-    line-height: 47 px;
+   
+    line-height: 15px;
    font-size: 2em;
    color:white;
-   ${({ arrow }) => arrow === "bottom-arrow" ? `  transform: rotate(180deg);` : `  transform: rotate(0deg);`}
+ 
+   position: absolute;
+   right:10px;
+   ${({ arrow, }) => arrow === "bottom-arrow" && `transform: rotate(180deg);`};
+   ${({ arrow }) => arrow === "bottom-arrow" && `transform: rotate(180deg);`};
+ 
    &::before {
     content:"^"  
    }
