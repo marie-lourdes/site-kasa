@@ -25,7 +25,6 @@ margin-bottom: 20px;
 position: relative;
 line-height: 1.5em;
 font-size: 1.5em;
-
 width: 100%;
 &, .my-header-class {
     border-radius: 5px;
@@ -43,22 +42,16 @@ width: 100%;
    padding-left: 15px;
 }
 .rc-collapse-content-box{
-    padding: 20px 10px 0 10px;
+    padding: 20px 10px 0 15px;
   
 }
 
-
 .rc-collapse-expand-icon{
     color: ${colors.backgroundBlack};
-   
-  
-  
-   color:white;
- 
-   position: absolute;
-   right:10px;
-   ${({ arrow, }) => arrow === "bottom-arrow" && `transform: rotate(180deg);`};
-  
+    color:white;
+    position: absolute;
+    right:10px;
+   ${({ arrow }) => arrow === "bottom-arrow" && `transform: rotate(180deg);`}; 
 }
 `
 export { StyledCollapseContainer, StyledPanel }

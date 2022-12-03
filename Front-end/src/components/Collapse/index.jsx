@@ -34,11 +34,11 @@ function CollapseAbout({ children }) {
             </StyledPanel>
             <StyledPanel
                 key={1}
-                value={1}
                 arrow={openPanel1 ? "top-arrow" : "bottom-arrow"}
                 header={contentPanel[1]["title"]}
                 isActive={true}
                 destroyInactivePanel={true}
+                expandIcon={FontAwesome}
                 headerClass="my-header-class"
                 className="title-collapse"
                 showArrow={true}
@@ -49,11 +49,11 @@ function CollapseAbout({ children }) {
             </StyledPanel>
             <StyledPanel
                 key={2}
-                value={2}
                 arrow={openPanel2 ? "top-arrow" : "bottom-arrow"}
                 header={contentPanel[2]["title"]}
                 isActive={true}
                 destroyInactivePanel={true}
+                expandIcon={FontAwesome}
                 headerClass="my-header-class"
                 className="title-collapse"
                 showArrow={true}
@@ -64,11 +64,11 @@ function CollapseAbout({ children }) {
             </StyledPanel>
             <StyledPanel
                 key={3}
-                value={3}
                 arrow={openPanel3 ? "top-arrow" : "bottom-arrow"}
                 header={contentPanel[3]["title"]}
                 isActive={true}
                 destroyInactivePanel={true}
+                expandIcon={FontAwesome}
                 headerClass="my-header-class"
                 className="title-collapse"
                 showArrow={true}
