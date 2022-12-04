@@ -1,14 +1,9 @@
 
-const images = [
-
-];
-function Carousel() {
-
-
+function Carousel({ children }) {
     return (
-        <section>
-
-        </section>
+        <div>
+            {children}
+        </div>
     )
 }
 
