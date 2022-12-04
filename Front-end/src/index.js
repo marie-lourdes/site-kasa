@@ -28,8 +28,7 @@ root.render(
             <Routes>
               <Route exact path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
-              <Route path="/locations" element={<Location />} />
-              <Route path="/location/:id" />
+              <Route path="/location/:id" element={<Location />} />
               <Route path="*" element={<Page404 />} />
             </Routes >
           </div>

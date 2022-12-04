@@ -12,8 +12,6 @@ flex-direction: column;
 justify-content: space-around;
 align-items: center;
 background: transparent;
-
-
 min-height: 100vh;
 & > div {
     font-family: MontSerratBold;
