@@ -47,7 +47,7 @@ h1{
 }
 
 .main-content{
-    width: 100 %;
+    width: 100%;
 }
 
 main {

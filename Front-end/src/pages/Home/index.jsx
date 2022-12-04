@@ -23,9 +23,11 @@ function Home() {
                 {error && <div>Une erreur est survenue...</div>}
                 <StyledGallery className="Gallery">
 
-                    {appartmentData.map(({ id, title }) => (
+                    {appartmentData.map(({ id, title, cover }) => (
                         <StyledLinkCard to={`location/${id}`} key={id} >
-                            <CardLocation title={title}
+                            <CardLocation
+                                title={title}
+                                cover={cover}
                             />
                         </StyledLinkCard>
                     ))}
