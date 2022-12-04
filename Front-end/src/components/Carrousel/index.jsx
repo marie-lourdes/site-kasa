@@ -22,7 +22,7 @@ function Caroussel() {
 
     return (
         <section>
-            Caroussel
+            <ImageGallery items={images} />;
         </section>
     )
 }
