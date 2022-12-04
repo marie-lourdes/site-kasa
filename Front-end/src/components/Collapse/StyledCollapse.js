@@ -36,7 +36,6 @@ width: 100%;
 }
 /* css icon Font awesome arrowUp*/
 .rc-collapse-expand-icon{
-    color: ${colors.backgroundBlack};
     color:white;
     position: absolute;
     right:10px;

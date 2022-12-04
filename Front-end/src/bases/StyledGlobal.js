@@ -37,7 +37,10 @@ h1, h2, h2, h4, h5, h6 {
 h1{
     font-size: 48px;
 }
-
+button {
+    background: transparent;
+    border: 0;
+}
 .container-page {
     display: flex;
     flex-direction: column;

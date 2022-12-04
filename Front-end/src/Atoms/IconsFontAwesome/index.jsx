@@ -1,3 +1,4 @@
+import StyledIconsFontAwesome from "./StyledIconsFontAwesome"
 function ArrowUp() {
     return (
         <i className="fa-solid fa-angle-up"></i>
@@ -5,12 +6,13 @@ function ArrowUp() {
 }
 function ArrowLeft() {
     return (
-        <i class="fa-solid fa-angle-left"></i>
+        <StyledIconsFontAwesome className="fa-solid fa-angle-left"></StyledIconsFontAwesome>
     )
 }
 function ArrowRight() {
     return (
-        <i class="fa-solid fa-angle-right"></i>
+        <StyledIconsFontAwesome className="fa-solid fa-angle-right"></StyledIconsFontAwesome>
+
     )
 }
 

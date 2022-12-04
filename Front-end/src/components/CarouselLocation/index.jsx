@@ -1,10 +1,11 @@
-import Carousel from "nuka-carousel"
+import StyledCarousel from "./StyledCarousel"
 // import des icons Font-Awesome ArrowLeft et ArrowRight
 import { ArrowLeft, ArrowRight } from "../../Atoms/IconsFontAwesome"
 
+
 function CarouselLocation({ children }) {
     return (
-        <Carousel
+        <StyledCarousel
             wrapAround={true}
             renderBottomCenterControls={({ currentSlide }) => (
                 <div>1/ {currentSlide + 1}</div>
@@ -22,7 +23,7 @@ function CarouselLocation({ children }) {
         >
             {children}
 
-        </Carousel>
+        </StyledCarousel>
     )
 }
 
