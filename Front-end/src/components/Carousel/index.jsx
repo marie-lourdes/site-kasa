@@ -1,10 +1,12 @@
+import Carousel from "nuka-carousel"
 
-function Carousel({ children }) {
+function CarouselLocation({ children }) {
     return (
-        <div>
+        <Carousel>
             {children}
-        </div>
+
+        </Carousel>
     )
 }
 
-export default Carousel
+export default CarouselLocation
