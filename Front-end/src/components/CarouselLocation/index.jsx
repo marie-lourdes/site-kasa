@@ -3,29 +3,40 @@
 // import des icons Font-Awesome ArrowLeft et ArrowRight
 import { ArrowLeft, ArrowRight } from "../../Atoms/IconsFontAwesome"
 
-//style component
+//styled component avec nuka-carousel integré
 import StyledCarousel from "./StyledCarousel.js"
-
 
 function CarouselLocation({ children }) {
     return (
-
+        /*affichage de la caroussel avec la definition des props de nuka-carousel pour repondre aux contraintes fonctionnelles du client*/
         <StyledCarousel
+            /* avec prop wrapAround on slide  à l infini sans se limiter a la premiere image et à la derniere image*/
             wrapAround={true}
-            renderBottomCenterControls={({ currentSlide, }) => (
-                <div>{currentSlide + 1}/5</div>
+
+            /*les propControls render de nuka carousel controle l affichage des elements 
+            avec les valeurs des props currentSlide, slideCount, previousSlide, nextSlide recupérées en parametre de la fonction des propControl*/
+
+            renderBottomCenterControls={({ currentSlide, slideCount }) => (
+                /* le bullet s saffiche que si il y a plus d 'une image dans la carroussel, idem pour les boutons suivant et precedent*/
+                slideCount > 1 &&
+                <div>{currentSlide + 1}/{slideCount}</div>
             )}
-            renderCenterLeftControls={({ previousSlide }) => (
+
+            renderCenterLeftControls={({ previousSlide, slideCount }) => (
+                slideCount > 1 &&
                 <button onClick={previousSlide} title="Image Précédente" >
                     <ArrowLeft />
                 </button>
             )}
-            renderCenterRightControls={({ nextSlide }) => (
+
+            renderCenterRightControls={({ nextSlide, slideCount }) => (
+                slideCount > 1 &&
                 <button onClick={nextSlide} title="Image suivante"  >
                     <ArrowRight />
                 </button>
             )}
         >
+            {/*children props img}*/}
             {children}
 
         </StyledCarousel>
