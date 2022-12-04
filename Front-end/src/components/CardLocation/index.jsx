@@ -6,7 +6,7 @@ import PropTypes from "prop-types"
 //styled Component
 import { StyledCardLocation } from "./StyledCardLocation"
 
-function CardLocation({ title }) {
+function CardLocation({ title, cover }) {
 
     if (typeof title === "number") return <div className="error-data-card">Données erronées...</div>
 
@@ -14,6 +14,7 @@ function CardLocation({ title }) {
         <React.Fragment>
 
             <StyledCardLocation>
+                <img src={`${cover}`} alt={`Photo de couverture ${title}`} />
                 <h4><li >{title}</li></h4>
             </StyledCardLocation>
 
@@ -22,6 +23,7 @@ function CardLocation({ title }) {
 }
 CardLocation.propTypes = {
     title: PropTypes.string.isRequired,
+    cover: PropTypes.string.isRequired,
 }
 /*function error() {
     const verifTitle = CardLocation.propTypes.title

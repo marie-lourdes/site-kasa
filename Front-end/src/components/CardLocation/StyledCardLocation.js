@@ -23,6 +23,13 @@ border-radius: 10px;
 align-items: flex-end;
 position: relative;
 overflow: hidden;
+img{
+    object-fit: cover;
+    width: 100%;
+    min-height: 340px;
+    max-height: 340px;
+   
+}
 &::after {
     content: "";
     position: absolute;
