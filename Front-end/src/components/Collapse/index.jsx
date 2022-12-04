@@ -1,14 +1,14 @@
 
 import React, { useState, useEffect } from "react"
 
-import FontAwesome from "../../Atoms/FontAwesome/index.jsx";
+import { ArrowUp } from "../../Atoms/IconsFontAwesome/index.jsx";
 
 import contentPanel from "../../utils/dataPanelAbout.js"
 
 //styled component
 import { StyledCollapseContainer, StyledPanel } from "./StyledCollapse"
 
-function CollapseAbout({ children }) {
+function CollapseAbout() {
     const [key, setActiveKey] = useState(0)
     const [openPanel0, setPanel0] = useState(false)
     const [openPanel1, setPanel1] = useState(true)
@@ -30,7 +30,7 @@ function CollapseAbout({ children }) {
                 arrow={openPanel0 ? "top-arrow" : "bottom-arrow"}
                 header={contentPanel[0]["title"]}
                 destroyInactivePanel={true}
-                expandIcon={FontAwesome}
+                expandIcon={ArrowUp}
                 headerClass="my-header-class"
                 className="title-collapse"
                 showArrow={true}
@@ -44,7 +44,7 @@ function CollapseAbout({ children }) {
                 key={1}
                 arrow={openPanel1 ? "top-arrow" : "bottom-arrow"}
                 header={contentPanel[1]["title"]}
-                expandIcon={FontAwesome}
+                expandIcon={ArrowUp}
                 headerClass="my-header-class"
                 className="title-collapse"
                 showArrow={true}
@@ -61,7 +61,7 @@ function CollapseAbout({ children }) {
                 header={contentPanel[2]["title"]}
                 isActive={true}
                 destroyInactivePanel={true}
-                expandIcon={FontAwesome}
+                expandIcon={ArrowUp}
                 headerClass="my-header-class"
                 className="title-collapse"
                 showArrow={true}
@@ -77,7 +77,7 @@ function CollapseAbout({ children }) {
                 header={contentPanel[3]["title"]}
                 isActive={true}
                 destroyInactivePanel={true}
-                expandIcon={FontAwesome}
+                expandIcon={ArrowUp}
                 headerClass="my-header-class"
                 className="title-collapse"
                 showArrow={true}

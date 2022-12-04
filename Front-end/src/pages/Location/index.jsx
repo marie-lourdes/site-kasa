@@ -4,7 +4,7 @@ import CarouselLocation from "../../components/CarouselLocation"
 function Location() {
     return (
         <React.Fragment>
-            <CarouselLocation wrapAround={true}>
+            <CarouselLocation >
                 <img src="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg" alt="titrealt" />
                 <img src="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-2.jpg" alt="titrealt" />
                 <img src="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-3.jpg" alt="titrealt" />

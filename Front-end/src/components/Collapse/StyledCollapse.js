@@ -34,7 +34,7 @@ width: 100%;
     padding: 27px 10px 0 15px;
      
 }
-
+/* css icon Font awesome arrowUp*/
 .rc-collapse-expand-icon{
     color: ${colors.backgroundBlack};
     color:white;
