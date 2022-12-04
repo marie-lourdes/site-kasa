@@ -1,9 +1,9 @@
 import React from "react"
-import Caroussel from "../../components/Carrousel"
+import Carousel from "../../components/Carousel"
 function Location() {
     return (
         <React.Fragment>
-            <Caroussel />
+            <Carousel />
             <main>
                 Location
             </main>
