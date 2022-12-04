@@ -1,5 +1,5 @@
 import React from "react"
-import CarouselLocation from "../../components/Carousel"
+import CarouselLocation from "../../components/CarouselLocation"
 
 function Location() {
     return (
