@@ -7,7 +7,7 @@ function Carousel() {
 
     return (
         <section>
-            <ImageGallery items={images} />;
+
         </section>
     )
 }
