@@ -1,13 +1,12 @@
 
 import React, { useState, useEffect } from "react"
-import PropTypes from 'prop-types';
-import FontAwesome from "../FontAwesome/index.jsx";
 
-import contentPanel from "../../utils/dataPanel.js"
+import FontAwesome from "../../Atoms/FontAwesome/index.jsx";
+
+import contentPanel from "../../utils/dataPanelAbout.js"
 
 //styled component
 import { StyledCollapseContainer, StyledPanel } from "./StyledCollapse"
-
 
 function CollapseAbout({ children }) {
     const [key, setActiveKey] = useState(0)
@@ -19,7 +18,6 @@ function CollapseAbout({ children }) {
         return setActiveKey(1)
 
     }, [])
-
 
     return (
         <StyledCollapseContainer accordion={false} activeKey={key} onChange={key => {
@@ -44,7 +42,6 @@ function CollapseAbout({ children }) {
 
             <StyledPanel
                 key={1}
-
                 arrow={openPanel1 ? "top-arrow" : "bottom-arrow"}
                 header={contentPanel[1]["title"]}
                 expandIcon={FontAwesome}
@@ -91,10 +88,6 @@ function CollapseAbout({ children }) {
             </StyledPanel>
         </StyledCollapseContainer >
     )
-    function desactiveKey() {
-        setActiveKey(0)
-
-    }
 
 }
 

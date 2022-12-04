@@ -1,6 +1,4 @@
 import styled from "styled-components"
-import { createGlobalStyle } from "styled-components"
-
 import colors from "../../utils/colors"
 
 const StyledPage404 = styled.main`

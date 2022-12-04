@@ -1,10 +1,7 @@
 import styled from "styled-components"
 
-//import icon font Awesomestyled components
-import FontAwesome from "../FontAwesome"
-
-//Rc- collapse
-import RcCollapse, { Panel } from "rc-collapse"
+//import Rc- collapse
+import RcCollapse from "rc-collapse"
 
 import colors from "../../utils/colors"
 
@@ -35,10 +32,8 @@ width: 100%;
 }
 .rc-collapse-content-box{
     padding: 27px 10px 0 15px;
-    
-  
+     
 }
-
 
 .rc-collapse-expand-icon{
     color: ${colors.backgroundBlack};
