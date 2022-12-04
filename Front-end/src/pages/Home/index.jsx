@@ -24,7 +24,7 @@ function Home() {
                 <StyledGallery className="Gallery">
 
                     {appartmentData.map(({ id, title }) => (
-                        <StyledLinkCard key={id} >
+                        <StyledLinkCard to={`location/${id}`} key={id} >
                             <CardLocation title={title}
                             />
                         </StyledLinkCard>
