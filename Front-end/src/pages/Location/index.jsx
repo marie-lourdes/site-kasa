@@ -1,8 +1,13 @@
+import React from "react"
+import Caroussel from "../../components/Carrousel"
 function Location() {
     return (
-        <main>
-            Location
-        </main>
+        <React.Fragment>
+            <Caroussel />
+            <main>
+                Location
+            </main>
+        </React.Fragment>
     )
 }
 
