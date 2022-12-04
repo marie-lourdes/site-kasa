@@ -49,7 +49,7 @@ button {
     max-width: 1240px;
 }
 
-.main-content{
+.main-content {
     width: 100%;
 }
 
@@ -59,8 +59,8 @@ main {
     margin: 3% 0;
     display: flex;
     flex-direction: column;
-    with: 100 %;
-    box-sizing: border - box;
+    width: 100%;
+    box-sizing: border-box;
 
 }
 
