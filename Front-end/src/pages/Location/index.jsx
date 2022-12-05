@@ -17,6 +17,7 @@ function Location() {
     console.log("datapicture", dataPictures)
     console.log("dataonelocation", dataOneLocation)
 
+
     // requete des données d une location via son parametre de recherche "id", a chaque modification de l id dans le tableau de dependance de useEffect  et chargement des données de la requete fetch  dans le state du composant via la fonction setDataOneLocation
     useEffect(() => {
         async function reqData() {

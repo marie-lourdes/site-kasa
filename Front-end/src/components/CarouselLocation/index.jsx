@@ -21,11 +21,14 @@ function CarouselLocation({ children, url }) {
             /*les propControls render de nuka carousel controle l affichage des elements 
             avec les valeurs des props currentSlide, slideCount, previousSlide, nextSlide recupérées en parametre de la fonction des propControl*/
 
-            renderBottomCenterControls={({ currentSlide, slideCount }) => (
+            renderBottomCenterControls={({ currentSlide, slideCount, pagingDotsIndices }) => {
+
                 /* le bullet s saffiche que si il y a plus d 'une image dans la carroussel, idem pour les boutons suivant et precedent*/
                 slideCount > 1 &&
-                <div>{currentSlide + 1}/{slideCount}</div>
-            )}
+                    <div> {currentSlide + 1} /{slideCount}</div >
+                console.log("array slide and key-index", pagingDotsIndices)
+            }
+            }
 
             renderCenterLeftControls={({ previousSlide, slideCount }) => (
                 slideCount > 1 &&
@@ -44,13 +47,14 @@ function CarouselLocation({ children, url }) {
             {/*children props img}*/}
             {children}
 
-        </StyledCarousel>
+        </StyledCarousel >
 
     )
 }
-// verification du tableau d images de type string  "generé par nuka-carousel"" de la carousel et le caractere obligatoire
+// verification du tableau d url de type string  "de la base de données recupérés  dans la carousel et le caractere obligatoire
+// pour verifier et respecter la structure de la base de données lorsqu une nouvelle donnée d image est inseré, doit etre sous forme de tableau string comme les données images des autres location
 CarouselLocation.propTypes = {
-    url: PropTypes.arrayOf(PropTypes.string.isRequired),
+    url: PropTypes.arrayOf(PropTypes.string.isRequired)
 
 }
 
