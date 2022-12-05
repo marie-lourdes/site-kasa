@@ -13,7 +13,7 @@ function Location() {
 
     const titreAlt = dataPictures && dataPictures.map((url) => (
 
-        url.slice(-21, -4)
+        url.slice(-5, -4)
 
 
     ))
@@ -47,7 +47,7 @@ function Location() {
                 {dataPictures &&
                     dataPictures.map((url) => (
 
-                        < img src={url} alt={titreAlt} />
+                        < img src={url} alt={`photo-${url.slice(-5, -4)}`} />
                     ))}
 
 
