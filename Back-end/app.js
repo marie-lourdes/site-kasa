@@ -1,7 +1,7 @@
 const express = require("express")
 const app = express();
 const routerAppartments = require("./routes/logements")
-app.use(express.json())
+
 corsConfiguration();
 
 function corsConfiguration() {

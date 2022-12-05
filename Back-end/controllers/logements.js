@@ -7,7 +7,7 @@ exports.getOneAppartment = (req, res) => {
         const query = req.params.id
         const oneAppartment = data.find(({ id }) => id === query)
         console.log("oneAPPARTEMENT", oneAppartment)
-        res.status(200).json({ oneAppartment })
+        res.status(200).json(oneAppartment)
 
     } catch (error) {
         res.status(404).json({ error: "page not found" })
