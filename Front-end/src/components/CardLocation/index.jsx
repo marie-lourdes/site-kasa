@@ -7,7 +7,7 @@ import PropTypes from "prop-types"
 import { StyledCardLocation } from "./StyledCardLocation"
 
 function CardLocation({ title, cover }) {
-
+    // gestion de l erreur de type de données
     if (typeof title === "number") return <div className="error-data-card">Données erronées...</div>
 
     return (

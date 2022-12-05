@@ -1,26 +1,26 @@
 const data = require("../data/logements.json")
 //console.log(data)
 
-exports.getOneAppartment = (req, res) => {
-
+// configuration des operations/requêtes Crud : READ  pour envoyer au requerant en reponse de la requête toutes les locations ou un seul selon le parametre de recherche "id" de location
+// envoit de la reponse avec une location selon l id
+exports.getOneLocation = (req, res) => {
     try {
         const query = req.params.id
-        const oneAppartment = data.find(({ id }) => id === query)
-        console.log("oneAPPARTEMENT", oneAppartment)
-        res.status(200).json(oneAppartment)
+        const location = data.find(({ id }) => id === query)
+        console.log("oneAPPARTEMENT", location)
+        res.status(200).json(location)
 
     } catch (error) {
         res.status(404).json({ error: "page not found" })
         console.log("requête appartement echouée")
 
     }
-
-
 };
-exports.getAllAppartments = (req, res) => {
+// envoi de la reponse avec toutes les locations de l api
+exports.getAllLocations = (req, res) => {
     try {
-        const appartmentData = data.map((element) => element)
-        res.status(200).json({ appartmentData })
+        const allLocations = data.map((element) => element)
+        res.status(200).json({ allLocations })
         console.log("requete des appartement reussie")
 
     } catch (error) {

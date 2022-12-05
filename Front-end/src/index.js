@@ -4,8 +4,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import App from './layouts/App'
 import reportWebVitals from './reportWebVitals'
 
-//import DataProvider
-import { DataProvider } from "./utils/contexte/DataContext"
+//import DataAllLocationsProvider
+import { DataAllLocationsProvider } from "./utils/contexte-fetch/DataAllLocationsContext"
 
 //composants react du layout App
 import Home from "./pages/Home"
@@ -19,7 +19,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
     <Router>
-      <DataProvider>
+      <DataAllLocationsProvider>
+
         <App >
           {/* children*/}
           <div>
@@ -33,7 +34,7 @@ root.render(
             </Routes >
           </div>
         </App>
-      </DataProvider>
+      </DataAllLocationsProvider>
     </Router >
   </React.StrictMode >
 )
