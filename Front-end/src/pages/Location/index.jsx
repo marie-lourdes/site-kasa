@@ -7,6 +7,9 @@ import CarouselLocation from "../../components/CarouselLocation"
 //import du TAG 
 import Tag from "../../Atoms/Tag"
 
+//styled component
+import StyledMainLocation from "./StyledLocation"
+
 function Location() {
     //recupération du parametre
     const param = useParams()
@@ -61,7 +64,7 @@ function Location() {
                         < img key={`${url.slice(-5, -4)}`} src={url} alt={`photo de location-${url.slice(-5, -4)}`} />
                     ))}
             </CarouselLocation>
-            <main>
+            <StyledMainLocation>
                 <div>
                     <div> {dataTitle && dataTitle}</div>
 
@@ -69,11 +72,14 @@ function Location() {
                     <Tag tags={dataTag} />
                 </div>
                 <div>
-                    <span>{dataOwner.name}</span>
-                    <span className="photo-owner">{dataOwner.picture}</span>
+                    <span>{dataOwner?.name && dataOwner.name}</span>
+                    <div className="photo-owner">
+                        <img src={`${dataOwner?.picture && dataOwner.picture}`} />
+                    </div>
+
 
                 </div>
-            </main>
+            </StyledMainLocation>
         </React.Fragment>
     )
 
