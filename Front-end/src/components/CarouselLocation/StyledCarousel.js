@@ -15,7 +15,7 @@ const StyledCarousel = styled(Carousel)`
         max-height: 415px;
         min-height: 415px;
         object-fit: cover;
-        object-position: center 65%;
+        object-position: center 50%;
         width:100%;       
     }
   

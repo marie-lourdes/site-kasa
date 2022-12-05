@@ -1,3 +1,4 @@
+
 import React from "react"
 import { useState, useEffect } from "react"
 import { useParams } from "react-router"
@@ -9,6 +10,15 @@ function Location() {
     const { id } = param
     const [dataOneLocation, setDataOneLocation] = useState({})
     const dataPictures = dataOneLocation?.pictures
+
+    const titreAlt = dataPictures && dataPictures.map((url) => (
+
+        url.slice(-21, -4)
+
+
+    ))
+
+    console.log("titre alt", titreAlt)
 
     console.log("datapicture", dataPictures)
     console.log("dataonelocation", dataOneLocation)
@@ -37,7 +47,7 @@ function Location() {
                 {dataPictures &&
                     dataPictures.map((url) => (
 
-                        <img src={url} alt="titrealt" />
+                        < img src={url} alt={titreAlt} />
                     ))}
 
 
