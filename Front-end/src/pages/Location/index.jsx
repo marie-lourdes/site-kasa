@@ -14,6 +14,13 @@ function Location() {
     const [error, setError] = useState(false)
     //verification d une chaine de caractere, comme une propriété dans l objet dataoneLocation , avant de recuperer la proprité pictures pour eviter des erreur "undefined"
     const dataPictures = dataOneLocation?.pictures
+    const dataTitle = dataOneLocation?.title
+    //Inversement des données de la position de la location de la base d données de l API
+    const positionLocation = dataOneLocation?.location
+    const dataPosition = positionLocation && positionLocation.split("-").reverse().join(" , ")
+
+    console.log("data position", dataPosition)
+
     console.log("datapicture", dataPictures)
     console.log("dataonelocation", dataOneLocation)
 
@@ -49,7 +56,11 @@ function Location() {
                     ))}
             </CarouselLocation>
             <main>
-                Location
+                <div>
+                    <div> {dataTitle}</div>
+
+                    <div>{dataPosition}</div>
+                </div>
             </main>
         </React.Fragment>
     )
