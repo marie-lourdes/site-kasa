@@ -1,7 +1,7 @@
 const express = require("express")
 const app = express();
 const routerAppartments = require("./routes/logements")
-
+app.use(express.json())
 corsConfiguration();
 
 function corsConfiguration() {
@@ -15,6 +15,6 @@ function corsConfiguration() {
 
 
 
-app.use("/api-kasa", routerAppartments)
+app.use("/api-kasa/logements/", routerAppartments)
 
 module.exports = app;

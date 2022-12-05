@@ -6,7 +6,10 @@ import { ArrowLeft, ArrowRight } from "../../Atoms/IconsFontAwesome"
 //styled component avec nuka-carousel integré
 import StyledCarousel from "./StyledCarousel.js"
 
+
 function CarouselLocation({ children }) {
+
+
     return (
         /*affichage de la caroussel avec la definition des props de nuka-carousel pour repondre aux contraintes fonctionnelles du client*/
         <StyledCarousel
