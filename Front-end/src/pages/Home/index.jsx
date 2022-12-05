@@ -20,7 +20,7 @@ function Home() {
                     <h1> Chez vous, partout et ailleurs</h1>
                 </div>
             </StyledBanner>
-            <main>
+            <main className="main-Home-page">
                 {/* affichage d un message d erreur dans le dom */}
                 {error && <div>Une erreur est survenue...</div>}
                 <StyledGallery className="Gallery">

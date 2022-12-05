@@ -21,10 +21,13 @@ function Location() {
     const dataPictures = dataOneLocation?.pictures
     const dataTitle = dataOneLocation?.title
     const dataTag = dataOneLocation?.tags
-    const dataOwner = dataOneLocation?.host
+
     //Inversement des données de la position de la location de la base d données de l API
     const positionLocation = dataOneLocation?.location
     const dataPosition = positionLocation && positionLocation.split("-").reverse().join(" , ")
+    {/* les données du nom complet  du propriétaire de la base de lA base de données de l 'API est scindé en deux partie: prénom et nom*/ }
+    const dataOwner = dataOneLocation?.host
+    const nameOwner = dataOwner?.name.split(" ");
 
     console.log("data position", dataPosition)
 
@@ -65,14 +68,18 @@ function Location() {
                     ))}
             </CarouselLocation>
             <StyledMainLocation>
-                <div>
+                <div className="column-left-info-location">
                     <div> {dataTitle && dataTitle}</div>
 
                     <div>{dataPosition && dataPosition}</div>
                     <Tag tags={dataTag} />
                 </div>
-                <div>
-                    <span>{dataOwner?.name && dataOwner.name}</span>
+                <div className="column-right-info-owner">
+                    {/*nom et prenom*/}
+                    <div>
+                        <div>{nameOwner && nameOwner[0]}</div>
+                        <div>{nameOwner && nameOwner[1]}</div>
+                    </div>
                     <div className="photo-owner">
                         <img src={`${dataOwner?.picture && dataOwner.picture}`} />
                     </div>

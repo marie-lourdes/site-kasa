@@ -54,14 +54,18 @@ button {
 }
 
 main {
-    border-radius: 25px;
-    background: ${colors.backgroundMain};
+  
     margin: 3% 0;
     display: flex;
     flex-direction: column;
     width: 100%;
     box-sizing: border-box;
 
+}
+
+main.main-Home-page{
+    border-radius: 25px;
+    background: ${colors.backgroundMain};
 }
 
 ul {
