@@ -7,6 +7,11 @@ function Location() {
     const param = useParams()
     console.log("param", param)
     const { id } = param
+    const [dataOneLocation, setDataOneLocation] = useState({})
+    const dataPictures = dataOneLocation?.pictures
+
+    console.log("datapicture", dataPictures)
+    console.log("dataonelocation", dataOneLocation)
     useEffect(() => {
         async function reqData() {
             try {
@@ -14,22 +19,28 @@ function Location() {
                 console.log("response", response)
                 const dataLocation = await response.json()
                 console.log("datalocation", dataLocation)
-
+                setDataOneLocation(dataLocation)
             } catch (err) {
                 console.log(err)
 
             }
         }
         reqData();
-    }, [])
+
+    }, [id])
+
+
+
     return (
         <React.Fragment>
             <CarouselLocation >
-                <img src="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg" alt="titrealt" />
-                <img src="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-2.jpg" alt="titrealt" />
-                <img src="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-3.jpg" alt="titrealt" />
-                <img src="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-4.jpg" alt="titrealt" />
-                <img src="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-5.jpg" alt="titrealt" />
+                {dataPictures &&
+                    dataPictures.map((url) => (
+
+                        <img src={url} alt="titrealt" />
+                    ))}
+
+
             </CarouselLocation>
             <main>
                 Location
