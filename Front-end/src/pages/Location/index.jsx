@@ -2,8 +2,10 @@ import React from "react"
 import { useState, useEffect } from "react"
 import { useParams } from "react-router"
 
-
+//Import du composant react carousel integrant le composant carousel de nuka-carousel stylisé par styled-components
 import CarouselLocation from "../../components/CarouselLocation"
+//import du TAG 
+import Tag from "../../Atoms/Tag"
 
 function Location() {
     //recupération du parametre
@@ -12,9 +14,11 @@ function Location() {
     const { id } = param
     const [dataOneLocation, setDataOneLocation] = useState({})
     const [error, setError] = useState(false)
-    //verification d une chaine de caractere, comme une propriété dans l objet dataoneLocation , avant de recuperer la proprité pictures pour eviter des erreur "undefined"
+    //verification d une chaine de caractere, comme une propriété dans l objet dataoneLocation , avant de recuperer les propriétés  pour eviter des erreur "undefined"
     const dataPictures = dataOneLocation?.pictures
     const dataTitle = dataOneLocation?.title
+    const dataTag = dataOneLocation?.tags
+    const dataOwner = dataOneLocation?.host
     //Inversement des données de la position de la location de la base d données de l API
     const positionLocation = dataOneLocation?.location
     const dataPosition = positionLocation && positionLocation.split("-").reverse().join(" , ")
@@ -23,6 +27,8 @@ function Location() {
 
     console.log("datapicture", dataPictures)
     console.log("dataonelocation", dataOneLocation)
+    console.log("data tags", dataTag)
+    console.log("dataowner", dataOwner)
 
 
     // requete des données d une location via son parametre de recherche "id", a chaque modification de l id dans le tableau de dependance de useEffect  et chargement des données de la requete fetch  dans le state du composant via la fonction setDataOneLocation
@@ -57,9 +63,15 @@ function Location() {
             </CarouselLocation>
             <main>
                 <div>
-                    <div> {dataTitle}</div>
+                    <div> {dataTitle && dataTitle}</div>
 
-                    <div>{dataPosition}</div>
+                    <div>{dataPosition && dataPosition}</div>
+                    <Tag tags={dataTag} />
+                </div>
+                <div>
+                    <span>{dataOwner.name}</span>
+                    <span className="photo-owner">{dataOwner.picture}</span>
+
                 </div>
             </main>
         </React.Fragment>

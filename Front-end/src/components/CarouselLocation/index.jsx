@@ -24,10 +24,11 @@ function CarouselLocation({ children, url }) {
             renderBottomCenterControls={({ currentSlide, slideCount, pagingDotsIndices }) => {
 
                 /* le bullet s saffiche que si il y a plus d 'une image dans la carroussel, idem pour les boutons suivant et precedent*/
-                slideCount > 1 &&
-                    <div> {currentSlide + 1} /{slideCount}</div >
                 /* incrementation de 1 pour afficher l index du slide correspondant au numero de l image*/
                 console.log("array slide and key-index", pagingDotsIndices)
+                return slideCount > 1 &&
+                    <div> {currentSlide + 1} /{slideCount}</div >
+
             }
             }
 
