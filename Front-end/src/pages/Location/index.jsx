@@ -1,7 +1,8 @@
-
 import React from "react"
 import { useState, useEffect } from "react"
 import { useParams } from "react-router"
+
+
 import CarouselLocation from "../../components/CarouselLocation"
 
 function Location() {
@@ -38,12 +39,12 @@ function Location() {
     if (error) return <div>Une erreur est survenue</div>
     return (
         <React.Fragment>
-            <CarouselLocation >
+            <CarouselLocation url={dataPictures && dataPictures}>
                 {/* //verifier que les url de la propriété pictures ont bien été chargé par fetch en verifiant bien que datapictures contien ces valeurs urls */}
                 {dataPictures &&
                     dataPictures.map((url) => (
                         //titre alt avec l url slicé pour recuperer le numero de la photo
-                        < img src={url} alt={`photo de location-${url.slice(-5, -4)}`} />
+                        < img key={`${url.slice(-5, -4)}`} src={url} alt={`photo de location-${url.slice(-5, -4)}`} />
                     ))}
             </CarouselLocation>
             <main>
@@ -51,6 +52,7 @@ function Location() {
             </main>
         </React.Fragment>
     )
+
 }
 
 export default Location

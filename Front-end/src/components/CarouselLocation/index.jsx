@@ -1,4 +1,6 @@
 
+// import PropTypes
+import PropTypes from "prop-types"
 
 // import des icons Font-Awesome ArrowLeft et ArrowRight
 import { ArrowLeft, ArrowRight } from "../../Atoms/IconsFontAwesome"
@@ -7,7 +9,7 @@ import { ArrowLeft, ArrowRight } from "../../Atoms/IconsFontAwesome"
 import StyledCarousel from "./StyledCarousel.js"
 
 
-function CarouselLocation({ children }) {
+function CarouselLocation({ children, url }) {
 
 
     return (
@@ -45,6 +47,11 @@ function CarouselLocation({ children }) {
         </StyledCarousel>
 
     )
+}
+// verification du tableau d images de type string  "generé par nuka-carousel"" de la carousel et le caractere obligatoire
+CarouselLocation.propTypes = {
+    url: PropTypes.arrayOf(PropTypes.string.isRequired),
+
 }
 
 export default CarouselLocation
