@@ -15,6 +15,14 @@ function ArrowRight() {
 
     )
 }
+function RateStar() {
+    const starNumber = [1, 2, 3, 4, 5]
+    return (
+        starNumber.map((star) => < i class="fa-sharp fa-solid fa-star" ></i >)
 
 
-export { ArrowUp, ArrowLeft, ArrowRight }
+    )
+}
+
+
+export { ArrowUp, ArrowLeft, ArrowRight, RateStar }

@@ -6,6 +6,7 @@ import { useParams } from "react-router"
 import CarouselLocation from "../../components/CarouselLocation"
 //import du TAG 
 import Tag from "../../Atoms/Tag"
+import { RateStar } from "../../Atoms/IconsFontAwesome"
 
 //styled component
 import StyledMainLocation from "./StyledLocation"
@@ -82,6 +83,9 @@ function Location() {
                     </div>
                     <div className="photo-owner">
                         <img src={`${dataOwner?.picture && dataOwner.picture}`} />
+                    </div>
+                    <div>
+
                     </div>
 
 
