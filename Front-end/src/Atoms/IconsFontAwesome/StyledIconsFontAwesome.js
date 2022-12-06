@@ -10,7 +10,10 @@ color: ${colors.secondary};
 
 const StyledRateStar = styled.i`
 
-color:${({ rating, value }) => value <= rating ? `${colors.primary}` : ` #E3E3E3`}
+color:${({ rating, value }) => value <= rating ? `${colors.primary}` : ` #E3E3E3`};
+font-size: 1.3em;
+margin-left:5%;
+
 
 
 `

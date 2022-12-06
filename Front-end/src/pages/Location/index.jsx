@@ -81,7 +81,7 @@ function Location() {
                     nameOwner={nameOwner}
                     dataOwner={dataOwner?.pictures} >
                     <div className="column-left-info-location">
-                        <div> {dataTitle && dataTitle}</div>
+                        <div className="title-location"> {dataTitle && dataTitle}</div>
 
                         <div>{dataPosition && dataPosition}</div>
                         <StyledTagContainer>
@@ -96,7 +96,7 @@ function Location() {
                     <div className="column-right-info-owner">
                         {/*nom et prenom*/}
                         <div className="info-owner">
-                            <div>
+                            <div className="name-owner">
                                 <div>{nameOwner && nameOwner[0]}</div>
                                 <div>{nameOwner && nameOwner[1]}</div>
                             </div>
@@ -109,7 +109,7 @@ function Location() {
                         </div>
                     </div>
                 </StyledHeaderInfoLocation>
-                <div className="collapse-descript-equipment">
+                <div className="collapse-descriptin-equipment">
                     <CollapseLocation />
                 </div>
             </main>
