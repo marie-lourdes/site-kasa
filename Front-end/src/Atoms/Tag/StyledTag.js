@@ -10,21 +10,16 @@ color: ${colors.secondary};
 justify-content: center;
 align-items: center;
 display: flex;
-margin-right:2%;
+margin-right: 2%;
 box-sizing: border-box;
 white-space: nowrap;
-width:30%;
-
+width: 30%;
 
 `
-
 const StyledTagContainer = styled.div`
 display:flex;
-
 align-items: center;
 width: 100%;
 box-sizing: border-box;
-
 `
-
 export { StyledTag, StyledTagContainer }

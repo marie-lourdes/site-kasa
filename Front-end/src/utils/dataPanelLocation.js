@@ -11,14 +11,15 @@ const contentPanel = [
     {
 
         title: `Equipements`,
-        content:
-            ` Climatisation
-            Wi-Fi
-            Cuisine
-            Espace de travail
-            Fer à repasser
-            Sèche-cheveux
-            Cintres`
+        content: [
+            " Climatisation",
+            "Wi-Fi",
+            "Cuisine",
+            " Espace de travail",
+            " Fer à repasser",
+            "Sèche-cheveux",
+            " Cintres",
+        ]
     }
 ]
 

@@ -49,7 +49,10 @@ function CollapseAbout() {
                 className="title-collapse"
                 showArrow={true}
                 destroyInactivePanel={true}
-                onClick={() => setPanel1(openPanel1 && true)}
+                onClick={(e) => {
+                    setPanel1(openPanel1 ? false : true)
+                    e.stopPropagation()
+                }}>
             >
                 {contentPanel[1]["content"]}
 

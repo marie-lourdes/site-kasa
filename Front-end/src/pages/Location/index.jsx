@@ -109,9 +109,9 @@ function Location() {
                         </div>
                     </div>
                 </StyledHeaderInfoLocation>
-                <div className="collapse-descriptin-equipment">
-                    <CollapseLocation />
-                </div>
+
+                <CollapseLocation />
+
             </main>
         </React.Fragment >
     )
