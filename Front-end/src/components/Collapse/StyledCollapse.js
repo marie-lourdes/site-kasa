@@ -7,6 +7,7 @@ import colors from "../../utils/colors"
 
 const StyledCollapseContainer = styled(RcCollapse)`
  width: 85%;
+
 `
 const StyledPanel = styled(RcCollapse.Panel)`
 background: ${colors.backgroundMain};
@@ -20,27 +21,30 @@ width: 100%;
 }
 
 .my-header-class {
-    background:${colors.primary};
-    color: ${colors.secondary};
-    height: 47px;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-   
-   padding-left: 15px;
+    background: ${colors.primary};
+color: ${colors.secondary};
+height: 47px;
+cursor: pointer;
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+padding-left: 15px;
 }
 .rc-collapse-content-box{
     padding: 27px 10px 0 15px;
-     
+
 }
 /* css icon Font awesome arrowUp*/
-.rc-collapse-expand-icon{
-    color:white;
+.rc-collapse-expand-icon {
+    color: white;
     position: absolute;
-    right:10px;
-   ${({ arrow }) => arrow === "bottom-arrow" && `transform: rotate(180deg);`}; 
-   
+    right: 10px;
+   ${({ arrow }) => arrow === "bottom-arrow" && `transform: rotate(180deg);`};
+
 }
 `
+
+/*${({ collapseLocation }) => collapseLocation && => `
+`};*/
 export { StyledCollapseContainer, StyledPanel }

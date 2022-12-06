@@ -1,5 +1,5 @@
 import React from "react"
-import Collapse from "../../components/Collapse"
+import CollapseAbout from "../../components/Collapse/CollapseAbout"
 //styled component
 import StyledAbout from "./StyledAbout.js"
 import StyledBanner from "../../layouts/StyledBanner.js"
@@ -9,7 +9,7 @@ function About() {
         <React.Fragment>
             <StyledBanner $about />
             <StyledAbout className="main-about">
-                <Collapse />
+                <CollapseAbout />
             </StyledAbout>
         </React.Fragment>
     )

@@ -1,8 +1,8 @@
 import styled from "styled-components";
-const StyledMainLocation = styled.main`
+const StyledHeaderInfoLocation = styled.div`
 
 flex-direction:row;
-align-items; center;
+align-items: center;
 
 .column-left-info-location, .column-right-info-owner {
     display: flex;  
@@ -42,4 +42,4 @@ align-items; center;
     justify-content: flex-end;
 }
 `
-export default StyledMainLocation
+export default StyledHeaderInfoLocation

@@ -1,4 +1,3 @@
-
 // import PropTypes
 import PropTypes from "prop-types"
 
@@ -8,10 +7,7 @@ import { ArrowLeft, ArrowRight } from "../../Atoms/IconsFontAwesome"
 //styled component avec nuka-carousel integré
 import StyledCarousel from "./StyledCarousel.js"
 
-
 function CarouselLocation({ children, url }) {
-
-
     return (
         /*affichage de la caroussel avec la definition des props de nuka-carousel pour repondre aux contraintes fonctionnelles du client*/
         <StyledCarousel
@@ -21,15 +17,13 @@ function CarouselLocation({ children, url }) {
             /*les propControls render de nuka carousel controle l affichage des elements 
             avec les valeurs des props currentSlide, slideCount, previousSlide, nextSlide recupérées en parametre de la fonction des propControl*/
 
-            renderBottomCenterControls={({ currentSlide, slideCount, pagingDotsIndices }) => {
+            renderBottomCenterControls={({ currentSlide, slideCount }) =>
 
                 /* le bullet s saffiche que si il y a plus d 'une image dans la carroussel, idem pour les boutons suivant et precedent*/
                 /* incrementation de 1 pour afficher l index du slide correspondant au numero de l image*/
-                console.log("array slide and key-index", pagingDotsIndices)
-                return slideCount > 1 &&
-                    <div> {currentSlide + 1} /{slideCount}</div >
 
-            }
+                slideCount > 1 &&
+                <div> {currentSlide + 1} /{slideCount}</div >
             }
 
             renderCenterLeftControls={({ previousSlide, slideCount }) => (
@@ -57,7 +51,6 @@ function CarouselLocation({ children, url }) {
 // pour verifier et respecter la structure de la base de données lorsqu une nouvelle donnée d image est inseré, doit etre sous forme de tableau string comme les données images des autres location
 CarouselLocation.propTypes = {
     url: PropTypes.arrayOf(PropTypes.string.isRequired)
-
 }
 
 export default CarouselLocation

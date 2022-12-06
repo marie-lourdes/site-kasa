@@ -34,10 +34,6 @@ function RateStar({ rating }) {
 
 
     )
-
-
-
-
 }
 
 
