@@ -22,6 +22,7 @@ display:flex;
 justify-content: space-between;
 align-items: center;
 width: 50%;
+box-sizing: border-box;
 
 `
 

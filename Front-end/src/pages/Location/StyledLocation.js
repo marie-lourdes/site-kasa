@@ -2,6 +2,7 @@ import styled from "styled-components";
 const StyledMainLocation = styled.main`
 
 flex-direction:row;
+align-items; center;
 
 .column-left-info-location, .column-right-info-owner {
     display: flex;  
@@ -9,13 +10,21 @@ flex-direction:row;
 .column-left-info-location {
     flex-direction: column;
     flex: 2;
+    box-sizing: border-box;
 }
 .column-right-info-owner {
-    justify-content: flex-end;
+   
     flex: 1;
-    align-items: center;
+  
+    flex-direction: column;
    
 
+}
+.info-owner {
+    display: flex;
+    flex-direction:row;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .photo-owner {
@@ -27,6 +36,10 @@ flex-direction:row;
     img {
       width:100%;
     }
+}
+.rating {
+    display: flex;
+    justify-content: flex-end;
 }
 `
 export default StyledMainLocation

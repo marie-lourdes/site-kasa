@@ -4,12 +4,13 @@ import { useParams } from "react-router"
 
 //Import du composant react carousel integrant le composant carousel de nuka-carousel stylisé par styled-components
 import CarouselLocation from "../../components/CarouselLocation"
-//import du TAG 
-import Tag from "../../Atoms/Tag"
+//import du TAag et rate star
+
 import { RateStar } from "../../Atoms/IconsFontAwesome"
 
 //styled component
 import StyledMainLocation from "./StyledLocation"
+import { StyledTag, StyledTagContainer } from "../../Atoms/Tag/StyledTag"
 
 function Location() {
     //recupération du parametre
@@ -22,6 +23,8 @@ function Location() {
     const dataPictures = dataOneLocation?.pictures
     const dataTitle = dataOneLocation?.title
     const dataTag = dataOneLocation?.tags
+    const dataRating = dataOneLocation?.rating
+
 
     //Inversement des données de la position de la location de la base d données de l API
     const positionLocation = dataOneLocation?.location
@@ -36,6 +39,7 @@ function Location() {
     console.log("dataonelocation", dataOneLocation)
     console.log("data tags", dataTag)
     console.log("dataowner", dataOwner)
+    console.log("datarating", dataRating)
 
 
     // requete des données d une location via son parametre de recherche "id", a chaque modification de l id dans le tableau de dependance de useEffect  et chargement des données de la requete fetch  dans le state du composant via la fonction setDataOneLocation
@@ -73,27 +77,40 @@ function Location() {
                     <div> {dataTitle && dataTitle}</div>
 
                     <div>{dataPosition && dataPosition}</div>
-                    <Tag tags={dataTag} />
+                    <StyledTagContainer>
+                        {dataTag && dataTag.map((tag, index) => {
+                            console.log("tag", index)
+                            return <StyledTag key={`${index}-${tag}`}>
+                                {tag}
+                            </StyledTag>
+                        })}
+                    </StyledTagContainer>
                 </div>
                 <div className="column-right-info-owner">
                     {/*nom et prenom*/}
-                    <div>
-                        <div>{nameOwner && nameOwner[0]}</div>
-                        <div>{nameOwner && nameOwner[1]}</div>
+                    <div className="info-owner">
+                        <div>
+                            <div>{nameOwner && nameOwner[0]}</div>
+                            <div>{nameOwner && nameOwner[1]}</div>
+                        </div>
+                        <div className="photo-owner">
+                            <img src={`${dataOwner?.picture && dataOwner.picture}`} />
+                        </div>
                     </div>
-                    <div className="photo-owner">
-                        <img src={`${dataOwner?.picture && dataOwner.picture}`} />
+                    <div className="rating">
+                        <RateStar rating={dataRating && dataRating} />
                     </div>
-                    <div>
-
-                    </div>
-
+                </div>
+                <div className="collapse-descript-equipment">
 
                 </div>
             </StyledMainLocation>
-        </React.Fragment>
+        </React.Fragment >
     )
 
 }
+
+
+
 
 export default Location

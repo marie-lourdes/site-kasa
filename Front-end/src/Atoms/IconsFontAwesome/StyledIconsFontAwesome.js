@@ -2,9 +2,17 @@ import styled from "styled-components"
 import colors from "../../utils/colors.js"
 
 
-const StyledIconsFontAwesome = styled.i`
+const StyledIconsCarouselFontAwesome = styled.i`
 font-size: 79.2px;
 color: ${colors.secondary};
 
 `
-export default StyledIconsFontAwesome
+
+const StyledRateStar = styled.i`
+
+color:${({ rating, value }) => value <= rating ? `${colors.primary}` : ` #E3E3E3`}
+
+
+`
+
+export { StyledIconsCarouselFontAwesome, StyledRateStar }
