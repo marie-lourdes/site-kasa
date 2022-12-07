@@ -9,7 +9,7 @@ function Header() {
     return (
         <StyledHeader>
             <div>
-                <img src={logo} alt="logo Kasa" />
+                <img className="logo" src={logo} alt="logo Kasa" />
             </div>
             <nav>
                 <ul>

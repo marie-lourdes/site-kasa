@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import colors from "../../utils/colors"
+import devices_mediaQueries from "../../utils/responsive-design/devices.js"
 
 const StyledHeader = styled.header`
 display: flex;
@@ -8,7 +9,10 @@ align-items: center;
 height: 68px;
 width: 100%;
 padding-top: 40px;
-& > div {
+@media screen and ${devices_mediaQueries.mobile}{
+    width: auto;
+}
+& > .logo {
     height: 68px
 }
 nav {

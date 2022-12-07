@@ -2,6 +2,7 @@ import { createGlobalStyle } from "styled-components"
 import MontserratFontBold from "../assets/fonts/Montserrat-ExtraBold.ttf"
 import MontserratFont from "../assets/fonts/Montserrat-Regular.ttf"
 import colors from "../utils/colors"
+import devices_mediaQueries from "../utils/responsive-design/devices.js"
 
 const StyledGlobal = createGlobalStyle`
 @font-face {
@@ -47,10 +48,16 @@ button {
     width: 100 %;
     margin: 0 auto;
     max-width: 1240px;
+    @media screen and ${devices_mediaQueries.mobile}{
+        width: auto;
+    }
 }
 
 .main-content {
     width: 100%;
+    @media screen and ${devices_mediaQueries.mobile}{
+        width: auto;
+    }
 }
 
 main {
@@ -60,6 +67,9 @@ main {
     flex-direction: column;
     width: 100%;
     box-sizing: border-box;
+    @media screen and ${devices_mediaQueries.mobile}{
+        width: auto;
+    }
 
 }
 
