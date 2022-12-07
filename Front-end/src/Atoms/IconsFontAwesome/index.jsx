@@ -1,5 +1,5 @@
 import React from "react"
-import { StyledIconsCarouselFontAwesome, StyledRateStar } from "./StyledIconsFontAwesome"
+import { StyledIconsArrowCarouselFontAwesome, StyledRateStar } from "./StyledIconsFontAwesome.js"
 import { useState } from "react"
 
 function ArrowUp() {
@@ -10,19 +10,18 @@ function ArrowUp() {
 
 function ArrowLeft() {
     return (
-        <StyledIconsCarouselFontAwesome className="fa-solid fa-angle-left"></StyledIconsCarouselFontAwesome>
+        <StyledIconsArrowCarouselFontAwesome className="fa-solid fa-angle-left"></StyledIconsArrowCarouselFontAwesome>
     )
 }
 
 function ArrowRight() {
     return (
-        <StyledIconsCarouselFontAwesome className="fa-solid fa-angle-right"></StyledIconsCarouselFontAwesome>
+        <StyledIconsArrowCarouselFontAwesome className="fa-solid fa-angle-right"></StyledIconsArrowCarouselFontAwesome>
     )
 }
 
 function RateStar({ rating }) {
     const rate = parseInt(rating)
-
     return (
         <React.Fragment>
             < StyledRateStar value={1} rating={rate} key={1} className="fa-sharp fa-solid fa-star" ></StyledRateStar >

@@ -24,7 +24,7 @@ function CollapseAbout() {
             setActiveKey(key)
             //renvoit le tableau 
             console.log("key", key)
-        }}  >
+        }}>
             <StyledPanel
                 key={0}
                 arrow={openPanel0 ? "top-arrow" : "bottom-arrow"}
@@ -39,7 +39,6 @@ function CollapseAbout() {
                     e.stopPropagation()
                 }}>
 
-
                 {contentPanel[0]["content"]}
             </StyledPanel>
 
@@ -53,12 +52,11 @@ function CollapseAbout() {
                 showArrow={true}
                 destroyInactivePanel={true}
                 onClick={(e) => {
-                    setPanel1(openPanel1 && true)
+                    setPanel1(openPanel1 ? false : true)
                     e.stopPropagation()
                 }}>
 
                 {contentPanel[1]["content"]}
-
             </StyledPanel>
 
             <StyledPanel
@@ -77,7 +75,6 @@ function CollapseAbout() {
                 }}>
 
                 {contentPanel[2]["content"]}
-
             </StyledPanel>
 
             <StyledPanel
@@ -94,9 +91,8 @@ function CollapseAbout() {
                     setPanel3(openPanel3 ? false : true)
                     e.stopPropagation()
                 }}>
-            >
-                {contentPanel[3]["content"]}
 
+                {contentPanel[3]["content"]}
             </StyledPanel>
         </StyledCollapseContainer >
     )

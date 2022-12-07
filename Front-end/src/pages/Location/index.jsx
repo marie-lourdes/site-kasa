@@ -109,9 +109,9 @@ function Location() {
                         </div>
                     </div>
                 </StyledHeaderInfoLocation>
-
-                <CollapseLocation />
-
+                <div className="collapse-location-row">
+                    <CollapseLocation />
+                </div>
             </main>
         </React.Fragment >
     )

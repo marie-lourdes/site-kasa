@@ -11,7 +11,7 @@ const StyledCollapseContainer = styled(RcCollapse)`
 ${({ $collapseLocation }) => $collapseLocation && `
 display: flex;
 justify-content: space-between;
-width: 100%;
+width: 47%;
 margin-top: 2%;`};
 `
 const StyledPanel = styled(RcCollapse.Panel)`
@@ -21,12 +21,6 @@ position: relative;
 line-height: 1.5em;
 font-size: 1.5em;
 width: 100%;
-
-${({ $panelLocation }) => $panelLocation && `
-width: 48%;
-.rc-collapse-content-box, .my-header-class {
-    font-size: 0.75em;
-}`}
 
 &, .my-header-class {
     border-radius: 5px;
@@ -46,6 +40,13 @@ padding-left: 15px;
 .rc-collapse-content-box {
     padding: 27px 10px 0 15px;
 }
+
+${({ $panelLocation }) => $panelLocation && `
+width: 100%;
+.rc-collapse-content-box, .my-header-class {
+    font-size: 0.75em;
+    padding-left: 20px;
+}`}
 
 /* css icon Font awesome arrowUp*/
 .rc-collapse-expand-icon {

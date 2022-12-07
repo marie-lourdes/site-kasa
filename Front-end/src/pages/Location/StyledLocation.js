@@ -50,6 +50,12 @@ align-items: start;
     display: flex;
     justify-content: flex-end;
 }
+& + .collapse-location-row {
+ display: flex;
+width: 100%;
+justify-content: space-between;
+
+}
 `
 
 export default StyledHeaderInfoLocation
