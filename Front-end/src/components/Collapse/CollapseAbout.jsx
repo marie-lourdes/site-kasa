@@ -36,7 +36,7 @@ function CollapseAbout() {
                 showArrow={true}
                 onClick={(e) => {
                     setPanel0(openPanel0 ? false : true)
-                    e.stopPropagation()
+
                 }}>
 
                 {contentPanel[0]["content"]}
@@ -53,7 +53,7 @@ function CollapseAbout() {
                 destroyInactivePanel={true}
                 onClick={(e) => {
                     setPanel1(openPanel1 ? false : true)
-                    e.stopPropagation()
+
                 }}>
 
                 {contentPanel[1]["content"]}
@@ -71,7 +71,7 @@ function CollapseAbout() {
                 showArrow={true}
                 onClick={(e) => {
                     setPanel2(openPanel2 ? false : true)
-                    e.stopPropagation()
+
                 }}>
 
                 {contentPanel[2]["content"]}
@@ -89,7 +89,7 @@ function CollapseAbout() {
                 showArrow={true}
                 onClick={(e) => {
                     setPanel3(openPanel3 ? false : true)
-                    e.stopPropagation()
+
                 }}>
 
                 {contentPanel[3]["content"]}

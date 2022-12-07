@@ -5,12 +5,13 @@ import RcCollapse from "rc-collapse"
 
 import colors from "../../utils/colors"
 
+
 const StyledCollapseContainer = styled(RcCollapse)`
  width: 85%;
 
+
 ${({ $collapseLocation }) => $collapseLocation && `
-display: flex;
-justify-content: space-between;
+
 width: 47%;
 margin-top: 2%;`};
 `
@@ -21,6 +22,9 @@ position: relative;
 line-height: 1.5em;
 font-size: 1.5em;
 width: 100%;
+display: grid;
+grid-template-columns: repeat(1, 1fr);
+
 
 &, .my-header-class {
     border-radius: 5px;
@@ -37,8 +41,11 @@ align-items: center;
 padding-left: 15px;
 }
 
-.rc-collapse-content-box {
+.content-box {
     padding: 27px 10px 0 15px;
+}
+.content-box--padding {
+    padding-bottom: 35px;
 }
 
 ${({ $panelLocation }) => $panelLocation && `

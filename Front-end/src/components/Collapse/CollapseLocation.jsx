@@ -11,8 +11,10 @@ function CollapseLocation() {
     return (
         <>
             <StyledCollapseContainer $collapseLocation accordion={false}>
+
                 <StyledPanel
                     $panelLocation
+                    $panelLocationDescription
                     key={0}
                     arrow={openPanelLocation0 ? "top-arrow" : "bottom-arrow"}
                     header={contentPanel[0]["title"]}
@@ -21,11 +23,13 @@ function CollapseLocation() {
                     headerClass="my-header-class"
                     className="title-collapse"
                     showArrow={true}
-                    onClick={(e) => {
+                    onClick={() => {
                         setPanelLocation0(openPanelLocation0 ? false : true)
-                        e.stopPropagation()
+
                     }}>
-                    {contentPanel[0]["content"]}
+                    <div className="content-box content-box--padding">
+                        {contentPanel[0]["content"]}
+                    </div>
                 </StyledPanel>
             </StyledCollapseContainer>
             <StyledCollapseContainer $collapseLocation accordion={false}>
@@ -37,15 +41,17 @@ function CollapseLocation() {
                     headerClass="my-header-class"
                     className="title-collapse"
                     showArrow={true}
-                    onClick={(e) => {
+                    onClick={() => {
                         setPanelLocation1(openPanelLocation1 ? false : true)
-                        e.stopPropagation()
+
                     }}>
-                    <ul>
-                        {contentPanel[1]["content"].map((listEquipement) =>
-                            <li>{listEquipement}</li>
-                        )}
-                    </ul>
+                    <div className="content-box">
+                        <ul>
+                            {contentPanel[1]["content"].map((listEquipement) =>
+                                <li>{listEquipement}</li>
+                            )}
+                        </ul>
+                    </div>
 
                 </StyledPanel>
 
