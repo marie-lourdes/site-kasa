@@ -1,10 +1,10 @@
 import React from "react"
-import { StyledIconsArrowCarouselFontAwesome, StyledRateStar } from "./StyledIconsFontAwesome.js"
+import { StyledIconsArrowCarouselFontAwesome, StyledIconsArrowUpFontAwesome, StyledRateStar } from "./StyledIconsFontAwesome.js"
 import { useState } from "react"
 
 function ArrowUp() {
     return (
-        <i className="fa-solid fa-angle-up"></i>
+        <StyledIconsArrowUpFontAwesome className="fa-solid fa-angle-up"></StyledIconsArrowUpFontAwesome>
     )
 }
 

@@ -47,8 +47,8 @@ function CollapseLocation() {
                     }}>
                     <div className="content-box">
                         <ul>
-                            {contentPanel[1]["content"].map((listEquipement) =>
-                                <li>{listEquipement}</li>
+                            {contentPanel[1]["content"].map((listEquipement, index) =>
+                                <li key={`${index}-${listEquipement}`}>{listEquipement}</li>
                             )}
                         </ul>
                     </div>

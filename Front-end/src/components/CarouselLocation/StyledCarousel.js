@@ -22,7 +22,7 @@ const StyledCarousel = styled(Carousel)`
         @media screen and ${devices_mediaQueries.mobile} {
           max-height: 255px;
           min-height: 255px; 
-      }       
+        }       
       }
   
 `

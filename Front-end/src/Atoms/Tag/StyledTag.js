@@ -13,7 +13,7 @@ display: flex;
 margin-right: 2%;
 box-sizing: border-box;
 white-space: nowrap;
-width: 30%;
+width: 22%;
 @media screen and ${devices_mediaQueries.mobile} {
    font-size: 0.625em; 
    padding: 2.16px 29px 1.84px;

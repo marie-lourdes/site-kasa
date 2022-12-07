@@ -8,13 +8,14 @@ import colors from "../../utils/colors"
 
 
 const StyledCollapseContainer = styled(RcCollapse)`
- width: 85%;
-
-
-${({ $collapseLocation }) => $collapseLocation && `
-
-width: 47%;
-margin-top: 2%;`};
+    width: 85%;
+    ${({ $collapseLocation }) => $collapseLocation && `
+    width: 47%;
+    margin-top: 2%;`};
+    @media screen and ${devices_mediaQueries.mobile} {
+        margin-top: 0; 
+        width: 100%;    
+    } 
 `
 const StyledPanel = styled(RcCollapse.Panel)`
     background: ${colors.backgroundMain};
@@ -23,71 +24,72 @@ const StyledPanel = styled(RcCollapse.Panel)`
     line-height: 1.5em;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
     @media screen and ${devices_mediaQueries.mobile}{
         margin-bottom: 7%;   
     }
 
-
     &, .my-header-class {
         border-radius: 5px;
     }
+
     .rc-collapse-content-box, .my-header-class {
-        font-size: 1.5em;
-        @media screen and ${devices_mediaQueries.mobile}{
-            font-size: 1em;   
+        font-size: 1.5em;      
+    }
+
+    .my-header-class {
+        background: ${colors.primary};
+        color: ${colors.secondary};
+        height: 47px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 15px;
+        @media screen and ${devices_mediaQueries.mobile} {
+        font-size: 0.813em;
+        height: 30px;
         }
     }
 
-.my-header-class {
-    background: ${colors.primary};
-    color: ${colors.secondary};
-    height: 47px;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 15px;
-    @media screen and ${devices_mediaQueries.mobile} {
-    font-size: 0.813em;
-    height: 30px;
+    .rc-collapse-content-box {
+        padding: 27px 10px 0 15px;
+        line-height: 1.5em;
+        @media screen and ${devices_mediaQueries.mobile} {
+            font-size: 0.75em;
+            padding-top: 20px;
+        }       
+    }
+    .content-box {
+        @media screen and ${devices_mediaQueries.mobile} {
+        padding-bottom: 50px;
+        }
+        ${({ $panelLocation }) => $panelLocation && `
+        @media screen and ${devices_mediaQueries.mobile} {
+           padding-bottom: 0;
+        }`};
     }
 
-}
-
-.rc-collapse-content-box {
-    padding: 27px 10px 0 15px;
-    line-height: 1.5em;
-    @media screen and ${devices_mediaQueries.mobile} {
-        font-size: 0.75em;
-        padding-top: 20px;
-      }
-     
-}
-.content-box {
-    @media screen and ${devices_mediaQueries.mobile} {
-       padding-bottom: 50px;
-     
+    .content-box--description {
+        padding-bottom: 35px;
     }
-}
-.content-box--description {
-    padding-bottom: 35px;
-}
 
-${({ $panelLocation }) => $panelLocation && `
-width: 100%;
-.rc-collapse-content-box, .my-header-class {
-    font-size: 0.75em;
-    padding-left: 20px;
-}`}
+    ${({ $panelLocation }) => $panelLocation && `
+    width: 100%;
+    .rc-collapse-content-box, .my-header-class {
+        font-size: 1.125em;
+        padding-left: 20px;
+        @media screen and ${devices_mediaQueries.mobile} {
+            font-size: 0.75em;
+        
+        }
+    }`};
 
-/* css icon Font awesome arrowUp*/
-.rc-collapse-expand-icon {
-    color: white;
-    position: absolute;
-    right: 10px;
-   ${({ arrow }) => arrow === "bottom-arrow" && `transform: rotate(180deg);`};
-
-}
+    /* css icon Font awesome arrowUp*/
+    .rc-collapse-expand-icon {
+        color: white;
+        position: absolute;
+        right: 10px;  
+    ${({ arrow }) => arrow === "bottom-arrow" && `transform: rotate(180deg);`};
+    }
 `
 export { StyledCollapseContainer, StyledPanel }

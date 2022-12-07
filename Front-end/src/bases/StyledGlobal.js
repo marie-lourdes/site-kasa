@@ -72,8 +72,8 @@ main {
     box-sizing: border-box;
     @media screen and ${devices_mediaQueries.mobile}{
         width: auto;
-        margin: 8% 0;
-       
+        margin: 6% 0;
+      
     }
 }
 
