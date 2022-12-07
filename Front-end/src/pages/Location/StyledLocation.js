@@ -49,7 +49,9 @@ align-items: start;
 .rating {
     display: flex;
     justify-content: flex-end;
+    margin-top: 5%;
 }
+
 & + .collapse-location-row {
  display: flex;
 width: 100%;
