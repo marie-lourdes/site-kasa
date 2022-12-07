@@ -4,7 +4,7 @@ function Footer() {
     return (
         <StyledFooter>
             <div className="footer-wrapper">
-                <div>
+                <div className="logo-footer">
                     <img src={logoConstrast} alt="logo contrasté de  Kasa" />
                 </div>
                 <span> © 2020 Kasa. All rights reserved</span>
