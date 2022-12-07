@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import colors from "../utils/colors"
 import bannerHome from "../assets/banner-home.png"
+import bannerHome_S from "../assets/banner-home-s.png"
 import bannerAbout from "../assets/banner-about.png"
 import devices_mediaQueries from "../utils/responsive-design/devices.js"
 
@@ -18,7 +19,9 @@ background: ${({ $about }) => $about ? `url(${bannerAbout}) no-repeat` : `url(${
 @media screen and ${devices_mediaQueries.mobile}{
     height: 111px;
     border-radius: 10px;
+    background: ${({ $about }) => $about ? `url(${bannerAbout})` : `url(${bannerHome_S})`};
 }
+
 &::before {
     content: "";
     background-color:${colors.backgroundBlack};
@@ -30,6 +33,7 @@ background: ${({ $about }) => $about ? `url(${bannerAbout}) no-repeat` : `url(${
     opacity: 0.3;
     mix-blend-mode: darken;
 } 
+
 .title-home {
     position: absolute;
     color: white;
