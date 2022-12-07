@@ -38,8 +38,9 @@ function CollapseAbout() {
                     setPanel0(openPanel0 ? false : true)
 
                 }}>
-
-                {contentPanel[0]["content"]}
+                <div className="content-box ">
+                    {contentPanel[0]["content"]}
+                </div>
             </StyledPanel>
 
             <StyledPanel
@@ -56,7 +57,9 @@ function CollapseAbout() {
 
                 }}>
 
-                {contentPanel[1]["content"]}
+                <div className="content-box ">
+                    {contentPanel[1]["content"]}
+                </div>
             </StyledPanel>
 
             <StyledPanel
@@ -74,7 +77,9 @@ function CollapseAbout() {
 
                 }}>
 
-                {contentPanel[2]["content"]}
+                <div className="content-box ">
+                    {contentPanel[2]["content"]}
+                </div>
             </StyledPanel>
 
             <StyledPanel
@@ -92,7 +97,9 @@ function CollapseAbout() {
 
                 }}>
 
-                {contentPanel[3]["content"]}
+                <div className="content-box ">
+                    {contentPanel[3]["content"]}
+                </div>
             </StyledPanel>
         </StyledCollapseContainer >
     )

@@ -27,7 +27,7 @@ function CollapseLocation() {
                         setPanelLocation0(openPanelLocation0 ? false : true)
 
                     }}>
-                    <div className="content-box content-box--padding">
+                    <div className="content-box--description">
                         {contentPanel[0]["content"]}
                     </div>
                 </StyledPanel>
