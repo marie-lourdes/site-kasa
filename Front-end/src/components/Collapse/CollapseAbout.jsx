@@ -34,9 +34,12 @@ function CollapseAbout() {
                 headerClass="my-header-class"
                 className="title-collapse"
                 showArrow={true}
-                onClick={() => setPanel0(openPanel0 ? false : true)}
+                onClick={(e) => {
+                    setPanel0(openPanel0 ? false : true)
+                    e.stopPropagation()
+                }}>
 
-            >
+
                 {contentPanel[0]["content"]}
             </StyledPanel>
 
@@ -50,10 +53,10 @@ function CollapseAbout() {
                 showArrow={true}
                 destroyInactivePanel={true}
                 onClick={(e) => {
-                    setPanel1(openPanel1 ? false : true)
+                    setPanel1(openPanel1 && true)
                     e.stopPropagation()
                 }}>
-            >
+
                 {contentPanel[1]["content"]}
 
             </StyledPanel>
@@ -68,8 +71,11 @@ function CollapseAbout() {
                 headerClass="my-header-class"
                 className="title-collapse"
                 showArrow={true}
-                onClick={() => setPanel2(openPanel2 ? false : true)}
-            >
+                onClick={(e) => {
+                    setPanel2(openPanel2 ? false : true)
+                    e.stopPropagation()
+                }}>
+
                 {contentPanel[2]["content"]}
 
             </StyledPanel>
@@ -84,7 +90,10 @@ function CollapseAbout() {
                 headerClass="my-header-class"
                 className="title-collapse"
                 showArrow={true}
-                onClick={() => setPanel3(openPanel3 ? false : true)}
+                onClick={(e) => {
+                    setPanel3(openPanel3 ? false : true)
+                    e.stopPropagation()
+                }}>
             >
                 {contentPanel[3]["content"]}
 
