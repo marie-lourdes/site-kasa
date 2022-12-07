@@ -3,6 +3,7 @@ import colors from "../utils/colors"
 import bannerHome from "../assets/banner-home.png"
 import bannerHome_S from "../assets/banner-home-s.png"
 import bannerAbout from "../assets/banner-about.png"
+import bannerAbout_S from "../assets/banner-about-s.png"
 import devices_mediaQueries from "../utils/responsive-design/devices.js"
 
 const StyledBanner = styled.section`
@@ -17,9 +18,9 @@ display: flex;
 justify-content: center;
 background: ${({ $about }) => $about ? `url(${bannerAbout}) no-repeat` : `url(${bannerHome}) no-repeat`};
 @media screen and ${devices_mediaQueries.mobile}{
-    height: 111px;
+    height:  ${({ $about }) => !$about && `111px`};
     border-radius: 10px;
-    background: ${({ $about }) => $about ? `url(${bannerAbout})` : `url(${bannerHome_S})`};
+    background: ${({ $about }) => $about ? `url(${bannerAbout_S})` : `url(${bannerHome_S})`};
 }
 
 &::before {

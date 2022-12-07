@@ -21,10 +21,12 @@ const StyledPanel = styled(RcCollapse.Panel)`
     margin-bottom: 30px;
     position: relative;
     line-height: 1.5em;
-
     width: 100%;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+    @media screen and ${devices_mediaQueries.mobile}{
+        margin-bottom: 7%;   
+    }
 
 
     &, .my-header-class {
@@ -34,7 +36,7 @@ const StyledPanel = styled(RcCollapse.Panel)`
         font-size: 1.5em;
         @media screen and ${devices_mediaQueries.mobile}{
             font-size: 1em;   
-    }
+        }
     }
 
 .my-header-class {
@@ -60,8 +62,7 @@ const StyledPanel = styled(RcCollapse.Panel)`
         font-size: 0.75em;
         padding-top: 20px;
       }
-      
-  
+     
 }
 .content-box {
     @media screen and ${devices_mediaQueries.mobile} {
