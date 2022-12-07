@@ -17,7 +17,6 @@ const StyledGlobal = createGlobalStyle`
     font-style: normal;
 }
 
-
 * {
     margin: 0;
 }
@@ -50,6 +49,7 @@ button {
     max-width: 1240px;
     @media screen and ${devices_mediaQueries.mobile}{
         width: auto;
+        padding: 0 5%;
     }
 }
 

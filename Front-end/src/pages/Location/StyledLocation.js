@@ -15,8 +15,10 @@ align-items: start;
     .title-location {
         font-size: 36px;
         margin-bottom: 1%;
+        font-weight: bold;
         & + div {
             margin-bottom: 4%;
+            font-weight: bold;
         }       
     }
 }

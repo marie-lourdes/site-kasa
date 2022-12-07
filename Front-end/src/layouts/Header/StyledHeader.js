@@ -11,26 +11,53 @@ width: 100%;
 padding-top: 40px;
 @media screen and ${devices_mediaQueries.mobile}{
     width: auto;
+    padding-top: 5%;
+    height: 50px;
 }
 & > .logo {
-    height: 68px
+    @media screen and ${devices_mediaQueries.mobile}{
+        flex:1;
+    }
+  
+    img {
+        height: 65px;
+        @media screen and ${devices_mediaQueries.mobile}{
+        height: 45px;
+        }
+    }
 }
 nav {
     width: 300px;
     font-size: 24px; 
     display: flex;
     justify-content: flex-end; 
+    font-weight: bold;
+    @media screen and ${devices_mediaQueries.mobile}{
+     text-transform: uppercase;
+     font-size: 80%;
+     flex: 1;
+     justify-content: space-between; 
+     height: 41px;
+    }
 }
 nav ul{
     display: flex;
     justify-content: flex-end;
-    align-items: flex-end;  
+    align-items: flex-end;
+    width: 100%;  
+    @media screen and ${devices_mediaQueries.mobile}{
+       padding-top: 2%;
+       align-items: center;
+       }
 }
 ul li {
    text-align: right;
    line-height: 142.6%;
    margin-left: 50px;
-   color: ${colors.primary}; 
+   color: ${colors.primary};
+   @media screen and ${devices_mediaQueries.mobile}{
+  margin-left: 10%;
+   } 
 }
 
 

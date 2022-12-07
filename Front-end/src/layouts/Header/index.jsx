@@ -8,8 +8,8 @@ import StyledLink from "../../bases/StyledLink"
 function Header() {
     return (
         <StyledHeader>
-            <div>
-                <img className="logo" src={logo} alt="logo Kasa" />
+            <div className="logo">
+                <img src={logo} alt="logo Kasa" />
             </div>
             <nav>
                 <ul>
