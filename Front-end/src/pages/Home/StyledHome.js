@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import devices_mediaQueries from "../../utils/responsive-design/devices.js"
 
 
 const StyledGallery = styled.ul`
@@ -9,5 +10,9 @@ align-items: space-evenly;
 width: 100%;
 box-sizing: border-box;
 padding: 56px 0 20px 20px;
+@media screen and ${devices_mediaQueries.mobile}{
+    padding: 0;
+}
+
 `
 export default StyledGallery 

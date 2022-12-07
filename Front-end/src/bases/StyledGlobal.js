@@ -39,7 +39,7 @@ h1{
     @media screen and ${devices_mediaQueries.mobile}{
         font-size:1.5em;
      
-       }
+    }
 }
 button {
     background: transparent;
@@ -65,7 +65,6 @@ button {
 }
 
 main {
-  
     margin: 3% 0;
     display: flex;
     flex-direction: column;
@@ -73,13 +72,17 @@ main {
     box-sizing: border-box;
     @media screen and ${devices_mediaQueries.mobile}{
         width: auto;
+        margin: 0;
     }
-
 }
 
 main.main-Home-page{
     border-radius: 25px;
     background: ${colors.backgroundMain};
+    @media screen and ${devices_mediaQueries.mobile}{
+      background: transparent;
+      border-radius: 0;
+    }
 }
 
 ul {
