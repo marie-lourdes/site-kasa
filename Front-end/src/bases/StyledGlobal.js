@@ -35,7 +35,11 @@ h1, h2, h2, h4, h5, h6 {
 }
 
 h1{
-    font-size: 48px;
+    font-size: 3em;
+    @media screen and ${devices_mediaQueries.mobile}{
+        font-size:1.5em;
+     
+       }
 }
 button {
     background: transparent;

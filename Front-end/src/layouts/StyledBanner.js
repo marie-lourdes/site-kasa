@@ -2,6 +2,8 @@ import styled from "styled-components"
 import colors from "../utils/colors"
 import bannerHome from "../assets/banner-home.png"
 import bannerAbout from "../assets/banner-about.png"
+import devices_mediaQueries from "../utils/responsive-design/devices.js"
+
 const StyledBanner = styled.section`
 width: 100%;
 border-radius: 25px;
@@ -12,8 +14,11 @@ overflow: hidden;
 margin-top: 5%;
 display: flex;
 justify-content: center;
-box-sizing: border-box;
 background: ${({ $about }) => $about ? `url(${bannerAbout}) no-repeat` : `url(${bannerHome}) no-repeat`};
+@media screen and ${devices_mediaQueries.mobile}{
+    height: 111px;
+    border-radius: 10px;
+}
 &::before {
     content: "";
     background-color:${colors.backgroundBlack};
@@ -23,7 +28,7 @@ background: ${({ $about }) => $about ? `url(${bannerAbout}) no-repeat` : `url(${
     bottom: 0;
     right: 0;
     opacity: 0.3;
-    mix - blend - mode: darken;
+    mix-blend-mode: darken;
 } 
 .title-home {
     position: absolute;
@@ -35,7 +40,11 @@ background: ${({ $about }) => $about ? `url(${bannerAbout}) no-repeat` : `url(${
     display: flex;
     align-items: flex-end;
     height: 68px;
-
+    @media screen and ${devices_mediaQueries.mobile}{
+        top: 15%;
+        left: 9.6%; 
+        padding-right: 25%;   
+    }
 }
 `
 export default StyledBanner

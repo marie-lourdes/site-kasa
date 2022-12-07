@@ -14,6 +14,7 @@ background: ${colors.backgroundBlack};
 @media screen and ${devices_mediaQueries.mobile}{
   align-items: center;
 }
+
 .footer-wrapper {
     display: flex;
     flex-direction: column;
@@ -25,11 +26,11 @@ background: ${colors.backgroundBlack};
     font-size: 80%;
     padding: 0;
   }
-   & > .logo-footer {
-     margin-bottom: 30px;
-     height: 40px;
-   }
-    
+
+  & > .logo-footer {
+    margin-bottom: 30px;
+    height: 40px;
+  }    
 }
 `
 
