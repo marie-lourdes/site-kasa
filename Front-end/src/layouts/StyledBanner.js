@@ -17,7 +17,7 @@ margin-top: 5%;
 display: flex;
 justify-content: center;
 background: ${({ $about }) => $about ? `url(${bannerAbout}) no-repeat` : `url(${bannerHome}) no-repeat`};
-@media screen and ${devices_mediaQueries.mobile}{
+@media screen and ${devices_mediaQueries.mobile} {
     height:  ${({ $about }) => !$about && `111px`};
     border-radius: 10px;
     background: ${({ $about }) => $about ? `url(${bannerAbout_S})` : `url(${bannerHome_S})`};
@@ -45,7 +45,7 @@ background: ${({ $about }) => $about ? `url(${bannerAbout}) no-repeat` : `url(${
     display: flex;
     align-items: flex-end;
     height: 68px;
-    @media screen and ${devices_mediaQueries.mobile}{
+    @media screen and ${devices_mediaQueries.mobile} {
         top: 15%;
         left: 9.6%; 
         padding-right: 25%;   
