@@ -1,6 +1,8 @@
 import styled from "styled-components";
 //import du composant carousel de nuka-carousel
 import Carousel from "nuka-carousel"
+
+import colors from "../../utils/colors"
 import devices_mediaQueries from "../../utils/responsive-design/devices.js"
 
 const StyledCarousel = styled(Carousel)`
@@ -10,6 +12,7 @@ const StyledCarousel = styled(Carousel)`
     max-height: 415px;
     mix-blend-mode: normal;
     overflow: hidden;
+   
 
 /*slide-list*/
     .slide img {
@@ -24,6 +27,9 @@ const StyledCarousel = styled(Carousel)`
           min-height: 255px; 
         }       
       }
+
+ 
+
   
 `
 

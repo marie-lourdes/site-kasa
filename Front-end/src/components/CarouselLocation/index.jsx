@@ -6,6 +6,7 @@ import { ArrowLeft, ArrowRight } from "../../Atoms/IconsFontAwesome"
 
 //styled component avec nuka-carousel integré
 import StyledCarousel from "./StyledCarousel.js"
+import colors from "../../utils/colors"
 
 function CarouselLocation({ children, url }) {
     return (
@@ -23,7 +24,7 @@ function CarouselLocation({ children, url }) {
                 /* incrementation de 1 pour afficher l index du slide correspondant au numero de l image*/
 
                 slideCount > 1 &&
-                <div> {currentSlide + 1} /{slideCount}</div >
+                <div style={{ color: "white" }}> {currentSlide + 1} /{slideCount}</div >
             }
 
             renderCenterLeftControls={({ previousSlide, slideCount }) => (
