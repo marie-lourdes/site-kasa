@@ -50,7 +50,7 @@ background: ${({ $about }) => $about ? `url(${bannerAbout}) no-repeat` : `url(${
     height: 68px;
     @media screen and ${devices_mediaQueries.mobile} {
         top: 15%;
-        left: 9.6%; 
+        left: 5.6%; 
         padding-right: 25%;   
     }
     @media screen and ${devices_mediaQueries.mobile_landscape}{

@@ -29,13 +29,18 @@ const StyledPage404 = styled.main`
         font-weight: bold;
         position: relative;
         bottom: 5px;
-
+    /* white space with span block */
         @media screen and ${devices_mediaQueries.mobile} {
             font-size:0.1875em;
-            word-spacing: 0.23em;
+            display: block;
             text-align: center;
             bottom: 130px;
+            .indent {
+                display: block:
+                width:10px;
+             }
         }
+       
     
     }
 `

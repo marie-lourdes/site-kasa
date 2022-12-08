@@ -33,10 +33,13 @@ body {
 h1, h2, h2, h4, h5, h6 {
     color:${colors.secondary};
 }
+h1, h4{
+    font-weight: 500;
+}
 
 h1{
     font-size: 3em;
-    @media screen and ${devices_mediaQueries.mobile}{
+     @media screen and ${devices_mediaQueries.mobile}{
         font-size:1.5em;
      
     }

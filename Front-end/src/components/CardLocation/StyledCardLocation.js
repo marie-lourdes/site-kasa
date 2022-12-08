@@ -14,6 +14,7 @@ const StyledLinkCard = styled(Link)`
         width: 100%;
         height: 255px;
         max-width: 335px;
+        margin: 0 0 5%;
     }
     @media screen and ${devices_mediaQueries.mobile_landscape}{
         max-width: 100%;
@@ -51,7 +52,7 @@ const StyledCardLocation = styled.div`
     }
     h4 {
         width: 29%;
-        padding: 18px;
+        padding: 10px;
         font-size: 14px;
         position: absolute;
         z-index: 9999;
