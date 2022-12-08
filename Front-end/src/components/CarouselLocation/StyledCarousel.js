@@ -27,10 +27,19 @@ const StyledCarousel = styled(Carousel)`
           min-height: 255px; 
         }       
       }
+      ${({ $renderBottomCenterControls }) => $renderBottomCenterControls && `
+      .slider-control-bottomcenter .slide-count {
+        @media screen and ${devices_mediaQueries.mobile} {
+          display: none;
+        } 
+      }
 
- 
+      `};
 
-  
-`
+
+
+
+
+    `
 
 export default StyledCarousel
