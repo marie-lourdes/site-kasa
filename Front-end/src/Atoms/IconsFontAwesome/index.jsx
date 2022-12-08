@@ -1,6 +1,5 @@
 import React from "react"
 import { StyledIconsArrowCarouselFontAwesome, StyledIconsArrowUpFontAwesome, StyledRateStar } from "./StyledIconsFontAwesome.js"
-import { useState } from "react"
 
 function ArrowUp() {
     return (

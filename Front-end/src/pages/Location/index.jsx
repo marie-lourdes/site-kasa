@@ -1,6 +1,6 @@
 import React from "react"
-import { useState, useEffect, useContext } from "react"
-import { useParams } from "react-router"
+import { useContext } from "react"
+
 // import PropTypes
 import PropTypes from "prop-types"
 

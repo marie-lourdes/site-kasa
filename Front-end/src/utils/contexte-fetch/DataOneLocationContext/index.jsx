@@ -52,7 +52,7 @@ export const DataOneLocationProvider = ({ children }) => {
         }
         reqData();
 
-    }, [id])
+    }, [id, navigate])
 
     return (
         <DataOneLocationContext.Provider value={{ dataPictures, dataTitle, dataTag, dataRating, dataPosition, dataOwner, nameOwner }}>

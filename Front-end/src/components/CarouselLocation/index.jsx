@@ -5,17 +5,9 @@ import PropTypes from "prop-types"
 import { ArrowLeft, ArrowRight } from "../../Atoms/IconsFontAwesome"
 
 //styled component avec nuka-carousel integré
-import StyledCarousel from "./StyledCarousel.js"
-import colors from "../../utils/colors"
+import { StyledCarousel, StyledSlideCount } from "./StyledCarousel.js"
 
-//style inline slideCount
-const styleSlideCount = {
-    color: `${colors.secondary}`,
-    position: "relative",
-    bottom: 25,
-}
-
-function CarouselLocation({ children, url }) {
+function CarouselLocation({ children }) {
     return (
         /*affichage de la caroussel avec la definition des props de nuka-carousel pour repondre aux contraintes fonctionnelles du client*/
         <StyledCarousel
@@ -25,13 +17,14 @@ function CarouselLocation({ children, url }) {
             /*les propControls render de nuka carousel controle l affichage des elements 
             avec les valeurs des props currentSlide, slideCount, previousSlide, nextSlide recupérées en parametre de la fonction des propControl*/
 
-            renderBottomCenterControls={({ currentSlide, slideCount, media }) =>
+            renderBottomCenterControls={({ currentSlide, slideCount }) =>
 
                 /* le bullet s saffiche que si il y a plus d 'une image dans la carroussel, idem pour les boutons suivant et precedent*/
                 /* incrementation de 1 pour afficher l index du slide correspondant au numero de l image*/
+                /*le composant StyledSlideCount ne s affiche pas sur mobile et tablet*/
 
-                slideCount > 1 && !media &&
-                <div style={styleSlideCount}> {currentSlide + 1} /{slideCount}</div >
+                slideCount > 1 &&
+                <StyledSlideCount> {currentSlide + 1} /{slideCount}</StyledSlideCount >
             }
             renderCenterLeftControls={({ previousSlide, slideCount }) => (
                 slideCount > 1 &&
