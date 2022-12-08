@@ -1,4 +1,5 @@
 import logo from "../../assets/Logo-kasa.png"
+import { Link } from "react-router-dom"
 
 //styled component
 import StyledHeader from "./StyledHeader.js"
@@ -9,7 +10,7 @@ function Header() {
     return (
         <StyledHeader>
             <div className="logo">
-                <img src={logo} alt="logo Kasa" />
+                <Link to="/"><img src={logo} alt="logo Kasa" /></Link>
             </div>
             <nav>
                 <ul>

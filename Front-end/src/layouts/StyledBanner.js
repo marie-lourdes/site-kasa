@@ -20,7 +20,7 @@ background: ${({ $about }) => $about ? `url(${bannerAbout}) no-repeat` : `url(${
 @media screen and ${devices_mediaQueries.mobile} {
     height:  ${({ $about }) => !$about && `111px`};
     border-radius: 10px;
-    background: ${({ $about }) => $about ? `url(${bannerAbout_S})` : `url(${bannerHome_S})`};
+    background: ${({ $about }) => $about ? `url(${bannerAbout_S}) no-repeat ` : `url(${bannerHome_S}) no-repeat`};
 }
 
 &::before {
