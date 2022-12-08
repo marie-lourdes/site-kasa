@@ -53,6 +53,12 @@ background: ${({ $about }) => $about ? `url(${bannerAbout}) no-repeat` : `url(${
         left: 9.6%; 
         padding-right: 25%;   
     }
+    @media screen and ${devices_mediaQueries.mobile_landscape}{
+        top: 3%;
+        left: 22%; 
+        white-space: nowrap;
+        
+    }
 }
 `
 export default StyledBanner
