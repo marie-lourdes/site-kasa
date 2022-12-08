@@ -19,6 +19,11 @@ width: 22%;
    padding: 2.16px 29px 1.84px;
    border-radius: 5px;
 }
+@media screen and ${devices_mediaQueries.tablet} {
+  
+   padding:10px 70px 10px;
+   border-radius: 10px;
+}
 
 `
 const StyledTagContainer = styled.div`

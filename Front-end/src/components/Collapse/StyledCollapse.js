@@ -16,6 +16,9 @@ const StyledCollapseContainer = styled(RcCollapse)`
         margin-top: 0; 
         width: 100%;    
     } 
+    @media screen and ${devices_mediaQueries.tablet}{
+        margin-top: 0;   
+    }
 `
 const StyledPanel = styled(RcCollapse.Panel)`
     background: ${colors.backgroundMain};
@@ -27,7 +30,7 @@ const StyledPanel = styled(RcCollapse.Panel)`
     @media screen and ${devices_mediaQueries.mobile}{
         margin-bottom: 7%;   
     }
-
+   
     &, .my-header-class {
         border-radius: 5px;
     }
@@ -79,8 +82,7 @@ const StyledPanel = styled(RcCollapse.Panel)`
         font-size: 1.125em;
         padding-left: 20px;
         @media screen and ${devices_mediaQueries.mobile} {
-            font-size: 0.75em;
-        
+            font-size: 0.75em;     
         }
     }`};
 

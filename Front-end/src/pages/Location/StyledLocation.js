@@ -8,6 +8,9 @@ const StyledHeaderInfoLocation = styled.div`
     @media screen and ${devices_mediaQueries.mobile} {
         flex-wrap: wrap;
     } 
+    @media screen and ${devices_mediaQueries.tablet} {
+        flex-wrap: wrap; 
+    } 
     
     .column-left-info-location, .column-right-info-owner {
         display: flex;  
@@ -19,9 +22,7 @@ const StyledHeaderInfoLocation = styled.div`
         justify-content: space-around;
         box-sizing: border-box;
         width: 100%;
-        @media screen and ${devices_mediaQueries.mobile} {
-           
-        } 
+        
         .title-location {
             font-size: 2.25em;
             margin-bottom: 1%;
@@ -29,13 +30,21 @@ const StyledHeaderInfoLocation = styled.div`
             @media screen and ${devices_mediaQueries.mobile} {
                 font-size: 1.125em;
                 margin-bottom: 3%;
-            }  
+            } 
+            @media screen and ${devices_mediaQueries.tablet} {
+                font-size: 2em;
+                margin-bottom: 3%;
+            }
             & + div {
                 margin-bottom: 4%;
                 font-weight: bold;
                 @media screen and ${devices_mediaQueries.mobile} {
                     font-size: 0.875em;
                 } 
+                @media screen and ${devices_mediaQueries.tablet} {
+                    font-size: 1.5em;
+                 
+                }
             }  
                
         }
@@ -51,7 +60,14 @@ const StyledHeaderInfoLocation = styled.div`
          align-items: center;
          height: 70px;
        
-        }   
+        } 
+        @media screen and ${devices_mediaQueries.tablet} {
+            flex-flow: wrap-reverse row-reverse;
+            justify-content: space-between;
+            width: 100%;
+            height: 100px;
+            align-items: center;
+        }  
     }
 
     .info-owner {
@@ -61,7 +77,9 @@ const StyledHeaderInfoLocation = styled.div`
         width: 100%;
         @media screen and ${devices_mediaQueries.mobile} {
             width: 50%;
-           
+        } 
+        @media screen and ${devices_mediaQueries.tablet} {
+            width: 50%;
         } 
         .name-owner {
             line-height: 1.5em;
@@ -96,6 +114,9 @@ const StyledHeaderInfoLocation = styled.div`
         @media screen and ${devices_mediaQueries.mobile} {
             margin-top: 0;   
         } 
+        @media screen and ${devices_mediaQueries.tablet} {
+        margin-top: 0;   
+        } 
     }
 
     & + .collapse-location-row {
@@ -103,8 +124,11 @@ const StyledHeaderInfoLocation = styled.div`
     width: 100%;
     justify-content: space-between;
     @media screen and ${devices_mediaQueries.mobile} {
-        flex-wrap: wrap;    
-    } 
+        flex-wrap: wrap;
+    }
+    @media screen and ${devices_mediaQueries.tablet} {
+        margin-top: 0;   
+        } 
 
 }
 `

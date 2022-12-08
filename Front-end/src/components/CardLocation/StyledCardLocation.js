@@ -58,10 +58,17 @@ const StyledCardLocation = styled.div`
     h4 {
         width: 29%;
         padding: 10px;
-        font-size: 14px;
+        font-size: 0.875em;
         position: absolute;
         z-index: 9999;
+        width: 50%;
+        box-sizing: border-box;
         line-height: 1.5em;
+        @media screen and ${devices_mediaQueries.tablet}{
+            font-size: 1.1em;
+            width: 70%;
+           
+        }
 
     }
 `

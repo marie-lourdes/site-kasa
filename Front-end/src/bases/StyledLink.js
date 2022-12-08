@@ -17,6 +17,9 @@ const StyledLink = styled(Link)`
     }
     @media screen and ${devices_mediaQueries.mobile_landscape} {      
         bottom: 30px;
+    }
+    @media screen and ${devices_mediaQueries.tablet} {      
+        font-size:0.09em;
     }`};
     &:hover {
         text-decoration: underline;

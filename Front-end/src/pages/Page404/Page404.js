@@ -40,7 +40,6 @@ const StyledPage404 = styled.main`
              }
         } 
         @media screen and ${devices_mediaQueries.mobile_landscape} {
-       
             bottom: 10px;
         }  
     }

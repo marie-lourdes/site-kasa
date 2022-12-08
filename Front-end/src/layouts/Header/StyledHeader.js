@@ -28,16 +28,21 @@ padding-top: 40px;
 }
 nav {
     width: 300px;
-    font-size: 24px; 
+    font-size: 1.5em; 
     display: flex;
     justify-content: flex-end; 
     font-weight: bold;
     @media screen and ${devices_mediaQueries.mobile}{
      text-transform: uppercase;
-     font-size: 80%;
+     font-size: 0.75em;
      flex: 1;
      justify-content: space-between; 
      height: 41px;
+    }
+    @media screen and ${devices_mediaQueries.tablet} {      
+        text-transform: uppercase;
+        font-size: 1.3em;
+        flex: 1;
     }
 }
 nav ul{
