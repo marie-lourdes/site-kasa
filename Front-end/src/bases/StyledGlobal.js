@@ -62,6 +62,7 @@ button {
     @media screen and ${devices_mediaQueries.mobile}{
         width: auto;
     }
+ 
 }
 
 main {

@@ -15,6 +15,10 @@ const StyledLinkCard = styled(Link)`
         height: 255px;
         max-width: 335px;
     }
+    @media screen and ${devices_mediaQueries.mobile_landscape}{
+        max-width: 100%;
+        
+    }
     .error-data-card {
         color: ${colors.primary}
     }
