@@ -17,12 +17,11 @@ const StyledPage404 = styled.main`
         font-size: 6em;
         top: 50px;
     }
+  
     & > div {
         font-family: MontSerratBold;
         margin-bottom: -12%;
-        @media screen and ${devices_mediaQueries.mobile} {
-           
-        }
+        
     }
     span {
         font-size: 0.125em;
@@ -39,9 +38,11 @@ const StyledPage404 = styled.main`
                 display: block:
                 width:10px;
              }
-        }
+        } 
+        @media screen and ${devices_mediaQueries.mobile_landscape} {
        
-    
+            bottom: 10px;
+        }  
     }
 `
 
