@@ -4,8 +4,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import App from './layouts/App'
 import reportWebVitals from './reportWebVitals'
 
-//import DataAllLocationsProvider
+//import DataAllLocationsProvider et  DataOneLocationProvider 
 import { DataAllLocationsProvider } from "./utils/contexte-fetch/DataAllLocationsContext"
+import { DataOneLocationProvider } from "./utils/contexte-fetch/DataOneLocationContext"
 
 //composants react du layout App
 import Home from "./pages/Home"
@@ -20,7 +21,6 @@ root.render(
   <React.StrictMode>
     <Router>
       <DataAllLocationsProvider>
-
         <App >
           {/* children*/}
           <div>
@@ -29,7 +29,7 @@ root.render(
             <Routes>
               <Route exact path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
-              <Route path="/location/:id" element={<Location />} />
+              <Route path="/location/:id" element={<DataOneLocationProvider><Location /></DataOneLocationProvider>} />
               <Route path="*" element={<Page404 />} />
             </Routes >
           </div>
