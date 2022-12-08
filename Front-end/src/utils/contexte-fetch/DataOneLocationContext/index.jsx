@@ -1,18 +1,20 @@
 //import contexte natif de React
 import { createContext, useState, useEffect } from 'react'
 import { useParams } from "react-router"
+import { useNavigate } from 'react-router'
 
 // initialisation du composant Contexte
 export const DataOneLocationContext = createContext()
 
 //creation du composant Provider qui partage les données du composant contexte avec lobjet Provider connecté au contexte
 export const DataOneLocationProvider = ({ children }) => {
+    const navigate = useNavigate()
     //recupération du parametre
     const param = useParams()
     console.log("param", param)
     const { id } = param
     const [dataOneLocation, setDataOneLocation] = useState({})
-    const [error, setError] = useState(false)
+
     //verification d une chaine de caractere, comme une propriété dans l objet dataoneLocation , avant de recuperer les propriétés  pour eviter des erreur "undefined"
     const dataPictures = dataOneLocation?.pictures
     const dataTitle = dataOneLocation?.title
@@ -44,8 +46,8 @@ export const DataOneLocationProvider = ({ children }) => {
                 setDataOneLocation(dataLocation)
             } catch (err) {
                 console.log(err)
-                //envoit la valeur true si il y a une erreur 
-                setError(true)
+                //redirection vers la page erreur, en creeant une page qui n existe pas qui genere la page404 sur une route qui n est pas defini dans les route de index.js
+                navigate("/error")
             }
         }
         reqData();
@@ -53,7 +55,7 @@ export const DataOneLocationProvider = ({ children }) => {
     }, [id])
 
     return (
-        <DataOneLocationContext.Provider value={{ dataPictures, dataTitle, dataTag, dataRating, dataPosition, dataOwner, nameOwner, error }}>
+        <DataOneLocationContext.Provider value={{ dataPictures, dataTitle, dataTag, dataRating, dataPosition, dataOwner, nameOwner }}>
             {children}
         </DataOneLocationContext.Provider>
     )

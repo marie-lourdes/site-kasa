@@ -23,6 +23,7 @@ const StyledPage404 = styled.main`
         margin-bottom: -12%;
         
     }
+    
     span {
         font-size: 0.125em;
         font-weight: bold;
