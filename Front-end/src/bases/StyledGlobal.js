@@ -40,8 +40,10 @@ h1, h4{
 h1{
     font-size: 3em;
      @media screen and ${devices_mediaQueries.mobile}{
-        font-size:1.5em;
-     
+        font-size:1.5em;   
+    }
+    @media screen and ${devices_mediaQueries.tablet}{
+       font-size:2.1em;
     }
 }
 button {
@@ -55,6 +57,10 @@ button {
     margin: 0 auto;
     max-width: 1240px;
     @media screen and ${devices_mediaQueries.mobile}{
+        width: auto;
+        padding: 0 5%;
+    }
+    @media screen and ${devices_mediaQueries.tablet}{
         width: auto;
         padding: 0 5%;
     }

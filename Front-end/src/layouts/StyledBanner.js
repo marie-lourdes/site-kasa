@@ -57,8 +57,15 @@ background: ${({ $about }) => $about ? `url(${bannerAbout}) no-repeat` : `url(${
         top: 3%;
         left: 22%; 
         white-space: nowrap;
-        
+       
     }
+    @media screen and ${devices_mediaQueries.tablet}{
+        top: 30%;
+        left: 15%; 
+        white-space: nowrap;
+       
+    }
+  
 }
 `
 export default StyledBanner

@@ -20,6 +20,11 @@ const StyledLinkCard = styled(Link)`
         max-width: 100%;
         
     }
+    @media screen and ${devices_mediaQueries.tablet}{
+        min-width: 45%;
+        max-width: 45%;
+        
+    }
     .error-data-card {
         color: ${colors.primary}
     }
