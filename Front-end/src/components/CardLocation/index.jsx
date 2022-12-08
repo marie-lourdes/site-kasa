@@ -25,17 +25,7 @@ CardLocation.propTypes = {
     title: PropTypes.string.isRequired,
     cover: PropTypes.string.isRequired,
 }
-/*function error() {
-    const verifTitle = CardLocation.propTypes.title
 
-    console.log("verifTitle", verifTitle)
-    try {
-
-
-    } catch (err) {
-        console.log("erruer prop")
-    }
-}*/
 
 
 export default CardLocation

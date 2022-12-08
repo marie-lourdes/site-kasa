@@ -27,6 +27,7 @@ function Location() {
         <React.Fragment>
             <CarouselLocation url={dataPictures && dataPictures}>
                 {/* //verifier que les url de la propriété pictures ont bien été chargé par fetch en verifiant bien que datapictures contien ces valeurs urls */}
+                {/* definition des children du composant Location qui s affichent dans le composant nuka-carousel*/}
                 {dataPictures &&
                     dataPictures.map((url) => (
                         //titre alt avec l url slicé pour recuperer le numero de la photo
