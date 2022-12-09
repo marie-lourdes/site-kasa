@@ -80,6 +80,7 @@ main {
     flex-direction: column;
     width: 100%;
     box-sizing: border-box;
+    min-height: 100vh;
     @media screen and ${devices_mediaQueries.mobile}{
         width: auto;
         margin: 6% 0;
