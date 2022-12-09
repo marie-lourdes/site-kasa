@@ -1,46 +1,86 @@
 // import PropTypes
 import PropTypes from "prop-types"
+import { useState, useContext } from "react"
+
+import { DataOneLocationContext } from "../../utils/contexte-fetch/DataOneLocationContext"
 
 // import des icons Font-Awesome ArrowLeft et ArrowRight
 import { ArrowLeft, ArrowRight } from "../../Atoms/IconsFontAwesome"
 
 //styled component avec nuka-carousel integré
-import { StyledCarousel, StyledSlideCount } from "./StyledCarousel.js"
+import { StyledCarousel, StyledSlideCount, StyledArrowButton } from "./StyledCarousel.js"
 
-function CarouselLocation({ children }) {
+function CarouselLocation({ children, currentSlide, setCurrentSlide }) {
+    const { dataPictures } = useContext(DataOneLocationContext)
+    console.log("index", currentSlide)
+    const currentSlideIndex = parseInt(currentSlide)
+    const nxtSlide = currentSlideIndex + 1;
+    const prevSlide = currentSlideIndex - 1;
+    const lastSlide = dataPictures && dataPictures.length - 1;
+    const slideCount = dataPictures && dataPictures.length;
+    console.log("slideCount", slideCount)
+
+
+    /*  const slideCount = url.length*/
+    function previousSlide() {
+
+        if (currentSlide === 0) {
+            console.log("prevslide", currentSlide)
+            return setCurrentSlide(lastSlide)
+
+
+        } else {
+            return setCurrentSlide(prevSlide)
+        }
+
+    }
+    function nextSlide() {
+        if (currentSlide === dataPictures.length - 1) {
+            console.log("next slide", currentSlide)
+            return setCurrentSlide(0)
+        } else {
+            return setCurrentSlide(nxtSlide)
+        }
+    }
+
     return (
         /*affichage de la caroussel avec la definition des props de nuka-carousel pour repondre aux contraintes fonctionnelles du client*/
-        <StyledCarousel
-            /* avec prop wrapAround on slide  à l infini sans se limiter a la premiere image et à la derniere image*/
-            wrapAround={true}
+        <StyledCarousel>
 
-            /*les propControls render de nuka carousel controle l affichage des elements 
-            avec les valeurs des props currentSlide, slideCount, previousSlide, nextSlide recupérées en parametre de la fonction des propControl*/
+            <StyledArrowButton arrow="left" title="Image Précédente" onClick={previousSlide} >
+                {slideCount > 1 &&
+                    <ArrowLeft />}
+            </StyledArrowButton>
+            <StyledArrowButton arrow="right" title="Image suivante" onClick={nextSlide}
+            > {slideCount > 1 &&
+                <ArrowRight />}
+            </StyledArrowButton>
+            <StyledSlideCount>{currentSlide + 1}/{slideCount}</StyledSlideCount>
+            {/* slideCount > 1 &&
+            <StyledSlideCount> {currentSlide + 1} /{slideCount}</StyledSlideCount >}
 
-            renderBottomCenterControls={({ currentSlide, slideCount }) =>
-
-                /* le bullet s saffiche que si il y a plus d 'une image dans la carroussel, idem pour les boutons suivant et precedent*/
-                /* incrementation de 1 pour afficher l index du slide correspondant au numero de l image*/
-                /*le composant StyledSlideCount ne s affiche pas sur mobile et tablet*/
-
-                slideCount > 1 &&
-                <StyledSlideCount> {currentSlide + 1} /{slideCount}</StyledSlideCount >
-            }
-            renderCenterLeftControls={({ previousSlide, slideCount }) => (
+            { renderCenterLeftControls = {({ previousSlide, slideCount }) => (
                 slideCount > 1 &&
                 <button onClick={previousSlide} title="Image Précédente" >
                     <ArrowLeft />
                 </button>
-            )}
+            )
+}
 
-            renderCenterRightControls={({ nextSlide, slideCount }) => (
-                slideCount > 1 &&
-                <button onClick={nextSlide} title="Image suivante"  >
-                    <ArrowRight />
-                </button>
-            )}
+renderCenterRightControls = {({ nextSlide, slideCount }) => (
+    slideCount > 1 &&
+    <button onClick={nextSlide} title="Image suivante"  >
+        <ArrowRight />
+    </button>
+)}
         >
-            {/*children props img}*/}
+            <button onClick={previousSlide} title="Image Précédente" >
+                <ArrowLeft />
+            </button>
+            <button onClick={nextSlide} title="Image suivante"  >
+                <ArrowRight />
+            </button>
+{/*children props img}*/}
             {children}
 
         </StyledCarousel >

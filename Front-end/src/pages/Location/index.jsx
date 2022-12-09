@@ -1,5 +1,5 @@
 import React from "react"
-import { useContext } from "react"
+import { useContext, useState } from "react"
 
 // import PropTypes
 import PropTypes from "prop-types"
@@ -17,22 +17,28 @@ import CollapseLocation from "../../components/Collapse/CollapseLocation"
 //styled component
 import StyledHeaderInfoLocation from "./StyledLocation"
 import { StyledTag, StyledTagContainer } from "../../Atoms/Tag/StyledTag"
+import { StyledItem } from "../../components/CarouselLocation/StyledCarousel.js"
 
 function Location() {
     const { dataPictures, dataTitle, dataTag, dataRating, dataPosition, dataOwner, nameOwner, error } = useContext(DataOneLocationContext)
+    const [currentSlide, setCurrentSlide] = useState(0)
 
     //affichage d un message d erreur dans le dom si catch recupere une erreur lors de la recuperation des données de la fonction reqData
     if (error) return <div>Une erreur est survenue</div>
     return (
         <React.Fragment>
-            <CarouselLocation url={dataPictures && dataPictures}>
+            <CarouselLocation url={dataPictures && dataPictures} currentSlide={currentSlide} setCurrentSlide={setCurrentSlide}>
                 {/* //verifier que les url de la propriété pictures ont bien été chargé par fetch en verifiant bien que datapictures contien ces valeurs urls */}
                 {/* definition des children du composant Location qui s affichent dans le composant nuka-carousel*/}
+
                 {dataPictures &&
-                    dataPictures.map((url) => (
+                    dataPictures.map((url, index, array) => {
+                        console.log("index img", index)
                         //titre alt avec l url slicé pour recuperer le numero de la photo
-                        < img key={`${url.slice(-5, -4)}`} src={url} alt={`photo de location-${url.slice(-5, -4)}`} />
-                    ))}
+                        return < StyledItem key={`${url.slice(-5, -4)}`} src={array[currentSlide] && array[currentSlide]} alt={`photo de location-${url.slice(-5, -4)}`} index={index} url={url} array={array[index]} />
+                    })}
+
+
             </CarouselLocation>
             <main>
                 <StyledHeaderInfoLocation
