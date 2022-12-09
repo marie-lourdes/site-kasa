@@ -13,21 +13,11 @@ const StyledCarousel = styled.div`
     mix-blend-mode: normal;
     overflow: hidden;
     position: relative;
-   
     display: flex;
-flex-wrap: nowrap;
-
-box-sizing: border-box;
-width: 100%;
-    
-
-
-/*slide-list*/
-    .item {
-/* definition de la hauteur pour redefinir sa position dans le frame*/
-
-    
-    `
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+    width: 100%;
+`
 const StyledArrowButton = styled.button`
     position: absolute;
     top: 50%;
@@ -37,18 +27,17 @@ const StyledArrowButton = styled.button`
     }
     `
 const StyledItem = styled.img`
-max-height: 415px;
-min-height: 415px;
-object-fit: cover;
-object-position: center 50%;
-min-width:100%;
-max-width: 100%;
+  max-height: 415px;
+  min-height: 415px;
+  object-fit: cover;
+  object-position: center 50%;
+  min-width:100%;
+  max-width: 100%;
+  @media screen and ${devices_mediaQueries.mobile} {
+    max-height: 255px;
+    min-height: 255px; 
+  }       
 
-@media screen and ${devices_mediaQueries.mobile} {
-  max-height: 255px;
-  min-height: 255px; 
-}       
-}
 `
 const StyledSlideCount = styled.div`
     color: ${colors.secondary};
@@ -62,6 +51,6 @@ const StyledSlideCount = styled.div`
     @media screen and ${devices_mediaQueries.tablet} {
       display: none;
     } 
-    `
+ `
 
 export { StyledCarousel, StyledSlideCount, StyledItem, StyledArrowButton }
