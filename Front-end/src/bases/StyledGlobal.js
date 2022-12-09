@@ -85,6 +85,10 @@ main {
         margin: 6% 0;
       
     }
+    @media screen and ${devices_mediaQueries.tablet}{
+        width: auto;
+        margin: 6% 0;
+    }
 }
 
 main.main-Home-page{
@@ -93,6 +97,10 @@ main.main-Home-page{
     @media screen and ${devices_mediaQueries.mobile}{
       background: transparent;
       border-radius: 0;
+    }
+    @media screen and ${devices_mediaQueries.tablet}{
+        background: transparent;
+        border-radius: 0;
     }
 }
 

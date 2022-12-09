@@ -13,6 +13,9 @@ padding: 56px 0 20px 20px;
 @media screen and ${devices_mediaQueries.mobile}{
     padding: 0;
 }
+@media screen and ${devices_mediaQueries.tablet}{
+    padding: 0;
+}
 
 `
 export default StyledGallery 
