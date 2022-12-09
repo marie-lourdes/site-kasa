@@ -24,6 +24,7 @@ const StyledLinkCard = styled(Link)`
         min-width: 45%;
         max-width: 45%;
         
+        
     }
     .error-data-card {
         color: ${colors.primary}
