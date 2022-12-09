@@ -56,31 +56,8 @@ function CarouselLocation({ children, currentSlide, setCurrentSlide }) {
                 <ArrowRight />}
             </StyledArrowButton>
             <StyledSlideCount>{currentSlide + 1}/{slideCount}</StyledSlideCount>
-            {/* slideCount > 1 &&
-            <StyledSlideCount> {currentSlide + 1} /{slideCount}</StyledSlideCount >}
 
-            { renderCenterLeftControls = {({ previousSlide, slideCount }) => (
-                slideCount > 1 &&
-                <button onClick={previousSlide} title="Image Précédente" >
-                    <ArrowLeft />
-                </button>
-            )
-}
-
-renderCenterRightControls = {({ nextSlide, slideCount }) => (
-    slideCount > 1 &&
-    <button onClick={nextSlide} title="Image suivante"  >
-        <ArrowRight />
-    </button>
-)}
-        >
-            <button onClick={previousSlide} title="Image Précédente" >
-                <ArrowLeft />
-            </button>
-            <button onClick={nextSlide} title="Image suivante"  >
-                <ArrowRight />
-            </button>
-{/*children props img}*/}
+            {/*children props img}*/}
             {children}
 
         </StyledCarousel >
