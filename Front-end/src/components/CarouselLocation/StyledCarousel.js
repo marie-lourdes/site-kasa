@@ -20,8 +20,9 @@ const StyledCarousel = styled.div`
 `
 const StyledArrowButton = styled.button`
     position: absolute;
-    top: 50%;
-    ${({ arrow }) => arrow === "left" ? `left: 0` : ` right: 0`};
+    top: 40%;
+  
+    ${({ arrow }) => arrow === "left" ? `left: 0.6%` : ` right: 0.6%`};
     @media screen and ${devices_mediaQueries.mobile} {
       top:45%;
     }
