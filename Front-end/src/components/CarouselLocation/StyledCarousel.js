@@ -17,6 +17,7 @@ const StyledCarousel = styled.div`
     flex-wrap: nowrap;
     box-sizing: border-box;
     width: 100%;
+    
 `
 const StyledArrowButton = styled.button`
     position: absolute;
@@ -34,6 +35,10 @@ const StyledItem = styled.img`
   object-position: center 50%;
   min-width:100%;
   max-width: 100%;
+  transition: transform 1s;
+    &:active{
+      transform: translate(-100%)
+ }
   @media screen and ${devices_mediaQueries.mobile} {
     max-height: 255px;
     min-height: 255px; 
