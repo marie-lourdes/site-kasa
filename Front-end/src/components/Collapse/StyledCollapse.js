@@ -67,14 +67,16 @@ const StyledPanel = styled(RcCollapse.Panel)`
         padding-bottom: 50px;
         }
         ${({ $panelLocation }) => $panelLocation && `
+        padding-bottom: 20px;
         @media screen and ${devices_mediaQueries.mobile} {
            padding-bottom: 0;
         }`};
     }
 
     .content-box--description {
-        padding-bottom: 35px;
+        padding-bottom: 45px;
     }
+    
 
     ${({ $panelLocation }) => $panelLocation && `
     width: 100%;

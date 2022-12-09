@@ -44,7 +44,6 @@ const StyledCardLocation = styled.div`
         width: 100%;
         min-height: 340px;
         max-height: 340px;
-    
     }
     &::after {
         content: "";

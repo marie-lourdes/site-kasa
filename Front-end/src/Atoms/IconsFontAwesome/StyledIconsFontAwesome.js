@@ -3,9 +3,9 @@ import colors from "../../utils/colors.js"
 import devices_mediaQueries from "../../utils/responsive-design/devices.js"
 
 const StyledIconsArrowUpFontAwesome = styled.i`
-font-size: 1.2em;
+font-size: 1.125em;
 @media screen and ${devices_mediaQueries.mobile} {
-   
+    font-size: 1.2em;
   
 }
 `

@@ -7,7 +7,7 @@ function ArrowUp() {
     )
 }
 
-function ArrowLeft() {
+function ArrowLeft({ arrow }) {
     return (
         <StyledIconsArrowCarouselFontAwesome className="fa-solid fa-angle-left"></StyledIconsArrowCarouselFontAwesome>
     )
