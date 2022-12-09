@@ -65,16 +65,13 @@ const StyledCardLocation = styled.div`
         box-sizing: border-box;
         line-height: 1.5em;
         @media screen and ${devices_mediaQueries.mobile}{
-           padding: 5.5%;
-           
+           padding-left: 6%;
+           width: 50%;        
         }
         @media screen and ${devices_mediaQueries.tablet}{
             font-size: 1.1em;
-            width: 70%;
-          
-           
+            width: 70%;     
         }
-
     }
 `
 export { StyledCardLocation, StyledLinkCard }
