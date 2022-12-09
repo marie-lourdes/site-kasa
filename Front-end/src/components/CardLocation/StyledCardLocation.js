@@ -64,9 +64,14 @@ const StyledCardLocation = styled.div`
         width: 50%;
         box-sizing: border-box;
         line-height: 1.5em;
+        @media screen and ${devices_mediaQueries.mobile}{
+           padding: 5.5%;
+           
+        }
         @media screen and ${devices_mediaQueries.tablet}{
             font-size: 1.1em;
             width: 70%;
+          
            
         }
 

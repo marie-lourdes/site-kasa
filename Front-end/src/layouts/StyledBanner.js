@@ -16,11 +16,14 @@ overflow: hidden;
 margin-top: 5%;
 display: flex;
 justify-content: center;
+align-items: center;
 background: ${({ $about }) => $about ? `url(${bannerAbout}) no-repeat` : `url(${bannerHome}) no-repeat`};
 @media screen and ${devices_mediaQueries.mobile} {
     height:  ${({ $about }) => !$about && `111px`};
     border-radius: 10px;
     background: ${({ $about }) => $about ? `url(${bannerAbout_S})  ` : `url(${bannerHome_S}) `};
+    justify-content: flex-start;
+    padding-left: 5%;
 }
 @media screen and ${devices_mediaQueries.mobile_landscape}{
   background-size: cover;
@@ -39,29 +42,20 @@ background: ${({ $about }) => $about ? `url(${bannerAbout}) no-repeat` : `url(${
 } 
 
 .title-home {
-    position: absolute;
     color: white;
     z-index: 9999;
-    top: 32%;
-    left: 22.4%;
     box-sizing: border-box;
     display: flex;
     align-items: flex-end;
     height: 68px;
     @media screen and ${devices_mediaQueries.mobile} {
-        top: 15%;
-        left: 5.6%; 
-        padding-right: 25%;   
+         width: 67%;    
     }
     @media screen and ${devices_mediaQueries.mobile_landscape}{
-        top: 3%;
-        left: 22%; 
-        white-space: nowrap;    
+         white-space: nowrap;    
     }
     @media screen and ${devices_mediaQueries.tablet}{
-        top: 30%;
-        left: 15%; 
-        white-space: nowrap;
+         white-space: nowrap;
        
     }
   
