@@ -27,6 +27,7 @@ background: ${({ $about }) => $about ? `url(${bannerAbout}) no-repeat` : `url(${
 }
 @media screen and ${devices_mediaQueries.mobile_landscape}{
   background-size: cover;
+  justify-content: center;
 }
 
 &::before {
@@ -47,7 +48,6 @@ background: ${({ $about }) => $about ? `url(${bannerAbout}) no-repeat` : `url(${
     box-sizing: border-box;
     display: flex;
     align-items: flex-end;
-    height: 68px;
     @media screen and ${devices_mediaQueries.mobile} {
          width: 67%;    
     }
