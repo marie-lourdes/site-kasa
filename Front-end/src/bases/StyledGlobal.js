@@ -113,15 +113,16 @@ ul {
     position: absolute;
     top: 20%;
     left: 40%;
+    font-size: 1.5em;  
     @media screen and ${devices_mediaQueries.mobile}{
-        left: 20%;   
+        left: 20%;
+        font-size: 1em;   
     }
     @media screen and ${devices_mediaQueries.mobile_landscape}{
         left: 35%;
         top: 10%;
     }
     @media screen and ${devices_mediaQueries.tablet}{
-       font-size: 1.5em;
        left: 30%;
        top: 10%;
     }   
