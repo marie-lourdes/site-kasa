@@ -56,7 +56,7 @@ const StyledPanel = styled(RcCollapse.Panel)`
 
     .rc-collapse-content-box {
         padding: 27px 10px 0 15px;
-        line-height: 1.5em;
+       
        
         @media screen and ${devices_mediaQueries.mobile} {
             font-size: 0.75em;
@@ -65,11 +65,12 @@ const StyledPanel = styled(RcCollapse.Panel)`
         }       
     }
     .content-box {
+       
         @media screen and ${devices_mediaQueries.mobile} {
             min-height: 130px;
         }
         ${({ $panelLocation }) => $panelLocation && `
-            min-height: 185px;
+            min-height: 215px;
         @media screen and ${devices_mediaQueries.mobile} {
             min-height: 100px;
         }
