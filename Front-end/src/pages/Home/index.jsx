@@ -21,7 +21,7 @@ function Home() {
                 </div>
             </StyledBanner>
             <main className="main-Home-page">
-                {/* affichage d un message d erreur dans le dom */}
+                {/*affichage d un message d erreur dans le dom si catch recupere une erreur lors de la recuperation des données de la fonction reqData de DataAllLocationProvider */}
                 {error && <div className="error-loading-page">Une erreur est survenue...</div>}
                 <StyledGallery className="Gallery">
 
