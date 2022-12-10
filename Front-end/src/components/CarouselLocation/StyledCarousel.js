@@ -22,6 +22,7 @@ const StyledCarousel = styled.div`
 const StyledArrowButton = styled.button`
     position: absolute;
     top: 40%;
+    z-index:9999;
   
     ${({ arrow }) => arrow === "left" ? `left: 0.6%` : ` right: 0.6%`};
     @media screen and ${devices_mediaQueries.mobile} {
@@ -35,10 +36,10 @@ const StyledItem = styled.img`
   object-position: center 50%;
   min-width:100%;
   max-width: 100%;
-  transition: transform 1s;
-    &:active{
-      transform: translate(-100%)
- }
+  transition: transform 5s;
+  ${({ transformImg, currentSlideImg, src }) => transformImg && currentSlideImg && ` transform: translate(-${currentSlideImg * transformImg}%)`};
+ 
+ 
   @media screen and ${devices_mediaQueries.mobile} {
     max-height: 255px;
     min-height: 255px; 

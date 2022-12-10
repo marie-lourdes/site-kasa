@@ -22,12 +22,14 @@ import { StyledItem } from "../../components/CarouselLocation/StyledCarousel.js"
 function Location() {
     const { dataPictures, dataTitle, dataTag, dataRating, dataPosition, dataOwner, nameOwner, error } = useContext(DataOneLocationContext)
     const [currentSlide, setCurrentSlide] = useState(0)
+    const [transform, setTransform] = useState(0)
+    console.log("transform", transform)
 
     //affichage d un message d erreur dans le dom si catch recupere une erreur lors de la recuperation des données de la fonction reqData
     if (error) return <div>Une erreur est survenue</div>
     return (
         <React.Fragment>
-            <CarouselLocation url={dataPictures && dataPictures} currentSlide={currentSlide} setCurrentSlide={setCurrentSlide}>
+            <CarouselLocation url={dataPictures && dataPictures} currentSlide={currentSlide} setCurrentSlide={setCurrentSlide} transform={transform} setTransform={setTransform}>
                 {/* //verifier que les url de la propriété pictures ont bien été chargé par fetch en verifiant bien que datapictures contien ces valeurs urls */}
                 {/* definition des children du composant Location qui s affichent dans le composant nuka-carousel*/}
 
@@ -35,7 +37,7 @@ function Location() {
                     dataPictures.map((url, index, array) => {
                         console.log("index img", index)
                         //titre alt avec l url slicé pour recuperer le numero de la photo
-                        return < StyledItem key={`${url.slice(-5, -4)}`} src={array[currentSlide] && array[currentSlide]} alt={`photo de location-${url.slice(-5, -4)}`} index={index} url={url} array={array[index]} />
+                        return < StyledItem key={`${url.slice(-5, -4)}`} src={array[currentSlide] && array[currentSlide]} alt={`photo de location-${url.slice(-5, -4)}`} transformImg={transform} currentSlideImg={currentSlide} />
                     })}
 
 

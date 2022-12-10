@@ -1,6 +1,6 @@
 // import PropTypes
 import PropTypes from "prop-types"
-import { useState, useContext } from "react"
+import { useState, useContext, useEffect } from "react"
 
 import { DataOneLocationContext } from "../../utils/contexte-fetch/DataOneLocationContext"
 
@@ -10,8 +10,9 @@ import { ArrowLeft, ArrowRight } from "../../Atoms/IconsFontAwesome"
 //styled component avec nuka-carousel integré
 import { StyledCarousel, StyledSlideCount, StyledArrowButton } from "./StyledCarousel.js"
 
-function CarouselLocation({ children, currentSlide, setCurrentSlide }) {
+function CarouselLocation({ children, currentSlide, setCurrentSlide, transform, setTransform }) {
     const { dataPictures } = useContext(DataOneLocationContext)
+
     console.log("index", currentSlide)
     const currentSlideIndex = parseInt(currentSlide)
     const nxtSlide = currentSlideIndex + 1;
@@ -21,7 +22,13 @@ function CarouselLocation({ children, currentSlide, setCurrentSlide }) {
     console.log("slideCount", slideCount)
 
 
+
+
+
     /*  const slideCount = url.length*/
+    useEffect(() => {
+        setTransform(100)
+    }, [currentSlide])
     function previousSlide() {
 
         if (currentSlide === 0) {
@@ -40,20 +47,24 @@ function CarouselLocation({ children, currentSlide, setCurrentSlide }) {
             return setCurrentSlide(0)
         } else {
             return setCurrentSlide(nxtSlide)
+
+
         }
+
     }
+
 
     return (
         /*affichage de la caroussel avec la definition des props de nuka-carousel pour repondre aux contraintes fonctionnelles du client*/
-        <StyledCarousel>
+        <StyledCarousel transform={transform} setTransform={setTransform}>
 
             <StyledArrowButton arrow="left" title="Image Précédente" onClick={previousSlide} >
                 {slideCount > 1 &&
-                    <ArrowLeft />}
+                    <ArrowLeft currentSlide={currentSlide} transform={transform} />}
             </StyledArrowButton>
             <StyledArrowButton arrow="right" title="Image suivante" onClick={nextSlide}
             > {slideCount > 1 &&
-                <ArrowRight />}
+                <ArrowRight currentSlide={currentSlide} transform={transform} />}
             </StyledArrowButton>
             <StyledSlideCount>{currentSlide + 1}/{slideCount}</StyledSlideCount>
 
