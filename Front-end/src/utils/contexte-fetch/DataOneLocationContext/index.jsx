@@ -15,11 +15,15 @@ export const DataOneLocationProvider = ({ children }) => {
     const { id } = param
     const [dataOneLocation, setDataOneLocation] = useState({})
 
+
     //verification d une chaine de caractere, comme une propriété dans l objet dataoneLocation , avant de recuperer les propriétés  pour eviter des erreur "undefined"
     const dataPictures = dataOneLocation?.pictures
     const dataTitle = dataOneLocation?.title
     const dataTag = dataOneLocation?.tags
     const dataRating = dataOneLocation?.rating
+    const dataDescription = dataOneLocation?.description
+    const dataEquipments = dataOneLocation?.equipments
+    console.log("dataEquipments", dataEquipments)
 
     //Inversement des données de la position de la location de la base d données de l API
     const positionLocation = dataOneLocation?.location
@@ -27,6 +31,7 @@ export const DataOneLocationProvider = ({ children }) => {
     /*les données du nom complet  du propriétaire de la base de lA base de données de l 'API est scindé en deux partie: prénom et nom*/
     const dataOwner = dataOneLocation?.host
     const nameOwner = dataOwner?.name.split(" ");
+
 
     console.log("data position", dataPosition)
     console.log("datapicture", dataPictures)
@@ -55,7 +60,7 @@ export const DataOneLocationProvider = ({ children }) => {
     }, [id, navigate])
 
     return (
-        <DataOneLocationContext.Provider value={{ dataPictures, dataTitle, dataTag, dataRating, dataPosition, dataOwner, nameOwner }}>
+        <DataOneLocationContext.Provider value={{ dataPictures, dataTitle, dataTag, dataRating, dataPosition, positionLocation, dataOwner, nameOwner, dataDescription, dataEquipments }}>
             {children}
         </DataOneLocationContext.Provider>
     )

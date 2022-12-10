@@ -57,14 +57,20 @@ const StyledPanel = styled(RcCollapse.Panel)`
     .rc-collapse-content-box {
         padding: 27px 10px 0 15px;
         line-height: 1.5em;
+       
         @media screen and ${devices_mediaQueries.mobile} {
             font-size: 0.75em;
             padding-top: 20px;
         }       
     }
     .content-box {
+        ${({ $panelLocation }) => $panelLocation && `
+     padding-bottom: 30px;
+     min-height: 300px;
+        `}
         @media screen and ${devices_mediaQueries.mobile} {
         padding-bottom: 50px;
+        min-height: 200px;
         }
         ${({ $panelLocation }) => $panelLocation && `
         @media screen and ${devices_mediaQueries.mobile} {
@@ -72,9 +78,11 @@ const StyledPanel = styled(RcCollapse.Panel)`
         }`};
     }
 
-    .content-box--description {
-        padding-bottom: 35px;
-    }
+    .content-box--equipments [
+        line-height: 2em;
+    ]
+
+   
 
     ${({ $panelLocation }) => $panelLocation && `
     width: 100%;

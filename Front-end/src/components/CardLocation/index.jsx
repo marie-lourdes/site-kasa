@@ -8,7 +8,7 @@ import { StyledCardLocation } from "./StyledCardLocation"
 
 function CardLocation({ title, cover }) {
     // gestion de l erreur de type de données
-    if (typeof title === "number" || typeof cover === "number") return <div className="error-data-card">Données erronées...</div>
+    if (!typeof title === "string" || !typeof cover === "string") return <div className="error-data-card">Données erronées...</div>
 
     return (
         <React.Fragment>

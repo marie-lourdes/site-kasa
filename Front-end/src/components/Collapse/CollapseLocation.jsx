@@ -4,7 +4,7 @@ import { ArrowUp } from "../../Atoms/IconsFontAwesome/index.jsx";
 
 //styled component
 import { StyledCollapseContainer, StyledPanel } from "../../components/Collapse/StyledCollapse"
-function CollapseLocation() {
+function CollapseLocation({ dataDescription, dataEquipments }) {
 
     const [openPanelLocation0, setPanelLocation0] = useState(false)
     const [openPanelLocation1, setPanelLocation1] = useState(false)
@@ -27,8 +27,8 @@ function CollapseLocation() {
                         setPanelLocation0(openPanelLocation0 ? false : true)
 
                     }}>
-                    <div className="content-box--description">
-                        {contentPanel[0]["content"]}
+                    <div className="content-box">
+                        {dataDescription}
                     </div>
                 </StyledPanel>
             </StyledCollapseContainer>
@@ -47,7 +47,7 @@ function CollapseLocation() {
                     }}>
                     <div className="content-box">
                         <ul>
-                            {contentPanel[1]["content"].map((listEquipement, index) =>
+                            {dataEquipments && dataEquipments.map((listEquipement, index) =>
                                 <li key={`${index}-${listEquipement}`}>{listEquipement}</li>
                             )}
                         </ul>

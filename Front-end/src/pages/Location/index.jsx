@@ -19,10 +19,12 @@ import StyledHeaderInfoLocation from "./StyledLocation"
 import { StyledTag, StyledTagContainer } from "../../Atoms/Tag/StyledTag"
 
 function Location() {
-    const { dataPictures, dataTitle, dataTag, dataRating, dataPosition, dataOwner, nameOwner, error } = useContext(DataOneLocationContext)
+    const { dataPictures, dataTitle, dataTag, dataRating, dataPosition, positionLocation, dataOwner, nameOwner, dataDescription, dataEquipments } = useContext(DataOneLocationContext)
+    console.log("typeof datatag", dataTag)
 
-    //affichage d un message d erreur dans le dom si catch recupere une erreur lors de la recuperation des données de la fonction reqData
-    if (error) return <div className="error-loading-page">Une erreur est survenue...</div>
+    //affichage d un message d erreur de type de données
+    { !typeof dataTitle === "string " || !typeof dataPosition === "string" || !typeof dataTag === "object" || !typeof nameOwner === "object" || !typeof dataOwner === "string" && <div> données erronées</div> }
+
     return (
         <React.Fragment>
             <CarouselLocation url={dataPictures && dataPictures}>
@@ -36,11 +38,14 @@ function Location() {
             </CarouselLocation>
             <main>
                 <StyledHeaderInfoLocation
-                    dataTitle={dataTitle}
-                    dataPosition={dataPosition}
-                    dataTag={dataTag}
-                    nameOwner={nameOwner}
+                    dataTitle={dataTitle && dataTitle}
+                    dataPosition={dataPosition && dataPosition}
+                    dataTag={dataTag && dataTag}
+                    nameOwner={nameOwner && nameOwner}
                     dataOwner={dataOwner?.pictures} >
+
+
+
                     <div className="column-left-info-location">
                         <div className="title-location"> {dataTitle && dataTitle}</div>
 
@@ -71,11 +76,13 @@ function Location() {
                     </div>
                 </StyledHeaderInfoLocation>
                 <div className="collapse-location-row">
-                    <CollapseLocation />
+                    <CollapseLocation dataDescription={dataDescription} dataEquipments={dataEquipments && dataEquipments} />
                 </div>
             </main>
         </React.Fragment >
     )
+
+
 
 }
 
@@ -87,5 +94,8 @@ StyledHeaderInfoLocation.propTypes = {
     nameOwner: PropTypes.arrayOf(PropTypes.string),
     dataOwner: PropTypes.string
 }
+
+
+
 
 export default Location
