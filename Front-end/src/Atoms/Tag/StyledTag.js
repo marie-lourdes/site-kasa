@@ -13,16 +13,16 @@ display: flex;
 margin-right: 2%;
 box-sizing: border-box;
 white-space: nowrap;
-width: 22%;
+min-width: 20%;
 @media screen and ${devices_mediaQueries.mobile} {
    font-size: 0.625em; 
    padding: 2.16px 29px 1.84px;
-   border-radius: 5px;
+   border-radius: 6px;
 }
 @media screen and ${devices_mediaQueries.tablet} {
   
    padding:10px 70px 10px;
-   border-radius: 10px;
+   border-radius: 15px;
 }
 
 `

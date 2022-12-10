@@ -55,14 +55,11 @@ const StyledPanel = styled(RcCollapse.Panel)`
     }
 
     .rc-collapse-content-box {
-        padding: 27px 10px 0 15px;
-       
-       
+        padding: 27px 10px 0 15px;    
         @media screen and ${devices_mediaQueries.mobile} {
             font-size: 0.75em;
             padding-top: 20px;
-          
-        }       
+       }       
     }
     .content-box {
        
