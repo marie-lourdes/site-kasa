@@ -17,7 +17,7 @@ function CollapseLocation({ dataDescription, dataEquipments }) {
                     $panelLocationDescription
                     key={0}
                     arrow={openPanelLocation0 ? "top-arrow" : "bottom-arrow"}
-                    header={contentPanel[0]["title"]}
+                    header="Description"
                     destroyInactivePanel={true}
                     expandIcon={ArrowUp}
                     headerClass="my-header-class"
@@ -35,7 +35,7 @@ function CollapseLocation({ dataDescription, dataEquipments }) {
             <StyledCollapseContainer $collapseLocation accordion={false}>
                 <StyledPanel $panelLocation $panelLocationEquipement key={1}
                     arrow={openPanelLocation1 ? "top-arrow" : "bottom-arrow"}
-                    header={contentPanel[1]["title"]}
+                    header="Équipements"
                     destroyInactivePanel={true}
                     expandIcon={ArrowUp}
                     headerClass="my-header-class"

@@ -61,21 +61,24 @@ const StyledPanel = styled(RcCollapse.Panel)`
         @media screen and ${devices_mediaQueries.mobile} {
             font-size: 0.75em;
             padding-top: 20px;
+          
         }       
     }
     .content-box {
+        @media screen and ${devices_mediaQueries.mobile} {
+       
+            min-height: 130px;
+            }
         ${({ $panelLocation }) => $panelLocation && `
-     padding-bottom: 30px;
+    
      min-height: 300px;
-        `}
-        @media screen and ${devices_mediaQueries.mobile} {
-        padding-bottom: 50px;
-        min-height: 200px;
+     @media screen and ${devices_mediaQueries.mobile} {
+       
+        min-height: 150px;
         }
-        ${({ $panelLocation }) => $panelLocation && `
-        @media screen and ${devices_mediaQueries.mobile} {
-           padding-bottom: 0;
-        }`};
+        `}
+       
+      
     }
 
     .content-box--equipments [
