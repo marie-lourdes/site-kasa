@@ -119,7 +119,7 @@ ul {
   
     @media screen and ${devices_mediaQueries.mobile}{
         left: 20%;
-        top: 10%;
+        top: 20%;
       }
       @media screen and ${devices_mediaQueries.mobile_landscape}{
         left: 35%;
