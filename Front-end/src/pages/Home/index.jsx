@@ -22,7 +22,7 @@ function Home() {
             </StyledBanner>
             <main className="main-Home-page">
                 {/* affichage d un message d erreur dans le dom */}
-                {error && <div>Une erreur est survenue...</div>}
+                {error && <div className="error-loading-page">Une erreur est survenue...</div>}
                 <StyledGallery className="Gallery">
 
                     {locationData.map(({ id, title, cover }) => (

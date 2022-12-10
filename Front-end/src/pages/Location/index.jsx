@@ -22,7 +22,7 @@ function Location() {
     const { dataPictures, dataTitle, dataTag, dataRating, dataPosition, dataOwner, nameOwner, error } = useContext(DataOneLocationContext)
 
     //affichage d un message d erreur dans le dom si catch recupere une erreur lors de la recuperation des données de la fonction reqData
-    if (error) return <div>Une erreur est survenue</div>
+    if (error) return <div className="error-loading-page">Une erreur est survenue...</div>
     return (
         <React.Fragment>
             <CarouselLocation url={dataPictures && dataPictures}>

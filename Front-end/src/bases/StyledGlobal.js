@@ -79,15 +79,18 @@ main {
     display: flex;
     flex-direction: column;
     width: 100%;
+    min-height: 100vh;
     box-sizing: border-box;
+    position: relative;
     @media screen and ${devices_mediaQueries.mobile}{
         width: auto;
-        margin: 6% 0;
-      
+        margin: 6% 0;  
+         
     }
     @media screen and ${devices_mediaQueries.tablet}{
         width: auto;
         margin: 6% 0;
+      
     }
 }
 
@@ -107,6 +110,27 @@ main.main-Home-page{
 ul {
     padding-left: 0;
     list-style: none;
+}
+
+.error-loading-page {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+  
+    @media screen and ${devices_mediaQueries.mobile}{
+        left: 20%;
+        top: 10%;
+      }
+      @media screen and ${devices_mediaQueries.mobile_landscape}{
+        left: 35%;
+        top: 10%;
+      }
+      @media screen and ${devices_mediaQueries.tablet}{
+       font-size: 1.5em;
+       left: 30%;
+       top: 10%;
+      }
+   
 }
 `
 export default StyledGlobal
