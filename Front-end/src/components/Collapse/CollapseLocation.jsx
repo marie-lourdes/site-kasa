@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import contentPanel from "../../utils/dataPanelLocation"
 import { ArrowUp } from "../../Atoms/IconsFontAwesome/index.jsx";
 
 //styled component
