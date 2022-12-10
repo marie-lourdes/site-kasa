@@ -37,8 +37,9 @@ const StyledItem = styled.img`
   object-position: center 50%;
   min-width:100%;
   max-width: 100%;
-  transition: transform 5s;
-  ${({ transformImg, }) => transformImg && ` transform: translate(-${transformImg}%)`};
+  transition: transform 50ms ease-in;
+  overflow: hidden;
+  ${({ transformImg, }) => transformImg && ` transform: translateX(-${transformImg}%)`};
  
  
   @media screen and ${devices_mediaQueries.mobile} {
