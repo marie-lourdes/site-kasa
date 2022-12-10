@@ -66,26 +66,15 @@ const StyledPanel = styled(RcCollapse.Panel)`
     }
     .content-box {
         @media screen and ${devices_mediaQueries.mobile} {
-       
             min-height: 130px;
-            }
+        }
         ${({ $panelLocation }) => $panelLocation && `
-    
-     min-height: 300px;
-     @media screen and ${devices_mediaQueries.mobile} {
-       
-        min-height: 150px;
+            min-height: 185px;
+        @media screen and ${devices_mediaQueries.mobile} {
+            min-height: 100px;
         }
         `}
-       
-      
     }
-
-    .content-box--equipments [
-        line-height: 2em;
-    ]
-
-   
 
     ${({ $panelLocation }) => $panelLocation && `
     width: 100%;
