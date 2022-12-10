@@ -78,7 +78,6 @@ main {
     display: flex;
     flex-direction: column;
     width: 100%;
-    min-height: 100vh;
     box-sizing: border-box;
     position: relative;
     @media screen and ${devices_mediaQueries.mobile}{
@@ -94,6 +93,7 @@ main {
 main.main-Home-page{
     border-radius: 25px;
     background: ${colors.backgroundMain};
+    min-height: 100vh;
     @media screen and ${devices_mediaQueries.mobile}{
       background: transparent;
       border-radius: 0;
@@ -113,7 +113,7 @@ ul {
     position: absolute;
     top: 20%;
     left: 40%;
-    font-size: 1.5em;  
+    font-size: 1.5em; 
     @media screen and ${devices_mediaQueries.mobile}{
         left: 20%;
         font-size: 1em;   
