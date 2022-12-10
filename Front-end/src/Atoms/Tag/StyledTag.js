@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import colors from "../../utils/colors"
 import devices_mediaQueries from "../../utils/responsive-design/devices.js"
+
 const StyledTag = styled.div`
 font-size: 0.875em;
 background:${colors.primary};
@@ -20,11 +21,9 @@ min-width: 20%;
    border-radius: 6px;
 }
 @media screen and ${devices_mediaQueries.tablet} {
-  
-   padding:10px 70px 10px;
+ padding:10px 70px 10px;
    border-radius: 15px;
 }
-
 `
 const StyledTagContainer = styled.div`
 display:flex;

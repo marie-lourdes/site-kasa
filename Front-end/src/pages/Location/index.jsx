@@ -19,11 +19,8 @@ import StyledHeaderInfoLocation from "./StyledLocation"
 import { StyledTag, StyledTagContainer } from "../../Atoms/Tag/StyledTag"
 
 function Location() {
-    const { dataPictures, dataTitle, dataTag, dataRating, dataPosition, positionLocation, dataOwner, nameOwner, dataDescription, dataEquipments } = useContext(DataOneLocationContext)
+    const { dataPictures, dataTitle, dataTag, dataRating, dataPosition, dataOwner, nameOwner, dataDescription, dataEquipments } = useContext(DataOneLocationContext)
     console.log("typeof datatag", dataTag)
-
-    //affichage d un message d erreur de type de données
-    { !typeof dataTitle === "string " || !typeof dataPosition === "string" || !typeof dataTag === "object" || !typeof nameOwner === "object" || !typeof dataOwner === "string" && <div> données erronées</div> }
 
     return (
         <React.Fragment>
@@ -76,7 +73,7 @@ function Location() {
                     </div>
                 </StyledHeaderInfoLocation>
                 <div className="collapse-location-row">
-                    <CollapseLocation dataDescription={dataDescription} dataEquipments={dataEquipments && dataEquipments} />
+                    <CollapseLocation dataDescription={dataDescription} dataEquipments={dataEquipments} />
                 </div>
             </main>
         </React.Fragment >
@@ -94,7 +91,13 @@ StyledHeaderInfoLocation.propTypes = {
     nameOwner: PropTypes.arrayOf(PropTypes.string),
     dataOwner: PropTypes.string
 }
+CollapseLocation.propTypes = {
+    dataDescription: PropTypes.string,
 
+    dataEquipments: PropTypes.arrayOf(PropTypes.string),
+
+
+}
 
 
 
