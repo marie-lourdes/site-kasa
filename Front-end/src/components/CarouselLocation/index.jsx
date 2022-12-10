@@ -21,32 +21,26 @@ function CarouselLocation({ children, currentSlide, setCurrentSlide, transform, 
     const slideCount = dataPictures && dataPictures.length;
     console.log("slideCount", slideCount)
 
-
-
-
-
     /*  const slideCount = url.length*/
-    useEffect(() => {
-        setTransform(100)
-    }, [currentSlide])
+
     function previousSlide() {
 
         if (currentSlide === 0) {
             console.log("prevslide", currentSlide)
-            return setCurrentSlide(lastSlide)
+            return (setCurrentSlide(lastSlide), setTransform(lastSlide * 100))
 
 
         } else {
-            return setCurrentSlide(prevSlide)
+            return (setCurrentSlide(prevSlide), setTransform(prevSlide * 100))
         }
 
     }
     function nextSlide() {
         if (currentSlide === dataPictures.length - 1) {
             console.log("next slide", currentSlide)
-            return setCurrentSlide(0)
+            return (setCurrentSlide(0), setTransform(0 * 100))
         } else {
-            return setCurrentSlide(nxtSlide)
+            return (setCurrentSlide(nxtSlide), setTransform(nxtSlide * 100))
 
 
         }

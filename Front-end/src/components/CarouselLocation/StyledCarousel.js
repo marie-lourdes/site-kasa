@@ -17,6 +17,7 @@ const StyledCarousel = styled.div`
     flex-wrap: nowrap;
     box-sizing: border-box;
     width: 100%;
+  
     
 `
 const StyledArrowButton = styled.button`
@@ -37,7 +38,7 @@ const StyledItem = styled.img`
   min-width:100%;
   max-width: 100%;
   transition: transform 5s;
-  ${({ transformImg, currentSlideImg, src }) => transformImg && currentSlideImg && ` transform: translate(-${currentSlideImg * transformImg}%)`};
+  ${({ transformImg, }) => transformImg && ` transform: translate(-${transformImg}%)`};
  
  
   @media screen and ${devices_mediaQueries.mobile} {
@@ -51,6 +52,7 @@ const StyledSlideCount = styled.div`
     position: absolute;
     bottom: 10%;
     left: 50%;
+    z-index: 9999;
     /*le composant ne s affiche pas sur mobile et tablet*/
     @media screen and ${devices_mediaQueries.mobile} {
       display: none;
