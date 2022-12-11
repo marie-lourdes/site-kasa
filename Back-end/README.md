@@ -1,8 +1,9 @@
 # SITE KASA
 
-The site "kasa" is property rental agency:
+The site "kasa" is property rental agency
 <br>
-## INSTALLATION
+
+## INSTALLATION 
 
 **Back end and Front end Prerequisites:** You will need to have Node and npm installed locally on your machine.
 Clone this repo.

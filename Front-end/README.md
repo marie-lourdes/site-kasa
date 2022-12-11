@@ -1,5 +1,12 @@
 # SITE KASA
 
+the site "kasa" is property rental agency
+<br>
+
+## INSTALLATION 
+
+**Back end and Front end Prerequisites:** You will need to have Node and npm installed locally on your machine.
+Clone this repo.
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
