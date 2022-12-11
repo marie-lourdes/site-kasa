@@ -1,8 +1,8 @@
-import { createGlobalStyle } from "styled-components"
-import MontserratFontBold from "../assets/fonts/Montserrat-ExtraBold.ttf"
-import MontserratFont from "../assets/fonts/Montserrat-Regular.ttf"
-import colors from "../utils/colors"
-import devices_mediaQueries from "../utils/responsive-design/devices.js"
+import { createGlobalStyle } from 'styled-components'
+import MontserratFontBold from '../assets/fonts/Montserrat-ExtraBold.ttf'
+import MontserratFont from '../assets/fonts/Montserrat-Regular.ttf'
+import colors from '../utils/colors'
+import devices_mediaQueries from '../utils/responsive-design/devices.js'
 
 const StyledGlobal = createGlobalStyle`
 @font-face {

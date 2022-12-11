@@ -1,13 +1,13 @@
 import React from 'react'
 
 // composant layouts react
-import Header from "./Header"
-import Footer from "./Footer"
+import Header from './Header'
+import Footer from './Footer'
 
 //styled component
 import StyledGlobal from '../bases/StyledGlobal'
 
-//LAYOUT APP 
+//LAYOUT APP
 
 function App({ children }) {
   return (
@@ -15,12 +15,10 @@ function App({ children }) {
       <StyledGlobal />
       <div className="container-page">
         <Header />
-        <div className="main-content">
-          {children}
-        </div>
+        <div className="main-content">{children}</div>
       </div>
       <Footer />
-    </React.Fragment >
+    </React.Fragment>
   )
 }
 

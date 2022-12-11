@@ -1,68 +1,70 @@
 //import contexte natif de React
 import { createContext, useState, useEffect } from 'react'
-import { useParams } from "react-router"
+import { useParams } from 'react-router'
 import { useNavigate } from 'react-router'
-import Page404 from "../../../pages/Page404"
+import Page404 from '../../../pages/Page404'
 
 // initialisation du composant Contexte
 export const DataOneLocationContext = createContext()
 
 //creation du composant Provider qui partage les données du composant contexte avec lobjet Provider connecté au contexte
 export const DataOneLocationProvider = ({ children }) => {
-    const navigate = useNavigate()
-    //recupération du parametre
-    const param = useParams()
-    console.log("param", param)
-    const { id } = param
-    const [dataOneLocation, setDataOneLocation] = useState({})
-    const [error, setError] = useState(false)
+  const navigate = useNavigate()
+  //recupération du parametre
+  const param = useParams()
+  const { id } = param
+  const [dataOneLocation, setDataOneLocation] = useState({})
 
+  //verification d une chaine de caractere, comme une propriété dans l objet dataoneLocation , avant de recuperer les propriétés  pour eviter des erreur "undefined"
+  const dataPictures = dataOneLocation?.pictures
+  const dataTitle = dataOneLocation?.title
+  const dataTag = dataOneLocation?.tags
+  const dataRating = dataOneLocation?.rating
+  const dataDescription = dataOneLocation?.description
+  const dataEquipments = dataOneLocation?.equipments
 
-    //verification d une chaine de caractere, comme une propriété dans l objet dataoneLocation , avant de recuperer les propriétés  pour eviter des erreur "undefined"
-    const dataPictures = dataOneLocation?.pictures
-    const dataTitle = dataOneLocation?.title
-    const dataTag = dataOneLocation?.tags
-    const dataRating = dataOneLocation?.rating
-    const dataDescription = dataOneLocation?.description
-    const dataEquipments = dataOneLocation?.equipments
-    console.log("dataEquipments", dataEquipments)
+  //Inversement des données de la position de la location de la base d données de l API
+  const positionLocation = dataOneLocation?.location
+  const dataPosition =
+    positionLocation && positionLocation.split('-').reverse().join(' , ')
+  /*les données du nom complet  du propriétaire de la base de lA base de données de l 'API est scindé en deux partie: prénom et nom*/
+  const dataOwner = dataOneLocation?.host
+  const nameOwner = dataOwner?.name.split(' ')
 
-    //Inversement des données de la position de la location de la base d données de l API
-    const positionLocation = dataOneLocation?.location
-    const dataPosition = positionLocation && positionLocation.split("-").reverse().join(" , ")
-    /*les données du nom complet  du propriétaire de la base de lA base de données de l 'API est scindé en deux partie: prénom et nom*/
-    const dataOwner = dataOneLocation?.host
-    const nameOwner = dataOwner?.name.split(" ");
+  // requete des données d une location via son parametre de recherche "id", a chaque modification de l id dans le tableau de dependance de useEffect  et chargement des données de la requete fetch  dans le state du composant via la fonction setDataOneLocation
+  useEffect(() => {
+    async function reqData() {
+      try {
+        const response = await fetch(
+          'http://localhost:8000/api-kasa/logements/' + id
+        )
+        const dataLocation = await response.json()
+        setDataOneLocation(dataLocation)
+      } catch (err) {
+        console.log(err)
+        //redirection vers la page erreur, en creeant une page qui n existe pas qui genere la page404 sur une route qui n est pas defini dans les route de index.js
+        navigate('/error')
+      }
+    }
+    reqData()
+  }, [id, navigate])
 
-
-    console.log("data position", dataPosition)
-    console.log("datapicture", dataPictures)
-    console.log("dataonelocation", dataOneLocation)
-    console.log("data tags", dataTag)
-    console.log("dataowner", dataOwner)
-    console.log("datarating", dataRating)
-
-    // requete des données d une location via son parametre de recherche "id", a chaque modification de l id dans le tableau de dependance de useEffect  et chargement des données de la requete fetch  dans le state du composant via la fonction setDataOneLocation
-    useEffect(() => {
-        async function reqData() {
-            try {
-                const response = await fetch("http://localhost:8000/api-kasa/logements/" + id)
-                const dataLocation = await response.json()
-                setDataOneLocation(dataLocation)
-            } catch (err) {
-                console.log(err)
-                setError(true)
-                //redirection vers la page erreur, en creeant une page qui n existe pas qui genere la page404 sur une route qui n est pas defini dans les route de index.js
-                navigate("/error")
-            }
-        }
-        reqData();
-
-    }, [id, navigate])
-
-    return (
-        <DataOneLocationContext.Provider value={{ dataPictures, dataTitle, dataTag, dataRating, dataPosition, positionLocation, dataOwner, nameOwner, dataDescription, dataEquipments }}>
-            {children}
-        </DataOneLocationContext.Provider>
-    )
+  return (
+    <DataOneLocationContext.Provider
+      value={{
+        dataPictures,
+        dataTitle,
+        dataTag,
+        dataRating,
+        dataPosition,
+        positionLocation,
+        dataOwner,
+        nameOwner,
+        dataDescription,
+        dataEquipments,
+      }}
+    >
+      {children}
+    </DataOneLocationContext.Provider>
+  )
 }

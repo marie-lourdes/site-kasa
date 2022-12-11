@@ -4,15 +4,15 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import App from './layouts/App'
 import reportWebVitals from './reportWebVitals'
 
-//import DataAllLocationsProvider et  DataOneLocationProvider 
-import { DataAllLocationsProvider } from "./utils/contexte-fetch/DataAllLocationsContext"
-import { DataOneLocationProvider } from "./utils/contexte-fetch/DataOneLocationContext"
+//import DataAllLocationsProvider et  DataOneLocationProvider
+import { DataAllLocationsProvider } from './utils/contexte-fetch/DataAllLocationsContext'
+import { DataOneLocationProvider } from './utils/contexte-fetch/DataOneLocationContext'
 
 //composants react du layout App
-import Home from "./pages/Home"
-import About from "./pages/About"
-import Location from "./pages/Location"
-import Page404 from "./pages/Page404"
+import Home from './pages/Home'
+import About from './pages/About'
+import Location from './pages/Location'
+import Page404 from './pages/Page404'
 
 //ROUTER ET ROUTES DU LAYOUT APP
 
@@ -29,14 +29,21 @@ root.render(
             <Routes>
               <Route exact path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
-              <Route path="/location/:id" element={<DataOneLocationProvider><Location /></DataOneLocationProvider>} />
+              <Route
+                path="/location/:id"
+                element={
+                  <DataOneLocationProvider>
+                    <Location />
+                  </DataOneLocationProvider>
+                }
+              />
               <Route path="*" element={<Page404 />} />
             </Routes>
           </div>
         </App>
       </DataAllLocationsProvider>
     </Router>
-  </React.StrictMode >
+  </React.StrictMode>
 )
 
 // If you want to start measuring performance in your app, pass a function

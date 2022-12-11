@@ -1,6 +1,6 @@
-import styled from "styled-components"
-import colors from "../../utils/colors"
-import devices_mediaQueries from "../../utils/responsive-design/devices.js"
+import styled from 'styled-components'
+import colors from '../../utils/colors'
+import devices_mediaQueries from '../../utils/responsive-design/devices.js'
 
 const StyledPage404 = styled.main`
     font-size: 18em;

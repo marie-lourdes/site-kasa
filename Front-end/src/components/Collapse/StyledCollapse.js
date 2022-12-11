@@ -1,78 +1,86 @@
-import styled from "styled-components"
-import devices_mediaQueries from "../../utils/responsive-design/devices.js"
+import styled from 'styled-components'
+import devices_mediaQueries from '../../utils/responsive-design/devices.js'
 
 //import Rc- collapse
-import RcCollapse from "rc-collapse"
+import RcCollapse from 'rc-collapse'
 
-import colors from "../../utils/colors"
+import colors from '../../utils/colors'
 
 const StyledCollapseContainer = styled(RcCollapse)`
-    width: 85%;
-    ${({ $collapseLocation }) => $collapseLocation && `
+  width: 85%;
+  ${({ $collapseLocation }) =>
+    $collapseLocation &&
+    `
     width: 47%;
     margin-top: 2%;`};
-    @media screen and ${devices_mediaQueries.mobile} {
-        margin-top: 0; 
-        width: 100%;    
-    } 
-    @media screen and ${devices_mediaQueries.tablet} {
-        margin-top: 0;   
-    }
+  @media screen and ${devices_mediaQueries.mobile} {
+    margin-top: 0;
+    width: 100%;
+  }
+  @media screen and ${devices_mediaQueries.tablet} {
+    margin-top: 0;
+  }
 `
 const StyledPanel = styled(RcCollapse.Panel)`
-    background: ${colors.backgroundMain};
-    margin-bottom: 30px;
-    position: relative;
-    line-height: 1.5em;
-    width: 100%;
+  background: ${colors.backgroundMain};
+  margin-bottom: 30px;
+  position: relative;
+  line-height: 1.5em;
+  width: 100%;
+  @media screen and ${devices_mediaQueries.mobile} {
+    margin-bottom: 7%;
+  }
+
+  &,
+  .my-header-class {
+    border-radius: 5px;
+  }
+
+  .rc-collapse-content-box,
+  .my-header-class {
+    font-size: 1.5em;
+  }
+
+  .my-header-class {
+    background: ${colors.primary};
+    color: ${colors.secondary};
+    height: 47px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 15px;
     @media screen and ${devices_mediaQueries.mobile} {
-        margin-bottom: 7%;   
+      font-size: 0.813em;
+      height: 30px;
     }
-   
-    &, .my-header-class {
-        border-radius: 5px;
-    }
+  }
 
-    .rc-collapse-content-box, .my-header-class {
-        font-size: 1.5em;      
+  .rc-collapse-content-box {
+    padding: 27px 10px 0 15px;
+    @media screen and ${devices_mediaQueries.mobile} {
+      font-size: 0.75em;
+      padding-top: 20px;
     }
+  }
 
-    .my-header-class {
-        background: ${colors.primary};
-        color: ${colors.secondary};
-        height: 47px;
-        cursor: pointer;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-left: 15px;
-        @media screen and ${devices_mediaQueries.mobile} {
-        font-size: 0.813em;
-        height: 30px;
-        }
+  .content-box {
+    @media screen and ${devices_mediaQueries.mobile} {
+      min-height: 160px;
     }
-
-    .rc-collapse-content-box {
-        padding: 27px 10px 0 15px;    
-        @media screen and ${devices_mediaQueries.mobile} {
-            font-size: 0.75em;
-            padding-top: 20px;
-       }       
-    }
-    
-    .content-box {
-        @media screen and ${devices_mediaQueries.mobile} {
-            min-height: 160px;
-        }
-        ${({ $panelLocation }) => $panelLocation && `
+    ${({ $panelLocation }) =>
+      $panelLocation &&
+      `
             min-height: 215px;
         @media screen and ${devices_mediaQueries.mobile} {
             min-height: 100px;
         }
         `}
-    }
+  }
 
-    ${({ $panelLocation }) => $panelLocation && `
+  ${({ $panelLocation }) =>
+    $panelLocation &&
+    `
     width: 100%;
     .rc-collapse-content-box, .my-header-class {
         font-size: 1.125em;
@@ -82,12 +90,12 @@ const StyledPanel = styled(RcCollapse.Panel)`
         }
     }`};
 
-    /* css icon Font awesome arrowUp*/
-    .rc-collapse-expand-icon {
-        color: white;
-        position: absolute;
-        right: 10px;  
-    ${({ arrow }) => arrow === "bottom-arrow" && `transform: rotate(180deg);`};
-    }
+  /* css icon Font awesome arrowUp*/
+  .rc-collapse-expand-icon {
+    color: white;
+    position: absolute;
+    right: 10px;
+    ${({ arrow }) => arrow === 'bottom-arrow' && `transform: rotate(180deg);`};
+  }
 `
 export { StyledCollapseContainer, StyledPanel }
