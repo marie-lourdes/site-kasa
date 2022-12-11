@@ -1,0 +1,4 @@
+{"level":"error","message":"page location/id location:c67ab8a7/title: must be string","service":"api-kasa","timestamp":"2022-12-11T17:06:33.155Z"}
+{"level":"error","message":"page location/id location:c67ab8a7/title: must be string","service":"api-kasa","timestamp":"2022-12-11T17:06:33.191Z"}
+{"level":"error","message":"page home/title: must be string","service":"api-kasa","timestamp":"2022-12-11T17:06:33.207Z"}
+{"level":"error","message":"page home/title: must be string","service":"api-kasa","timestamp":"2022-12-11T17:06:33.233Z"}
