@@ -16,8 +16,7 @@ const StyledTag = styled.div`
    white-space: nowrap;
    min-width: 20%;
    ${({ tagLittle }) => tagLittle &&
-      `min-width: 13%;
-  
+      `min-width: 13%; 
     `};
    @media screen and ${devices_mediaQueries.mobile} {
       font-size: 0.625em; 
@@ -25,7 +24,7 @@ const StyledTag = styled.div`
       border-radius: 6px;
    }
    @media screen and ${devices_mediaQueries.tablet} {
-   padding:10px 70px 10px;
+   padding:10px 25px 10px;
       border-radius: 15px;
    }
 `
