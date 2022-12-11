@@ -1,9 +1,0 @@
-
-{"level":"error","message":"page location/id location:c67ab8a7/title: must be string","service":"api-kasa","timestamp":"2022-12-11T17:15:55.201Z"}
-{"level":"error","message":"page home/title: must be string","service":"api-kasa","timestamp":"2022-12-11T17:15:55.250Z"}
-{"level":"error","message":"page location/id location:c67ab8a7/title: must be string","service":"api-kasa","timestamp":"2022-12-11T17:15:55.269Z"}
-{"level":"error","message":"page home/title: must be string","service":"api-kasa","timestamp":"2022-12-11T17:15:55.292Z"}
-{"level":"error","message":"page location/id location:c67ab8a7/title: must be string","service":"api-kasa","timestamp":"2022-12-11T17:17:16.986Z"}
-{"level":"error","message":"page home/title: must be string","service":"api-kasa","timestamp":"2022-12-11T17:17:16.993Z"}
-{"level":"error","message":"page home/title: must be string","service":"api-kasa","timestamp":"2022-12-11T17:17:17.021Z"}
-{"level":"error","message":"page location/id location:c67ab8a7/title: must be string","service":"api-kasa","timestamp":"2022-12-11T17:17:17.095Z"}
