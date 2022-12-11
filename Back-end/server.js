@@ -18,7 +18,6 @@ const errorHandler = error => {
 
     const bind = 'port: ' + MY_PORT;
     switch (error.code) {
-
         case 'EACCES':
             logger.error('Error:' + " " + bind + ' autorisation refusée.');
             process.exit(1);
@@ -40,7 +39,6 @@ server.on('listening', () => {
     const bind = 'port ' + MY_PORT;
     console.log('Listenning on:' + ' ' + bind)
     logger.info('Listenning on:' + ' ' + bind)
-
 });
 
 server.listen(MY_PORT);

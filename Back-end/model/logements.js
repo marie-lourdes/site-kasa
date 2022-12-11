@@ -31,7 +31,6 @@ const schema = {
             items: { type: "string" },
         },
     },
-
 }
 
 //creation d 'une instance objet '
