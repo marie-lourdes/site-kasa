@@ -3,7 +3,7 @@
 the site "kasa" is property rental agency
 <br>
 
-## INSTALLATION 
+## INSTALLATION FRONT-END
 
 **Back end and Front end Prerequisites:** You will need to have Node and npm installed locally on your machine.
 Clone this repo.
