@@ -6,7 +6,7 @@
 .pnp.js
 
 # logger
-.log
+log/.log
 
 # testing
 /coverage

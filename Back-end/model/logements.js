@@ -1,7 +1,7 @@
 // import du module  AJV node.js pour l implementation d une logique de validation des données  en json via les shema  et type en javascript
 const Ajv = require("ajv")
 
-const shema = {
+const schema = {
     type: "object",
     properties: {
         id: { type: "string" },
@@ -38,5 +38,5 @@ const shema = {
 const ajv = new Ajv();
 
 // objet sera compilé avec le structure de shema et ses validators
-module.exports = ajv.compile(shema)
+module.exports = ajv.compile(schema)
 
