@@ -15,7 +15,7 @@ exports.getOneLocation = (req, res) => {
         //validation de type de données d un location par son id de la base de données avec le shema de la librairie ajv avant de l envoyer dans la reponse
         if (!validate(location)) {
             validate.errors.map(error => {
-                const errorType = `id location:${location.id}/${error.instancePath.slice(1)}: ${error.message}`
+                const errorType = `page location/id location:${location.id}/${error.instancePath.slice(1)}: ${error.message}`
                 logger.error(errorType)
             })
         }
@@ -34,7 +34,7 @@ exports.getAllLocations = (req, res) => {
             //validation de type de données de la base de données avec le shema de la librairie ajv avant de l envoyer dans la reponse
             if (!validate(element)) {
                 validate.errors.map(error => {
-                    const errorType = ` ${error.instancePath.slice(1)}: ${error.message}`
+                    const errorType = `page home/${error.instancePath.slice(1)}: ${error.message}`
                     logger.error(errorType)
                 })
             }
