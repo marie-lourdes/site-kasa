@@ -5,7 +5,6 @@ import { Link } from "react-router-dom"
 import StyledHeader from "./StyledHeader.js"
 import StyledLink from "../../bases/StyledLink"
 
-
 function Header() {
     return (
         <StyledHeader>
@@ -17,7 +16,6 @@ function Header() {
                     <li> <StyledLink to="/"> Accueil</StyledLink></li>
                     <li> <StyledLink to="/about"> A Propos</StyledLink></li>
                 </ul>
-
             </nav>
         </StyledHeader>
     )

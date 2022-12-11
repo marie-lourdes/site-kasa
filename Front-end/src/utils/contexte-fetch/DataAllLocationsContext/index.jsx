@@ -17,7 +17,6 @@ export const DataAllLocationsProvider = ({ children }) => {
             try {
                 const response = await fetch("http://localhost:8000/api-kasa/logements")
                 const dataLocation = await response.json()
-
                 fetchData(dataLocation)
             } catch (err) {
                 console.log(err)
@@ -26,7 +25,6 @@ export const DataAllLocationsProvider = ({ children }) => {
         }
         reqData();
     }, [])
-
     return (
         <DataAllLocationsContext.Provider value={{ data, error }}>
             {children}

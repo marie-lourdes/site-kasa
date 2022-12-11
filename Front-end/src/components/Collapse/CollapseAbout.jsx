@@ -1,8 +1,5 @@
-
 import React, { useState, useEffect } from "react"
-
 import { ArrowUp } from "../../Atoms/IconsFontAwesome/index.jsx";
-
 import contentPanel from "../../utils/dataPanelAbout.js"
 
 //styled component
@@ -22,8 +19,6 @@ function CollapseAbout() {
     return (
         <StyledCollapseContainer accordion={false} activeKey={key} onChange={key => {
             setActiveKey(key)
-            //renvoit le tableau 
-            console.log("key", key)
         }}>
             <StyledPanel
                 key={0}
@@ -36,7 +31,6 @@ function CollapseAbout() {
                 showArrow={true}
                 onClick={(e) => {
                     setPanel0(openPanel0 ? false : true)
-
                 }}>
                 <div className="content-box ">
                     {contentPanel[0]["content"]}
@@ -54,9 +48,7 @@ function CollapseAbout() {
                 destroyInactivePanel={true}
                 onClick={(e) => {
                     setPanel1(openPanel1 ? false : true)
-
                 }}>
-
                 <div className="content-box ">
                     {contentPanel[1]["content"]}
                 </div>
@@ -74,9 +66,7 @@ function CollapseAbout() {
                 showArrow={true}
                 onClick={(e) => {
                     setPanel2(openPanel2 ? false : true)
-
                 }}>
-
                 <div className="content-box ">
                     {contentPanel[2]["content"]}
                 </div>
@@ -94,14 +84,12 @@ function CollapseAbout() {
                 showArrow={true}
                 onClick={(e) => {
                     setPanel3(openPanel3 ? false : true)
-
                 }}>
-
                 <div className="content-box ">
                     {contentPanel[3]["content"]}
                 </div>
             </StyledPanel>
-        </StyledCollapseContainer >
+        </StyledCollapseContainer>
     )
 
 }

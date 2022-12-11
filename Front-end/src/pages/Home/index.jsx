@@ -11,8 +11,6 @@ import StyledBanner from "../../layouts/StyledBanner.js"
 function Home() {
     const { data, error } = useContext(DataAllLocationsContext)
     const locationData = data
-    console.log(locationData)
-
     return (
         <React.Fragment>
             <StyledBanner >
@@ -24,7 +22,6 @@ function Home() {
                 {/*affichage d un message d erreur dans le dom si catch recupere une erreur lors de la recuperation des données de la fonction reqData de DataAllLocationProvider */}
                 {error && <div className="error-loading-page">Une erreur est survenue...</div>}
                 <StyledGallery className="Gallery">
-
                     {locationData.map(({ id, title, cover }) => (
                         <StyledLinkCard to={`location/${id}`} key={id} >
                             <CardLocation

@@ -20,8 +20,6 @@ import { StyledTag, StyledTagContainer } from "../../Atoms/Tag/StyledTag"
 
 function Location() {
     const { dataPictures, dataTitle, dataTag, dataRating, dataPosition, dataOwner, nameOwner, dataDescription, dataEquipments, error } = useContext(DataOneLocationContext)
-    console.log("typeof datatag", dataTag)
-
     return (
         <React.Fragment>
             <CarouselLocation url={dataPictures && dataPictures}>
@@ -72,7 +70,7 @@ function Location() {
                     <CollapseLocation dataDescription={dataDescription} dataEquipments={dataEquipments} />
                 </div>
             </main>
-        </React.Fragment >
+        </React.Fragment>
     )
 }
 
@@ -87,9 +85,7 @@ StyledHeaderInfoLocation.propTypes = {
 
 CollapseLocation.propTypes = {
     dataDescription: PropTypes.string,
-    dataEquipments: PropTypes.arrayOf(PropTypes.string),
-
-
+    dataEquipments: PropTypes.arrayOf(PropTypes.string)
 }
 
 export default Location

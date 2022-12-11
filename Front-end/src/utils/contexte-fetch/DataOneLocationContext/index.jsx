@@ -47,15 +47,12 @@ export const DataOneLocationProvider = ({ children }) => {
         async function reqData() {
             try {
                 const response = await fetch("http://localhost:8000/api-kasa/logements/" + id)
-                console.log("response", response)
                 const dataLocation = await response.json()
-                console.log("datalocation", dataLocation)
                 setDataOneLocation(dataLocation)
             } catch (err) {
                 console.log(err)
                 setError(true)
                 //redirection vers la page erreur, en creeant une page qui n existe pas qui genere la page404 sur une route qui n est pas defini dans les route de index.js
-
                 navigate("/error")
             }
         }

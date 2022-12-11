@@ -23,16 +23,13 @@ function RateStar({ rating }) {
     const rate = parseInt(rating)
     return (
         <React.Fragment>
-            < StyledRateStar value={1} rating={rate} key={1} className="fa-sharp fa-solid fa-star" ></StyledRateStar >
-            < StyledRateStar value={2} rating={rate} key={2} className="fa-sharp fa-solid fa-star" ></StyledRateStar >
-            < StyledRateStar value={3} rating={rate} key={3} className="fa-sharp fa-solid fa-star" ></StyledRateStar >
-            < StyledRateStar value={4} rating={rate} key={4} className="fa-sharp fa-solid fa-star" ></StyledRateStar >
-            < StyledRateStar value={5} rating={rate} key={5} className="fa-sharp fa-solid fa-star" ></StyledRateStar >
+            <StyledRateStar value={1} rating={rate} key={1} className="fa-sharp fa-solid fa-star"></StyledRateStar>
+            <StyledRateStar value={2} rating={rate} key={2} className="fa-sharp fa-solid fa-star"></StyledRateStar>
+            <StyledRateStar value={3} rating={rate} key={3} className="fa-sharp fa-solid fa-star"></StyledRateStar>
+            <StyledRateStar value={4} rating={rate} key={4} className="fa-sharp fa-solid fa-star"></StyledRateStar>
+            <StyledRateStar value={5} rating={rate} key={5} className="fa-sharp fa-solid fa-star"></StyledRateStar>
         </React.Fragment>
-
-
     )
 }
-
 
 export { ArrowUp, ArrowLeft, ArrowRight, RateStar }

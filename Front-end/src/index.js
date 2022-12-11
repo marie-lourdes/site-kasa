@@ -21,7 +21,7 @@ root.render(
   <React.StrictMode>
     <Router>
       <DataAllLocationsProvider>
-        <App >
+        <App>
           {/* children*/}
           <div>
             {/*Ajouter la prop exact pour que home s affiche sur ce path exactement et non sur un path contenant "/" , 
@@ -31,11 +31,11 @@ root.render(
               <Route path="/about" element={<About />} />
               <Route path="/location/:id" element={<DataOneLocationProvider><Location /></DataOneLocationProvider>} />
               <Route path="*" element={<Page404 />} />
-            </Routes >
+            </Routes>
           </div>
         </App>
       </DataAllLocationsProvider>
-    </Router >
+    </Router>
   </React.StrictMode >
 )
 

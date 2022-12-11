@@ -23,7 +23,6 @@ function CollapseLocation({ dataDescription, dataEquipments }) {
                     showArrow={true}
                     onClick={() => {
                         setPanelLocation0(openPanelLocation0 ? false : true)
-
                     }}>
                     <div className="content-box">
                         {dataDescription}
@@ -41,7 +40,6 @@ function CollapseLocation({ dataDescription, dataEquipments }) {
                     showArrow={true}
                     onClick={() => {
                         setPanelLocation1(openPanelLocation1 ? false : true)
-
                     }}>
                     <div className="content-box">
                         <ul>

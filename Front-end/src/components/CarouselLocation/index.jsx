@@ -19,32 +19,30 @@ function CarouselLocation({ children }) {
 
             renderBottomCenterControls={({ currentSlide, slideCount }) =>
 
-                /* le bullet s saffiche que si il y a plus d 'une image dans la carroussel, idem pour les boutons suivant et precedent*/
+                /* le bullet s affiche que si il y a plus d 'une image dans la carroussel, idem pour les boutons suivant et precedent*/
                 /* incrementation de 1 pour afficher l index du slide correspondant au numero de l image*/
                 /*le composant StyledSlideCount ne s affiche pas sur mobile et tablet*/
-
                 slideCount > 1 &&
-                <StyledSlideCount> {currentSlide + 1} /{slideCount}</StyledSlideCount >
+                <StyledSlideCount> {currentSlide + 1} /{slideCount}</StyledSlideCount>
             }
+
             renderCenterLeftControls={({ previousSlide, slideCount }) => (
                 slideCount > 1 &&
-                <button onClick={previousSlide} title="Image Précédente" >
+                <button onClick={previousSlide} title="Image Précédente">
                     <ArrowLeft />
                 </button>
             )}
 
             renderCenterRightControls={({ nextSlide, slideCount }) => (
                 slideCount > 1 &&
-                <button onClick={nextSlide} title="Image suivante"  >
+                <button onClick={nextSlide} title="Image suivante">
                     <ArrowRight />
                 </button>
             )}
         >
             {/*children props img}*/}
             {children}
-
-        </StyledCarousel >
-
+        </StyledCarousel>
     )
 }
 // verification du tableau d url de type string  "de la base de données recupérés  dans la carousel et le caractere obligatoire

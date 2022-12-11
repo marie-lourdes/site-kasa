@@ -13,7 +13,7 @@ function CardLocation({ title, cover }) {
                 <img src={`${cover}`} alt={`Photo de couverture ${title}`} />
                 <h4><li >{title}</li></h4>
             </StyledCardLocation>
-        </React.Fragment >
+        </React.Fragment>
     )
 }
 CardLocation.propTypes = {
