@@ -19,7 +19,7 @@ import StyledHeaderInfoLocation from "./StyledLocation"
 import { StyledTag, StyledTagContainer } from "../../Atoms/Tag/StyledTag"
 
 function Location() {
-    const { dataPictures, dataTitle, dataTag, dataRating, dataPosition, dataOwner, nameOwner, dataDescription, dataEquipments } = useContext(DataOneLocationContext)
+    const { dataPictures, dataTitle, dataTag, dataRating, dataPosition, dataOwner, nameOwner, dataDescription, dataEquipments, error } = useContext(DataOneLocationContext)
     console.log("typeof datatag", dataTag)
 
     return (
@@ -45,13 +45,7 @@ function Location() {
                         <div>{dataPosition && dataPosition}</div>
                         <StyledTagContainer>
                             {dataTag && dataTag.map((tag, index) => {
-                                console.log("tag ", tag)
                                 const tagLittle = tag.split("")
-                                {
-
-
-                                    if (tagLittle.length <= 5) console.log("taglITTLE", tagLittle)
-                                }
                                 return <StyledTag key={`${index}-${tag}`} tagLittle={tagLittle.length <= 7}>
                                     {tag}
                                 </StyledTag>

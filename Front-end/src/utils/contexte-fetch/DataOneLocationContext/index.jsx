@@ -15,6 +15,7 @@ export const DataOneLocationProvider = ({ children }) => {
     console.log("param", param)
     const { id } = param
     const [dataOneLocation, setDataOneLocation] = useState({})
+    const [error, setError] = useState(false)
 
 
     //verification d une chaine de caractere, comme une propriété dans l objet dataoneLocation , avant de recuperer les propriétés  pour eviter des erreur "undefined"
@@ -52,13 +53,10 @@ export const DataOneLocationProvider = ({ children }) => {
                 setDataOneLocation(dataLocation)
             } catch (err) {
                 console.log(err)
+                setError(true)
                 //redirection vers la page erreur, en creeant une page qui n existe pas qui genere la page404 sur une route qui n est pas defini dans les route de index.js
 
                 navigate("/error")
-
-
-
-
             }
         }
         reqData();

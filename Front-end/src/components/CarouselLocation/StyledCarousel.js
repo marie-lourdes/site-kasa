@@ -13,10 +13,9 @@ const StyledCarousel = styled(Carousel)`
     mix-blend-mode: normal;
     overflow: hidden;
    
-
 /*slide-list*/
     .slide img {
-/* definition de la hauteur pour redefinir sa position dans le frame*/
+        /* definition de la hauteur pour redefinir sa position dans le frame*/
         max-height: 415px;
         min-height: 415px;
         object-fit: cover;
@@ -26,9 +25,9 @@ const StyledCarousel = styled(Carousel)`
           max-height: 255px;
           min-height: 255px; 
         }       
-      }
+    }
     
-    `
+`
 
 const StyledSlideCount = styled.div`
     color: ${colors.secondary};
@@ -41,6 +40,6 @@ const StyledSlideCount = styled.div`
     @media screen and ${devices_mediaQueries.tablet} {
       display: none;
     } 
-    `
+`
 
 export { StyledCarousel, StyledSlideCount }

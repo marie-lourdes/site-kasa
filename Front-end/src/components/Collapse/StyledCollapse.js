@@ -6,7 +6,6 @@ import RcCollapse from "rc-collapse"
 
 import colors from "../../utils/colors"
 
-
 const StyledCollapseContainer = styled(RcCollapse)`
     width: 85%;
     ${({ $collapseLocation }) => $collapseLocation && `
@@ -16,7 +15,7 @@ const StyledCollapseContainer = styled(RcCollapse)`
         margin-top: 0; 
         width: 100%;    
     } 
-    @media screen and ${devices_mediaQueries.tablet}{
+    @media screen and ${devices_mediaQueries.tablet} {
         margin-top: 0;   
     }
 `
@@ -26,8 +25,7 @@ const StyledPanel = styled(RcCollapse.Panel)`
     position: relative;
     line-height: 1.5em;
     width: 100%;
-    display: grid;
-    @media screen and ${devices_mediaQueries.mobile}{
+    @media screen and ${devices_mediaQueries.mobile} {
         margin-bottom: 7%;   
     }
    
@@ -61,8 +59,8 @@ const StyledPanel = styled(RcCollapse.Panel)`
             padding-top: 20px;
        }       
     }
+    
     .content-box {
-       
         @media screen and ${devices_mediaQueries.mobile} {
             min-height: 160px;
         }

@@ -4,8 +4,8 @@ import colors from "../../utils/colors"
 import devices_mediaQueries from "../../utils/responsive-design/devices.js"
 
 const StyledLinkCard = styled(Link)`
-    width:30%;
-    height:340px;
+    width: 30%;
+    height: 340px;
     max-width: 340px;
     margin: 0 2%  4%;
     display: flex;
@@ -16,17 +16,15 @@ const StyledLinkCard = styled(Link)`
         max-width: 335px;
         margin: 0 0 5%;
     }
-    @media screen and ${devices_mediaQueries.mobile_landscape}{
-        max-width: 100%;
-        
+    @media screen and ${devices_mediaQueries.mobile_landscape} {
+        max-width: 100%;        
     }
-    @media screen and ${devices_mediaQueries.tablet}{
+    @media screen and ${devices_mediaQueries.tablet} {
         min-width: 45%;
         max-width: 45%;
-        margin: 0 2.5% 4.5%;
-        
-        
+        margin: 0 2.5% 4.5%;  
     }
+
     .error-data-card {
         color: ${colors.primary}
     }
@@ -41,13 +39,14 @@ const StyledCardLocation = styled.div`
     align-items: flex-end;
     position: relative;
     overflow: hidden;
+
     img {
         object-fit: cover;
         width: 100%;
         min-height: 340px;
-        max-height: 340px;
-    
+        max-height: 340px;  
     }
+
     &::after {
         content: "";
         position: absolute;
@@ -57,6 +56,7 @@ const StyledCardLocation = styled.div`
         bottom: 0;
         right: 0;
     }
+
     h4 {
         width: 29%;
         padding: 10px;
@@ -66,11 +66,11 @@ const StyledCardLocation = styled.div`
         width: 50%;
         box-sizing: border-box;
         line-height: 1.5em;
-        @media screen and ${devices_mediaQueries.mobile}{
+        @media screen and ${devices_mediaQueries.mobile} {
            padding-left: 6%;
            width: 55%;        
         }
-        @media screen and ${devices_mediaQueries.tablet}{
+        @media screen and ${devices_mediaQueries.tablet} {
             font-size: 1.1em;
             width: 70%;     
         }

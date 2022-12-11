@@ -20,8 +20,7 @@ const StyledPage404 = styled.main`
   
     & > div {
         font-family: MontSerratBold;
-        margin-bottom: -12%;
-        
+        margin-bottom: -12%;       
     }
     
     span {
@@ -31,14 +30,14 @@ const StyledPage404 = styled.main`
         bottom: 5px;
     /* white space with span block */
         @media screen and ${devices_mediaQueries.mobile} {
-            font-size:0.1875em;
+            font-size: 0.1875em;
             display: block;
             text-align: center;
             bottom: 130px;
             .indent {
                 display: block:
                 width:10px;
-             }
+            }
         } 
         @media screen and ${devices_mediaQueries.mobile_landscape} {
             bottom: 10px;
