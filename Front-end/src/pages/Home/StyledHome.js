@@ -9,7 +9,7 @@ justify-content: flex-start;
 align-items: space-evenly;
 width: 100%;
 box-sizing: border-box;
-padding: 56px 0 20px 20px;
+padding: 56px 0 20px 37px;
 @media screen and ${devices_mediaQueries.mobile}{
     padding: 0;
 }
