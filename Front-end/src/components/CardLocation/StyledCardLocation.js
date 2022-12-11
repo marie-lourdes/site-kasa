@@ -7,7 +7,7 @@ const StyledLinkCard = styled(Link)`
     width:30%;
     height:340px;
     max-width: 340px;
-    margin: 0 2%  5%;
+    margin: 0 2%  4%;
     display: flex;
     text-decoration:none;
     @media screen and ${devices_mediaQueries.mobile} {
