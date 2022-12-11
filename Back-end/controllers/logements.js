@@ -1,7 +1,7 @@
 //import de la base de données json
 const data = require("../data/logements.json")
 //import du module logger crée avec Winston , pour consigner les logs
-const logger = require("../log/logger")
+const logger = require("../logger")
 // import du model et du shema compilé avec le model construis avec le module de node  AJV
 const validate = require("../model/logements.js")
 

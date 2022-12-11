@@ -6,7 +6,7 @@ dotenv.config();
 const MY_PORT = process.env.PORT
 
 //import du module logger crée avec la Winston
-const logger = require("./log/logger")
+const logger = require("./logger")
 
 // gestion des erreurs du serveur
 
