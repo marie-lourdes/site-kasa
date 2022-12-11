@@ -3,10 +3,12 @@ import devices_mediaQueries from "../../utils/responsive-design/devices.js"
 const StyledHeaderInfoLocation = styled.div`
     display:flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     box-sizing: border-box;
     @media screen and ${devices_mediaQueries.mobile} {
         flex-wrap: wrap;
+        justify-content: start;
+        width: 100%;
     } 
     @media screen and ${devices_mediaQueries.tablet} {
         flex-wrap: wrap; 
@@ -18,18 +20,19 @@ const StyledHeaderInfoLocation = styled.div`
 
     .column-left-info-location {
         flex-direction: column;
-      width:50%;
+        width: 50%;
         justify-content: space-around;
         box-sizing: border-box;
-        width: 100%;
-        
-        .title-location {
+        @media screen and ${devices_mediaQueries.mobile} {
+           width: 100%;                
+        } 
+            .title-location {
             font-size: 2.25em;
             margin-bottom: 1%;
             font-weight: bold;
             @media screen and ${devices_mediaQueries.mobile} {
                 font-size: 1.125em;
-                margin-bottom: 3%;
+                margin-bottom: 3%;                
             } 
             @media screen and ${devices_mediaQueries.tablet} {
                 font-size: 2em;
@@ -45,14 +48,14 @@ const StyledHeaderInfoLocation = styled.div`
                     font-size: 1.5em;
                  
                 }
-            }  
-               
+            }                
         }
     }
 
     .column-right-info-owner {
-    width:50%;
+         width:50%;
         flex-direction: column; 
+        margin-top: -1%;
         @media screen and ${devices_mediaQueries.mobile} {
          flex-flow: wrap-reverse row-reverse;
          justify-content: space-between;
@@ -128,8 +131,7 @@ const StyledHeaderInfoLocation = styled.div`
     }
     @media screen and ${devices_mediaQueries.tablet} {
         margin-top: 0;   
-        } 
-
+    } 
 }
 `
 
