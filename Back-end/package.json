@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/marie-lourdes/site-kasa#readme",
   "dependencies": {
+    "ajv": "^8.11.2",
     "dotenv": "^16.0.3",
     "express": "^4.18.2"
   }
