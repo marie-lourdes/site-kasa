@@ -1,9 +1,8 @@
 const http = require("http");
 const app = require("./app")
-
+// import du module dotenv pour le chargement de la variable d environnement
 const dotenv = require("dotenv");
 dotenv.config();
-
 const MY_PORT = process.env.PORT
 
 // gestion des erreurs du serveur

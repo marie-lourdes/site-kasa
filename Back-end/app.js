@@ -1,5 +1,7 @@
+//import de Express pour creer l application et acceder aux methodes et au middleware de traitements des requetes, utilisé dans les fonctions semantiques du dossier controllers
 const express = require("express")
 const app = express();
+//import de l objet router avec ses routes individuelles 
 const routerAppartments = require("./routes/logements")
 
 corsConfiguration();
@@ -12,7 +14,7 @@ function corsConfiguration() {
         next(); // passe l execution du serveur au middleware suivant  qui traite l'envoie de l'objet reponse des requêtes sur tout type de verbe http
     });
 }
-
+// ajout des routes individuelles du Router a la route de base ajouté au niveau de l application "api/kasa/logements"
 app.use("/api-kasa/logements/", routerAppartments)
 
 module.exports = app;
