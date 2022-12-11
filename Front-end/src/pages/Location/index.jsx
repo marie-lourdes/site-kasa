@@ -40,17 +40,19 @@ function Location() {
                     dataTag={dataTag && dataTag}
                     nameOwner={nameOwner && nameOwner}
                     dataOwner={dataOwner?.pictures} >
-
-
-
                     <div className="column-left-info-location">
                         <div className="title-location"> {dataTitle && dataTitle}</div>
-
                         <div>{dataPosition && dataPosition}</div>
                         <StyledTagContainer>
                             {dataTag && dataTag.map((tag, index) => {
-                                console.log("tag", index)
-                                return <StyledTag key={`${index}-${tag}`}>
+                                console.log("tag ", tag)
+                                const tagLittle = tag.split("")
+                                {
+
+
+                                    if (tagLittle.length <= 5) console.log("taglITTLE", tagLittle)
+                                }
+                                return <StyledTag key={`${index}-${tag}`} tagLittle={tagLittle.length <= 7}>
                                     {tag}
                                 </StyledTag>
                             })}
