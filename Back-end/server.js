@@ -5,11 +5,14 @@ const dotenv = require("dotenv");
 dotenv.config();
 const MY_PORT = process.env.PORT
 
+//import du module logger crée avec la Winston
+const logger = require("./log/logger")
+
 // gestion des erreurs du serveur
 
 const errorHandler = error => {
     if (error.syscall !== 'listen') {
-        console.error("erreur systeme")
+        logger.error("erreur systeme")
         throw error;
     }
 
@@ -17,13 +20,13 @@ const errorHandler = error => {
     switch (error.code) {
 
         case 'EACCES':
-            console.error('Error:' + " " + bind + ' autorisation refusée.');
+            logger.error('Error:' + " " + bind + ' autorisation refusée.');
             process.exit(1);
             break;
 
         case 'EADDRINUSE':
 
-            console.error(bind + ' adresse déjà utilisée.');
+            logger.error(bind + ' adresse déjà utilisée.');
             process.exit(1);
             break;
         default:
@@ -36,6 +39,7 @@ server.on('error', errorHandler);
 server.on('listening', () => {
     const bind = 'port ' + MY_PORT;
     console.log('Listenning on:' + ' ' + bind)
+    logger.info('Listenning on:' + ' ' + bind)
 
 });
 

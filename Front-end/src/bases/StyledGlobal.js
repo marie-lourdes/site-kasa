@@ -27,6 +27,7 @@ body {
     font-weight: 500;
     color: ${colors.primary};
     background: ${colors.secondary}
+    min-height: 100vh;
    
 }
 
@@ -80,6 +81,7 @@ main {
     width: 100%;
     box-sizing: border-box;
     position: relative;
+  
     @media screen and ${devices_mediaQueries.mobile}{
         width: auto;
         margin: 6% 0;          
@@ -93,7 +95,7 @@ main {
 main.main-Home-page{
     border-radius: 25px;
     background: ${colors.backgroundMain};
-    min-height: 100vh;
+ 
     @media screen and ${devices_mediaQueries.mobile}{
       background: transparent;
       border-radius: 0;

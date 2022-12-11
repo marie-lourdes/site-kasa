@@ -2,6 +2,7 @@
 import { createContext, useState, useEffect } from 'react'
 import { useParams } from "react-router"
 import { useNavigate } from 'react-router'
+import Page404 from "../../../pages/Page404"
 
 // initialisation du composant Contexte
 export const DataOneLocationContext = createContext()
@@ -52,7 +53,12 @@ export const DataOneLocationProvider = ({ children }) => {
             } catch (err) {
                 console.log(err)
                 //redirection vers la page erreur, en creeant une page qui n existe pas qui genere la page404 sur une route qui n est pas defini dans les route de index.js
+
                 navigate("/error")
+
+
+
+
             }
         }
         reqData();

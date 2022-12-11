@@ -1,9 +1,9 @@
 //import de la base de données json
 const data = require("../data/logements.json")
-
+//import du module logger crée avec Winston , pour consigner les logs
+const logger = require("../log/logger")
 // import du model et du shema compilé avec le model construis avec le module de node  AJV
 const validate = require("../model/logements.js")
-console.log("validate", validate)
 
 // configuration des operations/requêtes Crud : READ  pour envoyer au requerant en reponse de la requête toutes les locations ou un seul selon le parametre de recherche "id" de location
 // envoit de la reponse avec une location selon l id
@@ -15,9 +15,8 @@ exports.getOneLocation = (req, res) => {
         //validation de type de données d un location par son id de la base de données avec le shema de la librairie ajv avant de l envoyer dans la reponse
         if (!validate(location)) {
             validate.errors.map(error => {
-                const errorType = ` ${error.instancePath.slice(1)}: ${error.message}`
-                console.log("errorType", errorType)
-                res.status(500).json({ errorType })
+                const errorType = `id location:${location.id}/${error.instancePath.slice(1)}: ${error.message}`
+                logger.error(errorType)
             })
         }
         res.status(200).json(location)
@@ -36,9 +35,7 @@ exports.getAllLocations = (req, res) => {
             if (!validate(element)) {
                 validate.errors.map(error => {
                     const errorType = ` ${error.instancePath.slice(1)}: ${error.message}`
-                    console.log("errortype", errorType)
-                    // Si il y a une erreur de la base de données , on envoit status 500 coté serveur
-                    res.status(500).json({ errorType })
+                    logger.error(errorType)
                 })
             }
             // si aucune erreur de type dans la base de données on envoit  les element de la base de données dans la variables allLocation qu on envoit par la suite dans la reponse de la requete http

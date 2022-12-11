@@ -78,9 +78,6 @@ function Location() {
             </main>
         </React.Fragment >
     )
-
-
-
 }
 
 //verification des types de données recupéré par fetch dans le hook useEffect
@@ -91,14 +88,12 @@ StyledHeaderInfoLocation.propTypes = {
     nameOwner: PropTypes.arrayOf(PropTypes.string),
     dataOwner: PropTypes.string
 }
+
 CollapseLocation.propTypes = {
     dataDescription: PropTypes.string,
-
     dataEquipments: PropTypes.arrayOf(PropTypes.string),
 
 
 }
-
-
 
 export default Location

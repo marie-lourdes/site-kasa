@@ -10,7 +10,6 @@ function CollapseLocation({ dataDescription, dataEquipments }) {
     return (
         <>
             <StyledCollapseContainer $collapseLocation accordion={false}>
-
                 <StyledPanel
                     $panelLocation
                     $panelLocationDescription
@@ -51,10 +50,7 @@ function CollapseLocation({ dataDescription, dataEquipments }) {
                             )}
                         </ul>
                     </div>
-
                 </StyledPanel>
-
-
             </StyledCollapseContainer>
         </>
     )

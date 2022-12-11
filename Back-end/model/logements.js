@@ -36,5 +36,7 @@ const shema = {
 
 //creation d 'une instance objet '
 const ajv = new Ajv();
+
 // objet sera compilé avec le structure de shema et ses validators
 module.exports = ajv.compile(shema)
+
