@@ -64,7 +64,7 @@ const StyledPanel = styled(RcCollapse.Panel)`
     .content-box {
        
         @media screen and ${devices_mediaQueries.mobile} {
-            min-height: 130px;
+            min-height: 160px;
         }
         ${({ $panelLocation }) => $panelLocation && `
             min-height: 215px;

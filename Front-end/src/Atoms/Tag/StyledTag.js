@@ -14,10 +14,10 @@ const StyledTag = styled.div`
    margin-right: 2%;
    box-sizing: border-box;
    white-space: nowrap;
-   min-width: 20%;
+   min-width: 25%;
    ${({ tagLittle }) => tagLittle &&
-      `min-width: 13%; 
-    `};
+      `min-width: 17%; 
+   `};
    @media screen and ${devices_mediaQueries.mobile} {
       font-size: 0.625em; 
       padding: 2.16px 29px 1.84px;
