@@ -20,7 +20,7 @@ const StyledHeaderInfoLocation = styled.div`
 
     .column-left-info-location {
         flex-direction: column;
-        min- width: 50%;
+        min-width: 50%;
         justify-content: space-around;
         box-sizing: border-box;
         @media screen and ${devices_mediaQueries.mobile} {

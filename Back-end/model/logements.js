@@ -17,7 +17,6 @@ const schema = {
             properties: {
                 name: { type: "string" },
                 picture: { type: "string" },
-
             }
         },
         rating: { type: "string" },
