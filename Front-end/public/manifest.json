@@ -4,7 +4,7 @@
     "icons": [
         {
             "src": "Logo-kasa.png",
-            "sizes": "200x64 100x32 50x16  ",
+            "sizes": "200x64 100x32 50x16",
             "type": "image/png"
         }
     ],
