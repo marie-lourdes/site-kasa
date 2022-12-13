@@ -30,6 +30,18 @@ function Location() {
     dataDescription,
     dataEquipments,
   } = useContext(DataOneLocationContext)
+  {/*affichage d un message d erreur dans le dom si il y a une erreur de chargement des données  lors de la recuperation des données de la fonction reqData de DataAllLocationProvider */ }
+  {/*L'erreur d id de propriété est géré par le catch et useNavigate dans le contexte fetch dataOneLocation*/ }
+  if (!dataPictures ||
+    !dataTitle ||
+    !dataTag ||
+    !dataRating ||
+    !dataPosition ||
+    !dataOwner ||
+    !nameOwner ||
+    !dataDescription ||
+    !dataEquipments) return <div className="error-loading-page">Une erreur est survenue...</div>
+
   return (
     <React.Fragment>
       <CarouselLocation url={dataPictures && dataPictures}>
@@ -46,6 +58,7 @@ function Location() {
           ))}
       </CarouselLocation>
       <main>
+
         <StyledHeaderInfoLocation
           dataTitle={dataTitle && dataTitle}
           dataPosition={dataPosition && dataPosition}
