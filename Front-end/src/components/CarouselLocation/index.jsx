@@ -22,8 +22,7 @@ function CarouselLocation({ children }) {
         /*le composant StyledSlideCount ne s affiche pas sur mobile et tablet*/
         slideCount > 1 && (
           <StyledSlideCount>
-            {' '}
-            {currentSlide + 1} /{slideCount}
+            {currentSlide + 1}/{slideCount}
           </StyledSlideCount>
         )
       }
@@ -50,7 +49,7 @@ function CarouselLocation({ children }) {
 // verification du tableau d url de type string  "de la base de données recupérés  dans la carousel et le caractere obligatoire
 // pour verifier et respecter la structure de la base de données lorsqu une nouvelle donnée d image est inseré, doit etre sous forme de tableau string comme les données images des autres location
 CarouselLocation.propTypes = {
-  url: PropTypes.arrayOf(PropTypes.string.isRequired),
+  url: PropTypes.arrayOf(PropTypes.string),
 }
 
 export default CarouselLocation

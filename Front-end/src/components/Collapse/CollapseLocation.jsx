@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { ArrowUp } from '../../Atoms/Icons'
-
+// import PropTypes
+import PropTypes from 'prop-types'
 //styled component
 import {
   StyledCollapseContainer,
@@ -58,6 +59,11 @@ function CollapseLocation({ dataDescription, dataEquipments }) {
       </StyledCollapseContainer>
     </>
   )
+}
+
+CollapseLocation.propTypes = {
+  dataDescription: PropTypes.string,
+  dataEquipments: PropTypes.arrayOf(PropTypes.string),
 }
 
 export default CollapseLocation

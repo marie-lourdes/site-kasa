@@ -4,6 +4,7 @@ import { useContext } from 'react'
 // import PropTypes
 import PropTypes from 'prop-types'
 
+//import contexte-fetch
 import { DataOneLocationContext } from '../../utils/contexte-fetch/DataOneLocationContext'
 
 //Import du composant react carousel integrant le composant carousel de nuka-carousel stylisé par styled-components
@@ -11,12 +12,13 @@ import CarouselLocation from '../../components/CarouselLocation'
 
 //import rate star Font-Awesome
 import { RateStar } from '../../Atoms/Icons'
+
 //import Collapse Location
 import CollapseLocation from '../../components/Collapse/CollapseLocation'
 
 //styled component
 import StyledHeaderInfoLocation from './StyledLocation'
-import { StyledTag, StyledTagContainer } from '../../Atoms/Tag/StyledTag'
+import { StyledTag, StyledTagContainer } from '../../Atoms/Tag/StyledTag.js'
 
 function Location() {
   const {
@@ -31,8 +33,8 @@ function Location() {
     dataEquipments,
   } = useContext(DataOneLocationContext)
 
-  {/*affichage d un message d erreur dans le dom si il y a une erreur de chargement des données  lors de la recuperation des données de la fonction reqData de DataAllLocationProvider */ }
-  {/*L'erreur d id de propriété est géré par le catch et useNavigate dans le contexte fetch dataOneLocation*/ }
+  /*affichage d un message d erreur dans le dom si il y a une erreur de chargement des données  lors de la recuperation des données de la fonction reqData de DataAllLocationProvider */
+  /*L'erreur d id de propriété est géré par le catch et useNavigate dans le contexte fetch dataOneLocation*/
   if (!dataPictures ||
     !dataTitle ||
     !dataTag ||
@@ -41,7 +43,9 @@ function Location() {
     !dataOwner ||
     !nameOwner ||
     !dataDescription ||
-    !dataEquipments) return <div className="error-loading-page error-loading-page--location ">Chargement en cours...nous nous excusons... <br /> Si l'erreur persiste tentez de raffaichir la page</div>
+    !dataEquipments) {
+    return <div className="error-loading-page error-loading-page--location ">Chargement en cours...nous nous excusons... <br /> Si l'erreur persiste tentez de raffaichir la page</div>
+  }
 
   return (
     <React.Fragment>
@@ -59,7 +63,6 @@ function Location() {
           ))}
       </CarouselLocation>
       <main>
-
         <StyledHeaderInfoLocation
           dataTitle={dataTitle && dataTitle}
           dataPosition={dataPosition && dataPosition}
@@ -119,11 +122,6 @@ StyledHeaderInfoLocation.propTypes = {
   dataTag: PropTypes.arrayOf(PropTypes.string),
   nameOwner: PropTypes.arrayOf(PropTypes.string),
   dataOwner: PropTypes.string,
-}
-
-CollapseLocation.propTypes = {
-  dataDescription: PropTypes.string,
-  dataEquipments: PropTypes.arrayOf(PropTypes.string),
 }
 
 export default Location
