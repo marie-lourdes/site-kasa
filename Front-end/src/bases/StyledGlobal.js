@@ -137,7 +137,7 @@ ul {
         }
         @media screen and ${devices_mediaQueries.mobile_landscape} {
             left: 25%;
-            top: 60%;
+            top: 55%;
         }
         @media screen and ${devices_mediaQueries.tablet} {
             left: 15%;
