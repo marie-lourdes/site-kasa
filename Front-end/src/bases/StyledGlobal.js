@@ -132,6 +132,7 @@ ul {
         left: 30%;
         @media screen and ${devices_mediaQueries.mobile} {
             left: 10%;
+            top: 40%;
             font-size: 1em;   
         }
         @media screen and ${devices_mediaQueries.mobile_landscape} {
