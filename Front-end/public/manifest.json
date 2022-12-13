@@ -3,12 +3,12 @@
     "name": "Agence de location immobilière",
     "icons": [
         {
-            "src": "Logo-kasa.png",
+            "src": "./logo-kasa.png",
             "sizes": "100x64 100x32 50x16",
             "type": "image/png"
         }
     ],
-    "start_url": ".",
+    "start_url": "./",
     "display": "standalone",
     "theme_color": "#000000",
     "background_color": "#ffffff"

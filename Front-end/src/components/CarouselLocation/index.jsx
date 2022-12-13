@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types'
 
 // import des icons Font-Awesome ArrowLeft et ArrowRight
-import { ArrowLeft, ArrowRight } from '../../Atoms/IconsFontAwesome'
+import { ArrowLeft, ArrowRight } from '../../Atoms/Icons'
 
 //styled component avec nuka-carousel integré
 import { StyledCarousel, StyledSlideCount } from './StyledCarousel.js'

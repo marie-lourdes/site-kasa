@@ -30,7 +30,7 @@ const schema = {
             items: { type: "string" },
         },
     },
-    required: ["id", "title", "cover", "pictures", "name", "location", "equipments", "tags"]
+    required: ["id", "title", "cover", "pictures", "host", "location", "equipments", "tags"]
 }
 
 //creation d 'une instance objet '

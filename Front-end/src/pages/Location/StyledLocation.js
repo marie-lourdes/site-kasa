@@ -24,8 +24,11 @@ const StyledHeaderInfoLocation = styled.div`
         justify-content: space-around;
         box-sizing: border-box;
         @media screen and ${devices_mediaQueries.mobile} {
-           width: 100%;                
+           min-width: 100%;                
         } 
+        @media screen and ${devices_mediaQueries.tablet} {
+           min-width: 100%
+        }
         .title-location {
         font-size: 2.25em;
         margin-bottom: 1%;

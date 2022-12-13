@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { ArrowUp } from '../../Atoms/IconsFontAwesome/index.jsx'
+import { ArrowUp } from '../../Atoms/Icons'
 import contentPanel from '../../utils/dataPanelAbout.js'
 
 //styled component

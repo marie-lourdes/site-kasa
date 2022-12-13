@@ -1,25 +1,28 @@
 import React from 'react'
+import arrowUp from "../../assets/arrowUp.png"
+import arrowLeft from "../../assets/arrowLeftCarousel.png"
+import arrowRight from "../../assets/arrowRightCarousel.png"
 import {
-    StyledIconsArrowCarouselFontAwesome,
-    StyledIconsArrowUpFontAwesome,
+    StyledIconsArrowCarousel,
+    StyledIconsArrowUp,
     StyledRateStar,
-} from './StyledIconsFontAwesome.js'
+} from './StyledIcons.js'
 
 function ArrowUp() {
     return (
-        <StyledIconsArrowUpFontAwesome className="fa-solid fa-angle-up"></StyledIconsArrowUpFontAwesome>
+        <StyledIconsArrowUp><img src={arrowUp} alt="icon-arrow-up" /></StyledIconsArrowUp>
     )
 }
 
 function ArrowLeft() {
     return (
-        <StyledIconsArrowCarouselFontAwesome className="fa-solid fa-angle-left"></StyledIconsArrowCarouselFontAwesome>
+        <StyledIconsArrowCarousel $arrowLeft><img src={arrowLeft} alt="icon-arrow-left" /></StyledIconsArrowCarousel>
     )
 }
 
 function ArrowRight() {
     return (
-        <StyledIconsArrowCarouselFontAwesome className="fa-solid fa-angle-right"></StyledIconsArrowCarouselFontAwesome>
+        <StyledIconsArrowCarousel $arrowRight><img src={arrowRight} alt="icon-arrow-right" /></StyledIconsArrowCarousel>
     )
 }
 
@@ -31,35 +34,30 @@ function RateStar({ rating }) {
                 value={1}
                 rating={rate}
                 key={1}
-                className="fa-sharp fa-solid fa-star"
             ></StyledRateStar>
 
             <StyledRateStar
                 value={2}
                 rating={rate}
                 key={2}
-                className="fa-sharp fa-solid fa-star"
             ></StyledRateStar>
 
             <StyledRateStar
                 value={3}
                 rating={rate}
                 key={3}
-                className="fa-sharp fa-solid fa-star"
             ></StyledRateStar>
 
             <StyledRateStar
                 value={4}
                 rating={rate}
                 key={4}
-                className="fa-sharp fa-solid fa-star"
             ></StyledRateStar>
 
             <StyledRateStar
                 value={5}
                 rating={rate}
                 key={5}
-                className="fa-sharp fa-solid fa-star"
             ></StyledRateStar>
         </React.Fragment>
     )

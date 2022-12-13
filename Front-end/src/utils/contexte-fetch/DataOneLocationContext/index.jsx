@@ -34,9 +34,7 @@ export const DataOneLocationProvider = ({ children }) => {
     useEffect(() => {
         async function reqData() {
             try {
-                const response = await fetch(
-                    'http://localhost:8000/api-kasa/logements/' + id
-                )
+                const response = await fetch('http://localhost:8000/api-kasa/logements/' + id)
                 const dataLocation = await response.json()
                 setDataOneLocation(dataLocation)
             } catch (err) {

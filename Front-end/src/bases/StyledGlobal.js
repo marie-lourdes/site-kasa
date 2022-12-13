@@ -72,6 +72,7 @@ button {
     min-height: 100vh;
     @media screen and ${devices_mediaQueries.mobile} {
         width: auto;
+        min-height: 0;
     }
 }
 

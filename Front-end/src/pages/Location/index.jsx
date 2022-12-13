@@ -10,7 +10,7 @@ import { DataOneLocationContext } from '../../utils/contexte-fetch/DataOneLocati
 import CarouselLocation from '../../components/CarouselLocation'
 
 //import rate star Font-Awesome
-import { RateStar } from '../../Atoms/IconsFontAwesome'
+import { RateStar } from '../../Atoms/Icons'
 //import Collapse Location
 import CollapseLocation from '../../components/Collapse/CollapseLocation'
 

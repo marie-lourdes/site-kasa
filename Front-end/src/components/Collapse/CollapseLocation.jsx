@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { ArrowUp } from '../../Atoms/IconsFontAwesome/index.jsx'
+import { ArrowUp } from '../../Atoms/Icons'
 
 //styled component
 import {
