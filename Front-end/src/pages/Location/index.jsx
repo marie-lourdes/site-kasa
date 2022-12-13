@@ -40,7 +40,7 @@ function Location() {
     !dataOwner ||
     !nameOwner ||
     !dataDescription ||
-    !dataEquipments) return <div className="error-loading-page">chargement en cours...nous nous excusons... <br /> si l'erreur persiste tentez de raffaichir la page</div>
+    !dataEquipments) return <div className="error-loading-page error-loading-page--location ">Chargement en cours...nous nous excusons... <br /> Si l'erreur persiste tentez de raffaichir la page</div>
 
   return (
     <React.Fragment>

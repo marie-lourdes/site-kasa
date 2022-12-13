@@ -72,7 +72,6 @@ button {
     min-height: 100vh;
     @media screen and ${devices_mediaQueries.mobile} {
         width: auto;
-        min-height: 0;
     }
 }
 
@@ -115,7 +114,7 @@ ul {
     position: absolute;
     top: 50%;
     left: 40%;
-    font-size: 1.5em; 
+    font-size: 1.5em;
     @media screen and ${devices_mediaQueries.mobile} {
         top: 50%;
         left: 20%;
@@ -128,7 +127,15 @@ ul {
     @media screen and ${devices_mediaQueries.tablet} {
        left: 30%;
        top: 10%;
-    }   
+    } 
+    &--location {
+        left: 30%;
+
+        @media screen and ${devices_mediaQueries.mobile} {
+            left: 10%;
+            font-size: 1em;   
+        }
+    }  
 }
 `
 export default StyledGlobal

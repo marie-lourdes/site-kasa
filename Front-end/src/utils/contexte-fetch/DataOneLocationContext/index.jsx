@@ -40,7 +40,7 @@ export const DataOneLocationProvider = ({ children }) => {
             } catch (err) {
                 console.log(err)
                 //redirection vers la page erreur, en creeant une page qui n existe pas qui genere la page404 sur une route qui n est pas defini dans les route de index.js
-                navigate('/error')
+                //navigate('/error')
             }
         }
         reqData()
