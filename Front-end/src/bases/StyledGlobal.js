@@ -130,11 +130,19 @@ ul {
     } 
     &--location {
         left: 30%;
-
         @media screen and ${devices_mediaQueries.mobile} {
             left: 10%;
             font-size: 1em;   
         }
+        @media screen and ${devices_mediaQueries.mobile_landscape} {
+            left: 25%;
+            top: 60%;
+        }
+        @media screen and ${devices_mediaQueries.tablet} {
+            left: 15%;
+            top: 50%;
+         }
+      
     }  
 }
 `
