@@ -13,7 +13,7 @@ const StyledBanner = styled.section`
   box-sizing: border-box;
   position: relative;
   overflow: hidden;
-  margin-top: 5%;
+  margin-top: 1%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,7 +23,7 @@ const StyledBanner = styled.section`
     height: ${({ $about }) => !$about && `111px`};
     border-radius: 10px;
     background: ${({ $about }) =>
-      $about ? `url(${bannerAbout_S})` : `url(${bannerHome_S})`};
+    $about ? `url(${bannerAbout_S})` : `url(${bannerHome_S})`};
     justify-content: flex-start;
     padding-left: 5%;
   }
