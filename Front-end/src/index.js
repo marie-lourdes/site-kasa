@@ -23,23 +23,21 @@ root.render(
       <DataAllLocationsProvider>
         <App>
           {/* children*/}
-          <div>
-            {/*Ajouter la prop exact pour que home s affiche sur ce path exactement et non sur un path contenant "/" , 
+          {/*Ajouter la prop exact pour que home s affiche sur ce path exactement et non sur un path contenant "/" , 
     c'est a dire que home ne doit pas s afficher dans le path du composant Survey qui commence par "/"*/}
-            <Routes>
-              <Route exact path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route
-                path="/location/:id"
-                element={
-                  <DataOneLocationProvider>
-                    <Location />
-                  </DataOneLocationProvider>
-                }
-              />
-              <Route path="*" element={<Page404 />} />
-            </Routes>
-          </div>
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route
+              path="/location/:id"
+              element={
+                <DataOneLocationProvider>
+                  <Location />
+                </DataOneLocationProvider>
+              }
+            />
+            <Route path="*" element={<Page404 />} />
+          </Routes>
         </App>
       </DataAllLocationsProvider>
     </Router>
