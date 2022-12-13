@@ -41,9 +41,10 @@ const StyledPanel = styled(RcCollapse.Panel)`
     font-size: 1.5em;
   }
   .rc-collapse-content-box {
+    line-height: 1.5em;
     padding: 27px 10px 0 15px;
     @media screen and ${devices_mediaQueries.mobile} {
-      font-size: 0.75em;
+      font-size: 0.8125em;
       padding-top: 20px;
     }
   }
@@ -65,7 +66,7 @@ const StyledPanel = styled(RcCollapse.Panel)`
 
   .content-box {
     @media screen and ${devices_mediaQueries.mobile} {
-      min-height: 160px;
+      min-height: 150px;
     }
     ${({ $panelLocation }) =>
     $panelLocation &&
@@ -85,7 +86,7 @@ const StyledPanel = styled(RcCollapse.Panel)`
         font-size: 1.125em;
         padding-left: 20px;
         @media screen and ${devices_mediaQueries.mobile} {
-            font-size: 0.8125em;     
+          font-size: 0.8125em;    
         }
     }`};
 
