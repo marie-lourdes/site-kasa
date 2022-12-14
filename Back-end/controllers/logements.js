@@ -13,6 +13,9 @@ exports.getOneLocation = (req, res) => {
         // on cherche la location par l id qui correspond a la valeur de l id  du parametre avec la methode  find qui renvoit la location selon le critere de comparaison id=== parametre de la requete
         const location = data.find(({ id }) => id === query)
 
+
+        res.status(200).json(location)
+        console.log("requête d'une location reussie")
         //validation(et log)de type de données d un location par son id de la base de données avec le shema de la librairie ajv 
         if (!validate(location)) {
             validate.errors.map(error => {
@@ -20,8 +23,6 @@ exports.getOneLocation = (req, res) => {
                 logger.error(errorType)
             })
         }
-        res.status(200).json(location)
-        console.log("requête d'une location reussie")
 
     } catch (error) {
         res.status(404).json({ error: "page not found" })
