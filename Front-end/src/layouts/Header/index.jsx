@@ -1,6 +1,6 @@
 import logo from '../../assets/Logo-kasa.png'
 import { Link, useLocation } from 'react-router-dom'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 //styled component
 import StyledHeader from './StyledHeader.js'
@@ -9,10 +9,7 @@ import StyledLink from '../../bases/StyledLink'
 function Header() {
     const location = useLocation()
     const [activelink, setActive] = useState("is-inactive")
-    useEffect(() => {
-        setActive()
-    }, [])
-    console.log("activeLink", activelink)
+
     return (
         <StyledHeader>
             <div className="logo">
