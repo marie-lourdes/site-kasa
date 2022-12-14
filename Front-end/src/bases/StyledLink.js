@@ -11,7 +11,7 @@ const StyledLink = styled(Link)`
   text-decoration: underline;  
   `
   };
-  ${({ $activeLinkAbout, $location }) => $activeLinkAbout === "is-active" && $location === "/about" && `
+  ${({ $activeLinkAbout, $locationAbout }) => $activeLinkAbout === "is-active" && $locationAbout === "/about" && `
   text-decoration: underline;  
    `
   };

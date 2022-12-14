@@ -23,7 +23,7 @@ function Header() {
                         <StyledLink to="/" $locationHome={location.pathname} $activeLinkHome={activelink} onClick={() => setActive("is-active")}  > Accueil</StyledLink>
                     </li>
                     <li>
-                        <StyledLink to="/about" $location={location.pathname} $activeLinkAbout={activelink} onClick={() => setActive("is-active")}  > A Propos</StyledLink>
+                        <StyledLink to="/about" $locationAbout={location.pathname} $activeLinkAbout={activelink} onClick={() => setActive("is-active")}  > A Propos</StyledLink>
 
                     </li>
                 </ul>
