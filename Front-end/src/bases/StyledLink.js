@@ -22,6 +22,9 @@ const StyledLink = styled(Link)`
     font-size: 0.0625em;
     position: relative;
     bottom: 25px;
+    &:active{
+      text-decoration: underline;
+    }
     @media screen and ${devices_mediaQueries.mobile} {
         bottom: 200px; 
         font-size: 0.146em;
