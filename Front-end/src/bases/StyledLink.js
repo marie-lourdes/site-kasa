@@ -7,11 +7,11 @@ const StyledLink = styled(Link)`
   color: ${colors.primary};
   text-decoration: none;
   /* Lien maintenu active et sousligné*/
-  ${({ $activeLinkHome, $locationHome }) => $activeLinkHome === "is-active" && $locationHome === "/" && `
+  ${({ $locationHome }) => $locationHome === "/" && `
   text-decoration: underline;  
   `
   };
-  ${({ $activeLinkAbout, $locationAbout }) => $activeLinkAbout === "is-active" && $locationAbout === "/about" && `
+  ${({ $locationAbout }) => $locationAbout === "/about" && `
   text-decoration: underline;  
    `
   };

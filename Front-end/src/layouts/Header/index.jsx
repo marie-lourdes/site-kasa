@@ -20,10 +20,10 @@ function Header() {
             <nav>
                 <ul>
                     <li>
-                        <StyledLink to="/" $locationHome={location.pathname} $activeLinkHome={activelink} onClick={() => setActive("is-active")}  > Accueil</StyledLink>
+                        <StyledLink to="/" $locationHome={location.pathname} > Accueil</StyledLink>
                     </li>
                     <li>
-                        <StyledLink to="/about" $locationAbout={location.pathname} $activeLinkAbout={activelink} onClick={() => setActive("is-active")}  > A Propos</StyledLink>
+                        <StyledLink to="/about" $locationAbout={location.pathname} > A Propos</StyledLink>
 
                     </li>
                 </ul>
